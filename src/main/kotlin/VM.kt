@@ -6,8 +6,8 @@ class VM(
         private val memory: MutableList<Int> = mutableListOf(),
         private val registers: IntArray = IntArray(8) { 0 },
         private val stack: Deque<Int> = ArrayDeque<Int>(),
-        private var instructionPointer: Int = 0,
-        private val loggingEnabled: Boolean = false
+        private val loggingEnabled: Boolean = false,
+        private var instructionPointer: Int = 0
 ) {
 
     fun runProgram(programName: String) {
