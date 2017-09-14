@@ -9,21 +9,17 @@ class VM(
         private var instructionPointer: Int = 0
 ) {
 
-    fun runProgram(programName: String) {
-        val unsignedBytes = getUnsignedBytes(programName)
+    fun runProgram(programName: String, log: Boolean = false) {
+        val unsignedBytes = getUnsignedBytes(programName) ?: return
 
-        if (unsignedBytes != null) {
-            println("Input parsed into unsigned bytes: $unsignedBytes")
+        if (log) { println("Input parsed into unsigned bytes: $unsignedBytes") }
 
-            val unsigned16BitInts = parseTo16BitInts(unsignedBytes)
-            println("Input parsed into unsigned 16-bit integers: $unsigned16BitInts")
+        val unsigned16BitInts = parseTo16BitInts(unsignedBytes)
+        if (log) { println("Input parsed into unsigned 16-bit integers: $unsigned16BitInts") }
 
-            memory.addAll(unsigned16BitInts)
-            println("Input loaded into memory.")
-            printState()
-        } else {
-            println("Error reading input file.")
-        }
+        memory.addAll(unsigned16BitInts)
+        if (log) { println("Input loaded into memory.") }
+        if (log) { printState() }
     }
 
     /**
