@@ -6,20 +6,21 @@ class VM(
         private val memory: MutableList<Int> = mutableListOf(),
         private val registers: IntArray = IntArray(8) { 0 },
         private val stack: Deque<Int> = ArrayDeque<Int>(),
-        private var instructionPointer: Int = 0
+        private var instructionPointer: Int = 0,
+        private val loggingEnabled: Boolean = false
 ) {
 
-    fun runProgram(programName: String, log: Boolean = false) {
+    fun runProgram(programName: String) {
         val unsignedBytes = getUnsignedBytes(programName) ?: return
 
-        if (log) { println("Input parsed into unsigned bytes: $unsignedBytes") }
+        maybeLog("Input parsed into unsigned bytes: $unsignedBytes")
 
         val unsigned16BitInts = parseTo16BitInts(unsignedBytes)
-        if (log) { println("Input parsed into unsigned 16-bit integers: $unsigned16BitInts") }
+        maybeLog("Input parsed into unsigned 16-bit integers: $unsigned16BitInts")
 
         memory.addAll(unsigned16BitInts)
-        if (log) { println("Input loaded into memory.") }
-        if (log) { printState() }
+        maybeLog("Input loaded into memory.")
+        maybePrintState()
     }
 
     /**
@@ -45,10 +46,14 @@ class VM(
         return result
     }
 
-    private fun printState() {
-        println("Current VM state:")
-        println("Registers: ${Arrays.toString(registers)}")
-        println("Stack: $stack")
+    private fun maybeLog(statement: String) {
+        if (loggingEnabled) println(statement)
+    }
+
+    private fun maybePrintState() {
+        maybeLog("Current VM state:")
+        maybeLog("Registers: ${Arrays.toString(registers)}")
+        maybeLog("Stack: $stack")
     }
 
 }
