@@ -2,11 +2,12 @@ import java.nio.file.Files
 import java.nio.file.Paths
 import java.util.*
 
-class VM {
-
-    private lateinit var memory: MutableList<Int>
-    private val registers = IntArray(8) { 0 }
-    private val stack: Deque<Int> = ArrayDeque<Int>()
+class VM(
+        private val memory: MutableList<Int> = mutableListOf(),
+        private val registers: IntArray = IntArray(8) { 0 },
+        private val stack: Deque<Int> = ArrayDeque<Int>(),
+        private var instructionPointer: Int = 0
+) {
 
     fun runProgram(programName: String) {
         val unsignedBytes = getUnsignedBytes(programName)
@@ -50,7 +51,7 @@ class VM {
 
     private fun printState() {
         println("Current VM state:")
-        println("Registers: $registers")
+        println("Registers: ${Arrays.toString(registers)}")
         println("Stack: $stack")
     }
 
