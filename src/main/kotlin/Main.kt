@@ -6,19 +6,25 @@ object Main {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val binaryBytes = getBinaryBytes("sample.bin")
+        val unsignedInts = getUnsignedInts("sample.bin")
 
-        if (binaryBytes != null) {
-            println("Input bytes:")
-            println(Arrays.toString(binaryBytes))
+        if (unsignedInts != null) {
+            println("Input bytes (interpreted as unsigned ints):")
+            println(Arrays.toString(unsignedInts))
         } else {
             println("Error reading input file.")
         }
     }
 
-    private fun getBinaryBytes(binaryFileName: String): ByteArray? {
-        val fileName = javaClass.classLoader.getResource(binaryFileName)?.file
-        return if (fileName != null) Files.readAllBytes(Paths.get(fileName)) else null
+    private fun getUnsignedInts(binaryFileName: String): IntArray? {
+        val fileName = javaClass.classLoader.getResource(binaryFileName)?.file ?: return null
+        return Files.readAllBytes(Paths.get(fileName))
+                .map(Byte::toUnsignedInt)
+                .toIntArray()
     }
+
+//    private fun parseTo16BitInts(unsignedInts: IntArray): IntArray {
+//
+//    }
 
 }
