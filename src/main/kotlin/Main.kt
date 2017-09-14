@@ -2,7 +2,7 @@ object Main {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        VM(loggingEnabled = true).runProgram(programName = "sample.bin")
+        VM(log = false).runProgram(programName = "challenge.bin")
     }
 
 }
