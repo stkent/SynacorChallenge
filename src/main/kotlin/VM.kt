@@ -1,19 +1,31 @@
 import OpCode.*
+import Operand.Number
 import Operand.Register
 import java.nio.file.Files
-import java.nio.file.Paths
+import java.nio.file.Path
 import java.util.*
 
+/**
+ * todo: fill me in
+ */
 class VM(
-        private val memory:    MutableList<Int> = mutableListOf(),
-        private val registers: IntArray         = IntArray(8) { 0 },
-        private val stack:     Deque<Int>       = ArrayDeque<Int>(),
-        private val log:       Boolean          = false,
-        private var ip:        Int              = 0 // Instruction pointer
+        registersSeed:   (Int) -> Int = { 0 },
+        stackSeed:       List<Int>    = emptyList(),
+        private val log: Boolean      = false,
+        private var ip:  Int          = 0
 ) {
 
-    fun runProgram(programName: String) {
-        val unsignedBytes = getUnsignedBytes(programName) ?: return
+    private val registers = IntArray(8)
+    private val stack  = ArrayDeque<Int>()
+    private val memory = mutableListOf<Int>()
+
+    init {
+        (0 until registers.size).forEach { registers[it] = registersSeed(it) }
+        stack.addAll(stackSeed)
+    }
+
+    fun runProgram(pathToProgram: Path) {
+        val unsignedBytes = getUnsignedBytes(pathToProgram) ?: return
 
         maybeLog("Input parsed into unsigned bytes: $unsignedBytes")
 
@@ -36,12 +48,17 @@ class VM(
         maybePrintState()
     }
 
+    fun getRegisterValues() = registers.toList()
+    fun getStack() = stack.toList()
+    fun getMemory() = memory.toList()
+
+    // Implementation
+
     /**
-     * fill me in
+     * todo: fill me in
      */
-    private fun getUnsignedBytes(programName: String): List<Int>? {
-        val fileName = javaClass.classLoader.getResource(programName)?.file ?: return null
-        return Files.readAllBytes(Paths.get(fileName)).map(Byte::toUnsignedInt)
+    private fun getUnsignedBytes(pathToProgram: Path): List<Int>? {
+        return Files.readAllBytes(pathToProgram).map(Byte::toUnsignedInt)
     }
 
     /**
@@ -211,7 +228,7 @@ class VM(
                 val target   = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
                 val operand2 = Operand.fromInt(memory[ip + 2]) ?: return false
 
-                registers[target.index] = operandToInt(operand2).inv()
+                registers[target.index] = operandToInt(operand2).inv() and ((1 shl 15) - 1)
                 ip += 3
 
                 return true
@@ -263,7 +280,12 @@ class VM(
                 return true
             }
 
-            IN -> TODO()
+            IN -> {
+                // todo: make this real
+                ip += 1
+
+                return true
+            }
 
             NOOP -> {
                 ip += 1
@@ -274,11 +296,11 @@ class VM(
     }
 
     private fun operandToInt(operand: Operand) = when (operand) {
-        is Operand.Number   -> operand.value
+        is Number   -> operand.value
         is Register -> registers[operand.index]
     }
 
-    // Logging methods
+    // Logging
 
     private fun maybeLog(statement: String) {
         if (log) println(statement)

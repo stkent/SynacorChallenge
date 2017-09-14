@@ -1,8 +1,18 @@
+import java.nio.file.Path
+import java.nio.file.Paths
+
 object Main {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        VM(log = false).runProgram(programName = "challenge.bin")
+        getPathToProgram("challenge.bin")?.let {
+            VM(log = false).runProgram(pathToProgram = it)
+        }
+    }
+
+    private fun getPathToProgram(programName: String): Path? {
+        val fileName = javaClass.classLoader.getResource(programName)?.file ?: return null
+        return Paths.get(fileName)
     }
 
 }
