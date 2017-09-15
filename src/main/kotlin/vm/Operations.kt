@@ -36,8 +36,14 @@ enum class OpCode {
 }
 
 sealed class Operand {
-    class Number(val value: Int) : Operand()
-    class Register(val index: Int) : Operand()
+
+    class Number(val value: Int) : Operand() {
+        override fun toString() = value.toString()
+    }
+
+    class Register(val index: Int) : Operand() {
+        override fun toString() = "REG[$index]"
+    }
 
     companion object {
         fun fromInt(int: Int): Operand? = when (int) {
@@ -46,4 +52,5 @@ sealed class Operand {
             else            -> null
         }
     }
+
 }

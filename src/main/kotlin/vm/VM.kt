@@ -2,39 +2,33 @@ package vm
 
 import Actor
 import InteractiveActor
-import toUnsignedInt
 import vm.OpCode.*
 import vm.Operand.Number
 import vm.Operand.Register
-import java.nio.file.Files
-import java.nio.file.Path
 import java.util.*
 
 /**
  * todo: fill me in
  */
 class VM(
-        private val actor: Actor = InteractiveActor,
-        registersSeed:       (Int) -> Int = { 0 },
-        stackSeed:           List<Int>    = emptyList(),
-        private var ip:      Int          = 0
+        private val actor: Actor        = InteractiveActor,
+        registersSeed:     (Int) -> Int = { 0 },
+        stackSeed:         List<Int>    = emptyList(),
+        private var ip:    Int          = 0
 ) {
 
-    private val registers = IntArray(8)
-    private val stack: Deque<Int> = ArrayDeque<Int>()
-    private val memory = mutableListOf<Int>()
-    private val lastInput: Deque<Char> = ArrayDeque<Char>()
+    private val registers: IntArray         = IntArray(8)
+    private val stack:     Deque<Int>       = ArrayDeque<Int>()
+    private val memory:    MutableList<Int> = mutableListOf()
+    private val lastInput: Deque<Char>      = ArrayDeque<Char>()
 
     init {
         (0 until registers.size).forEach { registers[it] = registersSeed(it) }
         stack.addAll(stackSeed)
     }
 
-    fun runProgram(pathToProgram: Path) {
-        val unsignedBytes = getUnsignedBytes(pathToProgram)
-        val unsigned16BitInts = to16BitInts(unsignedBytes)
-
-        memory.addAll(unsigned16BitInts)
+    fun runProgram(programInstructions: List<Int>) {
+        memory.addAll(programInstructions)
 
         var run = true
 
@@ -47,27 +41,6 @@ class VM(
     fun getRegisterValues() = registers.toList()
 
     // Implementation
-
-    /**
-     * todo: fill me in
-     */
-    private fun getUnsignedBytes(pathToProgram: Path) =
-            Files.readAllBytes(pathToProgram).map(Byte::toUnsignedInt)
-
-    /**
-     * Converts pairs of bytes (arranged in little-endian format) into 16-bit unsigned integers.
-     */
-    private fun to16BitInts(unsignedBytes: List<Int>): List<Int> {
-        val result = mutableListOf<Int>()
-
-        for (i in 0 until unsignedBytes.size step 2) {
-            val lowByte  = unsignedBytes[i]
-            val highByte = unsignedBytes[i + 1]
-            result.add((highByte shl 8) + lowByte)
-        }
-
-        return result
-    }
 
     private fun processOpCode(opCode: OpCode): Boolean {
         when (opCode) {

@@ -1,8 +1,8 @@
+package vm
+
+import DummyActor
 import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.fail
 import org.junit.jupiter.api.Test
-import vm.VM
-import java.nio.file.Paths
 
 class VMTest {
 
@@ -11,10 +11,10 @@ class VMTest {
         val vm = VM(
                 registersSeed = { 0 },
                 stackSeed = emptyList(),
-                ip = 0)
+                ip = 0,
+                actor = DummyActor)
 
-        val fileName = javaClass.classLoader.getResource("not.bin")?.file ?: fail("Test file not found!")
-        vm.runProgram(Paths.get(fileName))
+        vm.runProgram(listOf(14, 32768, 14000))
 
         val register1Value = vm.getRegisterValues().first()
         assertEquals(17875, register1Value)
