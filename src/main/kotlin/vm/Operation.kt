@@ -1,3 +1,5 @@
+package vm
+
 enum class OpCode {
     HALT,
     SET,
@@ -39,8 +41,8 @@ sealed class Operand {
 
     companion object {
         fun fromInt(int: Int): Operand? = when (int) {
-            in 0..32767     -> Operand.Number(value = int)
-            in 32768..32775 -> Operand.Register(index = int - 32768)
+            in 0..32767     -> Number(value = int)
+            in 32768..32775 -> Register(index = int - 32768)
             else            -> null
         }
     }

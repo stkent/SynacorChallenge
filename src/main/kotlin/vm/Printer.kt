@@ -1,3 +1,5 @@
+package vm
+
 interface Printer {
     fun print(char: Char)
 }

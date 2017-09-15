@@ -1,6 +1,8 @@
-import OpCode.*
-import Operand.Number
-import Operand.Register
+package vm
+
+import vm.OpCode.*
+import vm.Operand.Number
+import vm.Operand.Register
 import java.nio.file.Files
 import java.nio.file.Path
 import java.util.*
@@ -9,7 +11,7 @@ import java.util.*
  * todo: fill me in
  */
 class VM(
-        private val actor:   Actor        = InteractiveActor,
+        private val actor: Actor = InteractiveActor,
         registersSeed:       (Int) -> Int = { 0 },
         stackSeed:           List<Int>    = emptyList(),
         private var ip:      Int          = 0

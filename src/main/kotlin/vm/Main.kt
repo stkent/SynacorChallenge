@@ -1,3 +1,5 @@
+package vm
+
 import java.nio.file.Path
 import java.nio.file.Paths
 
@@ -6,7 +8,7 @@ object Main {
     @JvmStatic
     fun main(args: Array<String>) {
         getPathToProgram("challenge.bin")?.let { path ->
-            VM(actor = AutomatedActor).runProgram(pathToProgram = path)
+            VM(actor = BootstrappedActor).runProgram(pathToProgram = path)
         }
     }
 
