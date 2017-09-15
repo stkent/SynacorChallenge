@@ -6,7 +6,7 @@ object Main {
     @JvmStatic
     fun main(args: Array<String>) {
         getPathToProgram("challenge.bin")?.let {
-            VM(log = false).runProgram(pathToProgram = it)
+            VM().runProgram(pathToProgram = it)
         }
     }
 

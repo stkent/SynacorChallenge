@@ -11,13 +11,13 @@ import java.util.*
 class VM(
         registersSeed:   (Int) -> Int = { 0 },
         stackSeed:       List<Int>    = emptyList(),
-        private val log: Boolean      = false,
         private var ip:  Int          = 0
 ) {
 
     private val registers = IntArray(8)
-    private val stack  = ArrayDeque<Int>()
+    private val stack: Deque<Int> = ArrayDeque<Int>()
     private val memory = mutableListOf<Int>()
+    private val lastInput: Deque<Char> = ArrayDeque<Char>()
 
     init {
         (0 until registers.size).forEach { registers[it] = registersSeed(it) }
@@ -26,26 +26,16 @@ class VM(
 
     fun runProgram(pathToProgram: Path) {
         val unsignedBytes = getUnsignedBytes(pathToProgram) ?: return
-
-        maybeLog("Input parsed into unsigned bytes: $unsignedBytes")
-
         val unsigned16BitInts = to16BitInts(unsignedBytes)
-        maybeLog("Input parsed into unsigned 16-bit integers: $unsigned16BitInts")
 
         memory.addAll(unsigned16BitInts)
-        maybeLog("Input loaded into memory.")
-        maybePrintState()
 
         var run = true
 
         while (run && ip in 0 until memory.size) {
-            maybeLog("Handling instruction at index $ip")
-
             val opCode = OpCode.fromInt(memory[ip]) ?: break
             run = processOpCode(opCode)
         }
-
-        maybePrintState()
     }
 
     fun getRegisterValues() = registers.toList()
@@ -281,8 +271,16 @@ class VM(
             }
 
             IN -> {
-                // todo: make this real
-                ip += 1
+                val target = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
+
+                if (lastInput.isEmpty()) {
+                    val scan = Scanner(System.`in`)
+                    scan.nextLine().forEach { lastInput.add(it) }
+                    lastInput.add('\n')
+                }
+
+                registers[target.index] = lastInput.poll().toInt()
+                ip += 2
 
                 return true
             }
@@ -298,18 +296,6 @@ class VM(
     private fun operandToInt(operand: Operand) = when (operand) {
         is Number   -> operand.value
         is Register -> registers[operand.index]
-    }
-
-    // Logging
-
-    private fun maybeLog(statement: String) {
-        if (log) println(statement)
-    }
-
-    private fun maybePrintState() {
-        maybeLog("Current VM state:")
-        maybeLog("Registers: ${Arrays.toString(registers)}")
-        maybeLog("Stack: $stack")
     }
 
 }

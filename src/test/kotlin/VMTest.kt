@@ -10,7 +10,6 @@ class VMTest {
         val vm = VM(
                 registersSeed = { 0 },
                 stackSeed = emptyList(),
-                log = false,
                 ip = 0)
 
         val fileName = javaClass.classLoader.getResource("not.bin")?.file ?: fail("Test file not found!")
