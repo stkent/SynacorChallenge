@@ -1,5 +1,8 @@
 package vm
 
+import Actor
+import InteractiveActor
+import toUnsignedInt
 import vm.OpCode.*
 import vm.Operand.Number
 import vm.Operand.Register
@@ -28,7 +31,7 @@ class VM(
     }
 
     fun runProgram(pathToProgram: Path) {
-        val unsignedBytes = getUnsignedBytes(pathToProgram) ?: return
+        val unsignedBytes = getUnsignedBytes(pathToProgram)
         val unsigned16BitInts = to16BitInts(unsignedBytes)
 
         memory.addAll(unsigned16BitInts)
@@ -42,17 +45,14 @@ class VM(
     }
 
     fun getRegisterValues() = registers.toList()
-    fun getStack() = stack.toList()
-    fun getMemory() = memory.toList()
 
     // Implementation
 
     /**
      * todo: fill me in
      */
-    private fun getUnsignedBytes(pathToProgram: Path): List<Int>? {
-        return Files.readAllBytes(pathToProgram).map(Byte::toUnsignedInt)
-    }
+    private fun getUnsignedBytes(pathToProgram: Path) =
+            Files.readAllBytes(pathToProgram).map(Byte::toUnsignedInt)
 
     /**
      * Converts pairs of bytes (arranged in little-endian format) into 16-bit unsigned integers.

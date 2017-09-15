@@ -1,5 +1,4 @@
-package vm
-
+import vm.VM
 import java.nio.file.Path
 import java.nio.file.Paths
 

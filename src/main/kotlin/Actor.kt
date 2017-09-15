@@ -1,5 +1,3 @@
-package vm
-
 import java.util.*
 
 interface Actor {
