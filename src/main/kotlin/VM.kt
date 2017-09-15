@@ -9,9 +9,10 @@ import java.util.*
  * todo: fill me in
  */
 class VM(
-        registersSeed:   (Int) -> Int = { 0 },
-        stackSeed:       List<Int>    = emptyList(),
-        private var ip:  Int          = 0
+        private val printer: Printer      = SystemOutPrinter,
+        registersSeed:       (Int) -> Int = { 0 },
+        stackSeed:           List<Int>    = emptyList(),
+        private var ip:      Int          = 0
 ) {
 
     private val registers = IntArray(8)
@@ -264,7 +265,7 @@ class VM(
             OUT -> {
                 val operand = Operand.fromInt(memory[ip + 1]) ?: return false
 
-                print(operandToInt(operand).toChar())
+                printer.print(operandToInt(operand).toChar())
                 ip += 2
 
                 return true
