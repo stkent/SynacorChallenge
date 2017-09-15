@@ -277,7 +277,13 @@ class VM(
                 val target = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
 
                 if (lastInput.isEmpty()) {
-                    actor.getInput().forEach { lastInput.add(it) }
+                    val input = actor.getInput()
+
+                    if (input == "use teleporter") {
+                        registers[7] = 1
+                    }
+
+                    input.forEach { lastInput.add(it) }
                     lastInput.add('\n')
                 }
 
