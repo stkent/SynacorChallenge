@@ -9,7 +9,7 @@ import java.util.*
  * todo: fill me in
  */
 class VM(
-        private val printer: Printer      = SystemOutPrinter,
+        private val actor:   Actor        = InteractiveActor,
         registersSeed:       (Int) -> Int = { 0 },
         stackSeed:           List<Int>    = emptyList(),
         private var ip:      Int          = 0
@@ -265,7 +265,7 @@ class VM(
             OUT -> {
                 val operand = Operand.fromInt(memory[ip + 1]) ?: return false
 
-                printer.print(operandToInt(operand).toChar())
+                actor.handleOutput(operandToInt(operand).toChar())
                 ip += 2
 
                 return true
@@ -275,8 +275,7 @@ class VM(
                 val target = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
 
                 if (lastInput.isEmpty()) {
-                    val scan = Scanner(System.`in`)
-                    scan.nextLine().forEach { lastInput.add(it) }
+                    actor.getInput().forEach { lastInput.add(it) }
                     lastInput.add('\n')
                 }
 

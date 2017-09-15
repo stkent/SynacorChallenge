@@ -5,7 +5,7 @@ interface Printer {
 object SystemOutPrinter : Printer {
 
     override fun print(char: Char) {
-        print(char)
+        kotlin.io.print(char)
     }
 
 }
