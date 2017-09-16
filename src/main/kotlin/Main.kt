@@ -10,11 +10,11 @@ object Main {
     fun main(args: Array<String>) {
         val programBytes = readProgramBytes("challenge.bin")
 
-        println("""
+        print("""
             Choose an option:
 
-            [1] Run program")
-            [2] Decompile program")
+            [1] Run program"
+            [2] Decompile program"
 
             > """.trimIndent())
 
@@ -22,7 +22,7 @@ object Main {
 
         when (option) {
             "1" -> VM(actor = InteractiveActor).runProgram(programBytes)
-            "2" -> Decompiler().decompile(programBytes)
+            "2" -> Decompiler().decompile(programBytes, "tempfile.txt")
             else -> println("Option not recognized. Exiting.")
         }
     }
