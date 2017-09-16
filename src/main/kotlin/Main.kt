@@ -14,12 +14,12 @@ object Main {
         val programBytes = readProgramBytes("$fileName.bin")
 
         print("""
-            Choose an option:
+              Choose an option:
 
-            [1] Run program
-            [2] Decompile program
+              [1] Run program
+              [2] Decompile program
 
-            > """.trimIndent())
+              > """.trimIndent())
 
         val option = Scanner(System.`in`).nextLine()!!
 
