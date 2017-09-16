@@ -27,8 +27,10 @@ class VM(
         stack.addAll(stackSeed)
     }
 
-    fun runProgram(programInstructions: List<Int>) {
-        memory.addAll(programInstructions)
+    fun runProgram(programBytes: ByteArray) {
+        val intInstructions = parseIntInstructions(programBytes)
+
+        memory.addAll(intInstructions)
 
         var run = true
 

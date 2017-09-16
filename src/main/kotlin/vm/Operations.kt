@@ -1,28 +1,28 @@
 package vm
 
-enum class OpCode {
-    HALT,
-    SET,
-    PUSH,
-    POP,
-    EQ,
-    GT,
-    JMP,
-    JT,
-    JF,
-    ADD,
-    MULT,
-    MOD,
-    AND,
-    OR,
-    NOT,
-    RMEM,
-    WMEM,
-    CALL,
-    RET,
-    OUT,
-    IN,
-    NOOP;
+enum class OpCode(val operandCount: Int) {
+    HALT(0),
+    SET(2),
+    PUSH(1),
+    POP(1),
+    EQ(3),
+    GT(3),
+    JMP(1),
+    JT(2),
+    JF(2),
+    ADD(3),
+    MULT(3),
+    MOD(3),
+    AND(3),
+    OR(3),
+    NOT(2),
+    RMEM(2),
+    WMEM(2),
+    CALL(1),
+    RET(0),
+    OUT(1),
+    IN(1),
+    NOOP(0);
 
     companion object {
         fun fromInt(int: Int): OpCode? {

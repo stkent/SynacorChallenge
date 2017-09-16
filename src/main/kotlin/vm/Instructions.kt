@@ -3,7 +3,7 @@ package vm
 /**
  * Converts an array of bytes representing a program into a list of 16-bit unsigned integer instructions.
  */
-fun getIntInstructions(programBytes: ByteArray): List<Int> {
+fun parseIntInstructions(programBytes: ByteArray): List<Int> {
     val bytesAsUnsignedInts = programBytes.map(Byte::toUnsignedInt)
 
     val result = mutableListOf<Int>()

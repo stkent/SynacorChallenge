@@ -1,5 +1,5 @@
+import vm.Decompiler
 import vm.VM
-import vm.getIntInstructions
 import java.nio.file.Files
 import java.nio.file.Paths
 
@@ -8,8 +8,9 @@ object Main {
     @JvmStatic
     fun main(args: Array<String>) {
         val programBytes = readProgramBytes("challenge.bin")
-        val programIntInstructions = getIntInstructions(programBytes)
-        VM(actor = InteractiveActor).runProgram(programIntInstructions)
+
+        Decompiler().decompile(programBytes)
+        VM(actor = InteractiveActor).runProgram(programBytes)
     }
 
     private fun readProgramBytes(programName: String): ByteArray {

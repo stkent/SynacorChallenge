@@ -1,47 +1,37 @@
 package vm
 
-import vm.OpCode.*
-
 class Decompiler {
 
-    fun getReadableInstructions(programBytes: ByteArray) {
-        val intInstructions = getIntInstructions(programBytes)
+    fun decompile(programBytes: ByteArray) {
+        val intInstructions = parseIntInstructions(programBytes)
 
         var index = 0
 
         while (index < intInstructions.size) {
-            val opCode = OpCode.fromInt(intInstructions[index])!!
-            println(opCode)
+            val intInstruction = intInstructions[index]
+            val opCode = OpCode.fromInt(intInstruction)
 
-            when (opCode) {
-                HALT -> TODO()
-                SET -> TODO()
-                PUSH -> TODO()
-                POP -> TODO()
-                EQ -> TODO()
-                GT -> TODO()
-                JMP -> TODO()
-                JT -> TODO()
-                JF -> TODO()
-                ADD -> TODO()
-                MULT -> TODO()
-                MOD -> TODO()
-                AND -> TODO()
-                OR -> TODO()
-                NOT -> TODO()
-                RMEM -> TODO()
-                WMEM -> TODO()
-                CALL -> TODO()
-                RET -> TODO()
-                OUT -> TODO()
-                IN -> TODO()
-                NOOP -> TODO()
+            if (opCode != null) {
+                println(opCode)
+
+                val operandCount = opCode.operandCount
+
+                if (operandCount > 0) {
+                    printOperands(intInstructions.subList(index + 1, index + operandCount + 1))
+                }
+
+                index += operandCount + 1
+            } else {
+                println(intInstruction)
+                index += 1
             }
         }
     }
 
     private fun printOperands(intInstructions: List<Int>) {
-
+        intInstructions
+                .map { instruction -> Operand.fromInt(instruction) }
+                .forEach { operand -> println(operand) }
     }
 
 }
