@@ -8,7 +8,10 @@ object Main {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val programBytes = readProgramBytes("challenge.bin")
+        // Name of a binary file residing in the resources directory.
+        val fileName = "challenge"
+
+        val programBytes = readProgramBytes("$fileName.bin")
 
         print("""
             Choose an option:
@@ -22,7 +25,7 @@ object Main {
 
         when (option) {
             "1" -> VM(actor = InteractiveActor).runProgram(programBytes)
-            "2" -> Decompiler().decompile(programBytes, "tempfile.txt")
+            "2" -> Decompiler().decompile(programBytes, "${fileName}_decompiled.txt")
             else -> println("Option not recognized. Exiting.")
         }
     }

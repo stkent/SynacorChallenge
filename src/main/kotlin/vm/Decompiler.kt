@@ -20,12 +20,13 @@ class Decompiler {
                     val operandCount = opCode.operandCount
 
                     if (opCode == OpCode.OUT) {
-                        val intInstruction = intInstructions[index + 1]
+                        // Special handling for OUT because operands will often be ASCII characters.
+                        val intOperand = intInstructions[index + 1]
 
-                        if (intInstruction <= MAX_INT) {
-                            writer.println("\"${intInstruction.toChar()}\"")
+                        if (intOperand <= MAX_INT) {
+                            writer.println("\"${intOperand.toChar()}\"")
                         } else {
-                            writer.println(Operand.fromInt(intInstruction))
+                            writer.println(Operand.fromInt(intOperand))
                         }
                     } else if (operandCount > 0) {
                         intInstructions
