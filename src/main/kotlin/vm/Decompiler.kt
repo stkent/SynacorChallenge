@@ -19,7 +19,15 @@ class Decompiler {
 
                     val operandCount = opCode.operandCount
 
-                    if (operandCount > 0) {
+                    if (opCode == OpCode.OUT) {
+                        val intInstruction = intInstructions[index + 1]
+
+                        if (intInstruction <= MAX_INT) {
+                            writer.println("\"${intInstruction.toChar()}\"")
+                        } else {
+                            writer.println(Operand.fromInt(intInstruction))
+                        }
+                    } else if (operandCount > 0) {
                         intInstructions
                                 .subList(index + 1, index + operandCount + 1)
                                 .map { instruction -> Operand.fromInt(instruction) }

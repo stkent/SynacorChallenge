@@ -7,6 +7,11 @@ import vm.Operand.Number
 import vm.Operand.Register
 import java.util.*
 
+const val MAX_INT = 32767
+const val FIRST_REGISTER_INSTRUCTION = MAX_INT + 1
+const val REGISTER_COUNT = 8
+const val LAST_REGISTER_INSTRUCTION = FIRST_REGISTER_INSTRUCTION + REGISTER_COUNT - 1
+
 /**
  * todo: fill me in
  */
@@ -17,7 +22,7 @@ class VM(
         private var ip:    Int          = 0
 ) {
 
-    private val registers: IntArray         = IntArray(8)
+    private val registers: IntArray         = IntArray(REGISTER_COUNT)
     private val stack:     Deque<Int>       = ArrayDeque<Int>()
     private val memory:    MutableList<Int> = mutableListOf()
     private val lastInput: Deque<Char>      = ArrayDeque<Char>()

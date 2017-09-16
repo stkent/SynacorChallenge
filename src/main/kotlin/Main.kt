@@ -13,8 +13,8 @@ object Main {
         print("""
             Choose an option:
 
-            [1] Run program"
-            [2] Decompile program"
+            [1] Run program
+            [2] Decompile program
 
             > """.trimIndent())
 

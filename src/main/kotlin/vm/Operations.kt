@@ -47,9 +47,17 @@ sealed class Operand {
 
     companion object {
         fun fromInt(int: Int): Operand? = when (int) {
-            in 0..32767     -> Number(value = int)
-            in 32768..32775 -> Register(index = int - 32768)
-            else            -> null
+            in 0..MAX_INT -> {
+                Number(value = int)
+            }
+
+            in FIRST_REGISTER_INSTRUCTION..LAST_REGISTER_INSTRUCTION -> {
+                Register(index = int - FIRST_REGISTER_INSTRUCTION)
+            }
+
+            else -> {
+                null
+            }
         }
     }
 
