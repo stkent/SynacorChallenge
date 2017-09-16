@@ -1,0 +1,6 @@
+ADD
+REG[0]
+REG[1]
+4
+OUT
+REG[0]
