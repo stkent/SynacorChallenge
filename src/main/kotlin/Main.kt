@@ -24,7 +24,7 @@ object Main {
         val option = Scanner(System.`in`).nextLine()!!
 
         when (option) {
-            "1" -> VM(actor = InteractiveActor).runProgram(programBytes)
+            "1" -> VM(actor = BootstrappedActor).runProgram(programBytes)
             "2" -> Decompiler().decompile(programBytes, "${fileName}_decompiled.txt")
             else -> println("Option not recognized. Exiting.")
         }

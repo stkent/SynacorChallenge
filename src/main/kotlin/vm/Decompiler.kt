@@ -24,7 +24,19 @@ class Decompiler {
                         val intOperand = intInstructions[index + 1]
 
                         if (intOperand <= MAX_INT) {
-                            writer.println("\"${intOperand.toChar()}\"")
+                            val operandChar = intOperand.toChar()
+
+                            if (operandChar == '\n') {
+                                /*
+                                 * Print newline literals (1 line "tall"), rather than inserting actual newlines (2
+                                 * lines "tall") so that our decompiled file line numbers correspond to instruction
+                                 * indices (offset by 1, since the instruction indices are 0-indexed but the file line
+                                 * numbers are 1-indexed).
+                                 */
+                                writer.println("\"\\n\"")
+                            } else {
+                                writer.println("\"$operandChar\"")
+                            }
                         } else {
                             writer.println(Operand.fromInt(intOperand))
                         }
@@ -37,7 +49,7 @@ class Decompiler {
 
                     index += operandCount + 1
                 } else {
-                    // Represents initial data (vs initial instruction) in binary file.
+                    // Represents a piece of initial data (vs an operation) in the binary file we're decompiling.
                     writer.println(intInstruction)
                     index += 1
                 }
