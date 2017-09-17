@@ -33,6 +33,9 @@ enum class OpCode(val operandCount: Int) {
             }
         }
     }
+
+    override fun toString() = super.toString().toLowerCase()
+
 }
 
 sealed class Operand {
@@ -42,7 +45,7 @@ sealed class Operand {
     }
 
     class Register(val index: Int) : Operand() {
-        override fun toString() = "REG[$index]"
+        override fun toString() = "register[$index]"
     }
 
     companion object {

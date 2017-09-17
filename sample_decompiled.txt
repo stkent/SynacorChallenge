@@ -1,6 +1,6 @@
-ADD
-REG[0]
-REG[1]
-4
-OUT
-REG[0]
+add
+  register[0]
+  register[1]
+  4
+out
+  register[0]

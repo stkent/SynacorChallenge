@@ -1,6 +1,7 @@
 package vm
 
 import java.io.File
+import java.io.PrintWriter
 
 class Decompiler {
 
@@ -33,18 +34,18 @@ class Decompiler {
                                  * indices (offset by 1, since the instruction indices are 0-indexed but the file line
                                  * numbers are 1-indexed).
                                  */
-                                writer.println("\"\\n\"")
+                                printOperandValue("\"\\n\"", writer)
                             } else {
-                                writer.println("\"$operandChar\"")
+                                printOperandValue("\"$operandChar\"", writer)
                             }
                         } else {
-                            writer.println(Operand.fromInt(intOperand))
+                            printOperandValue(Operand.fromInt(intOperand).toString(), writer)
                         }
                     } else if (operandCount > 0) {
                         intInstructions
                                 .subList(index + 1, index + operandCount + 1)
                                 .map { instruction -> Operand.fromInt(instruction) }
-                                .forEach { operand -> writer.println(operand) }
+                                .forEach { operand -> printOperandValue(operand.toString(), writer) }
                     }
 
                     index += operandCount + 1
@@ -55,6 +56,10 @@ class Decompiler {
                 }
             }
         }
+    }
+
+    private fun printOperandValue(literal: String, writer: PrintWriter) {
+        writer.println("  $literal")
     }
 
 }

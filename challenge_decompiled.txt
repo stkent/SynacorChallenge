@@ -1,2380 +1,2380 @@
-NOOP
-NOOP
-OUT
-"W"
-OUT
-"e"
-OUT
-"l"
-OUT
-"c"
-OUT
-"o"
-OUT
-"m"
-OUT
-"e"
-OUT
-" "
-OUT
-"t"
-OUT
-"o"
-OUT
-" "
-OUT
-"t"
-OUT
-"h"
-OUT
-"e"
-OUT
-" "
-OUT
-"S"
-OUT
-"y"
-OUT
-"n"
-OUT
-"a"
-OUT
-"c"
-OUT
-"o"
-OUT
-"r"
-OUT
-" "
-OUT
-"C"
-OUT
-"h"
-OUT
-"a"
-OUT
-"l"
-OUT
-"l"
-OUT
-"e"
-OUT
-"n"
-OUT
-"g"
-OUT
-"e"
-OUT
-"!"
-OUT
-"\n"
-OUT
-"P"
-OUT
-"l"
-OUT
-"e"
-OUT
-"a"
-OUT
-"s"
-OUT
-"e"
-OUT
-" "
-OUT
-"r"
-OUT
-"e"
-OUT
-"c"
-OUT
-"o"
-OUT
-"r"
-OUT
-"d"
-OUT
-" "
-OUT
-"y"
-OUT
-"o"
-OUT
-"u"
-OUT
-"r"
-OUT
-" "
-OUT
-"p"
-OUT
-"r"
-OUT
-"o"
-OUT
-"g"
-OUT
-"r"
-OUT
-"e"
-OUT
-"s"
-OUT
-"s"
-OUT
-" "
-OUT
-"b"
-OUT
-"y"
-OUT
-" "
-OUT
-"p"
-OUT
-"u"
-OUT
-"t"
-OUT
-"t"
-OUT
-"i"
-OUT
-"n"
-OUT
-"g"
-OUT
-" "
-OUT
-"c"
-OUT
-"o"
-OUT
-"d"
-OUT
-"e"
-OUT
-"s"
-OUT
-" "
-OUT
-"l"
-OUT
-"i"
-OUT
-"k"
-OUT
-"e"
-OUT
-"\n"
-OUT
-"t"
-OUT
-"h"
-OUT
-"i"
-OUT
-"s"
-OUT
-" "
-OUT
-"o"
-OUT
-"n"
-OUT
-"e"
-OUT
-" "
-OUT
-"i"
-OUT
-"n"
-OUT
-"t"
-OUT
-"o"
-OUT
-" "
-OUT
-"t"
-OUT
-"h"
-OUT
-"e"
-OUT
-" "
-OUT
-"c"
-OUT
-"h"
-OUT
-"a"
-OUT
-"l"
-OUT
-"l"
-OUT
-"e"
-OUT
-"n"
-OUT
-"g"
-OUT
-"e"
-OUT
-" "
-OUT
-"w"
-OUT
-"e"
-OUT
-"b"
-OUT
-"s"
-OUT
-"i"
-OUT
-"t"
-OUT
-"e"
-OUT
-":"
-OUT
-" "
-OUT
-"c"
-OUT
-"F"
-OUT
-"O"
-OUT
-"l"
-OUT
-"i"
-OUT
-"f"
-OUT
-"y"
-OUT
-"L"
-OUT
-"I"
-OUT
-"b"
-OUT
-"I"
-OUT
-"t"
-OUT
-"\n"
-OUT
-"\n"
-OUT
-"E"
-OUT
-"x"
-OUT
-"e"
-OUT
-"c"
-OUT
-"u"
-OUT
-"t"
-OUT
-"i"
-OUT
-"n"
-OUT
-"g"
-OUT
-" "
-OUT
-"s"
-OUT
-"e"
-OUT
-"l"
-OUT
-"f"
-OUT
-"-"
-OUT
-"t"
-OUT
-"e"
-OUT
-"s"
-OUT
-"t"
-OUT
-"."
-OUT
-"."
-OUT
-"."
-OUT
-"\n"
-OUT
-"\n"
-JMP
-347
-OUT
-"j"
-OUT
-"m"
-OUT
-"p"
-OUT
-" "
-OUT
-"f"
-OUT
-"a"
-OUT
-"i"
-OUT
-"l"
-OUT
-"s"
-OUT
-"\n"
-HALT
-NOOP
-NOOP
-NOOP
-NOOP
-NOOP
-NOOP
-NOOP
-NOOP
-NOOP
-JMP
-358
-JMP
-368
-JMP
-397
-JMP
-484
-JMP
-424
-JMP
-453
-NOOP
-NOOP
-NOOP
-NOOP
-OUT
-"j"
-OUT
-"m"
-OUT
-"p"
-OUT
-" "
-OUT
-"l"
-OUT
-"a"
-OUT
-"n"
-OUT
-"d"
-OUT
-"s"
-OUT
-" "
-OUT
-"-"
-OUT
-"2"
-OUT
-"\n"
-HALT
-NOOP
-NOOP
-OUT
-"j"
-OUT
-"m"
-OUT
-"p"
-OUT
-" "
-OUT
-"l"
-OUT
-"a"
-OUT
-"n"
-OUT
-"d"
-OUT
-"s"
-OUT
-" "
-OUT
-"-"
-OUT
-"1"
-OUT
-"\n"
-HALT
-NOOP
-NOOP
-OUT
-"j"
-OUT
-"m"
-OUT
-"p"
-OUT
-" "
-OUT
-"l"
-OUT
-"a"
-OUT
-"n"
-OUT
-"d"
-OUT
-"s"
-OUT
-" "
-OUT
-"+"
-OUT
-"1"
-OUT
-"\n"
-HALT
-NOOP
-NOOP
-NOOP
-NOOP
-OUT
-"j"
-OUT
-"m"
-OUT
-"p"
-OUT
-" "
-OUT
-"l"
-OUT
-"a"
-OUT
-"n"
-OUT
-"d"
-OUT
-"s"
-OUT
-" "
-OUT
-"+"
-OUT
-"2"
-OUT
-"\n"
-HALT
-JT
-0
-1074
-JF
-1
-1074
-JT
-1
-495
-JMP
-1074
-JF
-0
-500
-JMP
-1074
-JT
-REG[0]
-1093
-JT
-REG[1]
-1093
-JT
-REG[2]
-1093
-JT
-REG[3]
-1093
-JT
-REG[4]
-1093
-JT
-REG[5]
-1093
-JT
-REG[6]
-1093
-JT
-REG[7]
-1093
-SET
-REG[0]
-1
-JF
-REG[0]
-1118
-SET
-REG[0]
-0
-JT
-REG[0]
-1118
-ADD
-REG[0]
-1
-1
-JT
-REG[0]
-564
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"a"
-OUT
-"d"
-OUT
-"d"
-OUT
-" "
-OUT
-"o"
-OUT
-"p"
-OUT
-"\n"
-HALT
-EQ
-REG[1]
-REG[0]
-2
-JT
-REG[1]
-590
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"e"
-OUT
-"q"
-OUT
-" "
-OUT
-"o"
-OUT
-"p"
-OUT
-"\n"
-HALT
-PUSH
-REG[0]
-PUSH
-REG[1]
-POP
-REG[0]
-POP
-REG[1]
-EQ
-REG[2]
-REG[1]
-2
-JF
-REG[2]
-1158
-EQ
-REG[2]
-REG[0]
-1
-JF
-REG[2]
-1158
-GT
-REG[2]
-REG[1]
-REG[0]
-JF
-REG[2]
-1139
-GT
-REG[2]
-REG[0]
-REG[1]
-JT
-REG[2]
-1139
-GT
-REG[2]
-42
-42
-JT
-REG[2]
-1139
-AND
-REG[0]
-28912
-19626
-EQ
-REG[1]
-REG[0]
-16544
-JF
-REG[1]
-1177
-OR
-REG[1]
-28912
-19626
-EQ
-REG[0]
-REG[1]
-31994
-JT
-REG[0]
-684
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"b"
-OUT
-"i"
-OUT
-"t"
-OUT
-"w"
-OUT
-"i"
-OUT
-"s"
-OUT
-"e"
-OUT
-" "
-OUT
-"o"
-OUT
-"r"
-OUT
-"\n"
-HALT
-NOT
-REG[0]
-0
-EQ
-REG[1]
-REG[0]
-32767
-JF
-REG[1]
-1208
-NOT
-REG[0]
-21845
-EQ
-REG[1]
-REG[0]
-10922
-JF
-REG[1]
-1208
-CALL
-1285
-JMP
-1289
-POP
-REG[0]
-EQ
-REG[1]
-REG[0]
-708
-JT
-REG[1]
-1289
-EQ
-REG[1]
-REG[0]
-706
-JF
-REG[1]
-1289
-SET
-REG[0]
-1287
-CALL
-REG[0]
-JMP
-1289
-POP
-REG[0]
-EQ
-REG[1]
-REG[0]
-731
-JT
-REG[1]
-1289
-EQ
-REG[1]
-REG[0]
-729
-JF
-REG[1]
-1289
-ADD
-REG[0]
-32767
-32767
-EQ
-REG[1]
-REG[0]
-32766
-JF
-REG[1]
-1312
-EQ
-REG[1]
-32766
-REG[0]
-JF
-REG[1]
-1312
-ADD
-REG[0]
-16384
-16384
-JT
-REG[0]
-1312
-ADD
-REG[0]
-16384
-16384
-JT
-REG[0]
-1312
-MULT
-REG[0]
-6
-9
-EQ
-REG[1]
-REG[0]
-42
-JT
-REG[1]
-1381
-EQ
-REG[1]
-REG[0]
-54
-JF
-REG[1]
-1414
-MULT
-REG[0]
-12345
-32123
-EQ
-REG[1]
-REG[0]
-99
-JF
-REG[1]
-1312
-MOD
-REG[0]
-6
-3
-EQ
-REG[1]
-REG[0]
-0
-JF
-REG[1]
-1437
-MOD
-REG[0]
-70
-6
-EQ
-REG[1]
-REG[0]
-4
-JF
-REG[1]
-1437
-MULT
-REG[0]
-32766
-15
-EQ
-REG[1]
-REG[0]
-32738
-JF
-REG[1]
-1312
-JMP
-845
+noop
+noop
+out
+  "W"
+out
+  "e"
+out
+  "l"
+out
+  "c"
+out
+  "o"
+out
+  "m"
+out
+  "e"
+out
+  " "
+out
+  "t"
+out
+  "o"
+out
+  " "
+out
+  "t"
+out
+  "h"
+out
+  "e"
+out
+  " "
+out
+  "S"
+out
+  "y"
+out
+  "n"
+out
+  "a"
+out
+  "c"
+out
+  "o"
+out
+  "r"
+out
+  " "
+out
+  "C"
+out
+  "h"
+out
+  "a"
+out
+  "l"
+out
+  "l"
+out
+  "e"
+out
+  "n"
+out
+  "g"
+out
+  "e"
+out
+  "!"
+out
+  "\n"
+out
+  "P"
+out
+  "l"
+out
+  "e"
+out
+  "a"
+out
+  "s"
+out
+  "e"
+out
+  " "
+out
+  "r"
+out
+  "e"
+out
+  "c"
+out
+  "o"
+out
+  "r"
+out
+  "d"
+out
+  " "
+out
+  "y"
+out
+  "o"
+out
+  "u"
+out
+  "r"
+out
+  " "
+out
+  "p"
+out
+  "r"
+out
+  "o"
+out
+  "g"
+out
+  "r"
+out
+  "e"
+out
+  "s"
+out
+  "s"
+out
+  " "
+out
+  "b"
+out
+  "y"
+out
+  " "
+out
+  "p"
+out
+  "u"
+out
+  "t"
+out
+  "t"
+out
+  "i"
+out
+  "n"
+out
+  "g"
+out
+  " "
+out
+  "c"
+out
+  "o"
+out
+  "d"
+out
+  "e"
+out
+  "s"
+out
+  " "
+out
+  "l"
+out
+  "i"
+out
+  "k"
+out
+  "e"
+out
+  "\n"
+out
+  "t"
+out
+  "h"
+out
+  "i"
+out
+  "s"
+out
+  " "
+out
+  "o"
+out
+  "n"
+out
+  "e"
+out
+  " "
+out
+  "i"
+out
+  "n"
+out
+  "t"
+out
+  "o"
+out
+  " "
+out
+  "t"
+out
+  "h"
+out
+  "e"
+out
+  " "
+out
+  "c"
+out
+  "h"
+out
+  "a"
+out
+  "l"
+out
+  "l"
+out
+  "e"
+out
+  "n"
+out
+  "g"
+out
+  "e"
+out
+  " "
+out
+  "w"
+out
+  "e"
+out
+  "b"
+out
+  "s"
+out
+  "i"
+out
+  "t"
+out
+  "e"
+out
+  ":"
+out
+  " "
+out
+  "c"
+out
+  "F"
+out
+  "O"
+out
+  "l"
+out
+  "i"
+out
+  "f"
+out
+  "y"
+out
+  "L"
+out
+  "I"
+out
+  "b"
+out
+  "I"
+out
+  "t"
+out
+  "\n"
+out
+  "\n"
+out
+  "E"
+out
+  "x"
+out
+  "e"
+out
+  "c"
+out
+  "u"
+out
+  "t"
+out
+  "i"
+out
+  "n"
+out
+  "g"
+out
+  " "
+out
+  "s"
+out
+  "e"
+out
+  "l"
+out
+  "f"
+out
+  "-"
+out
+  "t"
+out
+  "e"
+out
+  "s"
+out
+  "t"
+out
+  "."
+out
+  "."
+out
+  "."
+out
+  "\n"
+out
+  "\n"
+jmp
+  347
+out
+  "j"
+out
+  "m"
+out
+  "p"
+out
+  " "
+out
+  "f"
+out
+  "a"
+out
+  "i"
+out
+  "l"
+out
+  "s"
+out
+  "\n"
+halt
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+noop
+jmp
+  358
+jmp
+  368
+jmp
+  397
+jmp
+  484
+jmp
+  424
+jmp
+  453
+noop
+noop
+noop
+noop
+out
+  "j"
+out
+  "m"
+out
+  "p"
+out
+  " "
+out
+  "l"
+out
+  "a"
+out
+  "n"
+out
+  "d"
+out
+  "s"
+out
+  " "
+out
+  "-"
+out
+  "2"
+out
+  "\n"
+halt
+noop
+noop
+out
+  "j"
+out
+  "m"
+out
+  "p"
+out
+  " "
+out
+  "l"
+out
+  "a"
+out
+  "n"
+out
+  "d"
+out
+  "s"
+out
+  " "
+out
+  "-"
+out
+  "1"
+out
+  "\n"
+halt
+noop
+noop
+out
+  "j"
+out
+  "m"
+out
+  "p"
+out
+  " "
+out
+  "l"
+out
+  "a"
+out
+  "n"
+out
+  "d"
+out
+  "s"
+out
+  " "
+out
+  "+"
+out
+  "1"
+out
+  "\n"
+halt
+noop
+noop
+noop
+noop
+out
+  "j"
+out
+  "m"
+out
+  "p"
+out
+  " "
+out
+  "l"
+out
+  "a"
+out
+  "n"
+out
+  "d"
+out
+  "s"
+out
+  " "
+out
+  "+"
+out
+  "2"
+out
+  "\n"
+halt
+jt
+  0
+  1074
+jf
+  1
+  1074
+jt
+  1
+  495
+jmp
+  1074
+jf
+  0
+  500
+jmp
+  1074
+jt
+  register[0]
+  1093
+jt
+  register[1]
+  1093
+jt
+  register[2]
+  1093
+jt
+  register[3]
+  1093
+jt
+  register[4]
+  1093
+jt
+  register[5]
+  1093
+jt
+  register[6]
+  1093
+jt
+  register[7]
+  1093
+set
+  register[0]
+  1
+jf
+  register[0]
+  1118
+set
+  register[0]
+  0
+jt
+  register[0]
+  1118
+add
+  register[0]
+  1
+  1
+jt
+  register[0]
+  564
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "a"
+out
+  "d"
+out
+  "d"
+out
+  " "
+out
+  "o"
+out
+  "p"
+out
+  "\n"
+halt
+eq
+  register[1]
+  register[0]
+  2
+jt
+  register[1]
+  590
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "e"
+out
+  "q"
+out
+  " "
+out
+  "o"
+out
+  "p"
+out
+  "\n"
+halt
+push
+  register[0]
+push
+  register[1]
+pop
+  register[0]
+pop
+  register[1]
+eq
+  register[2]
+  register[1]
+  2
+jf
+  register[2]
+  1158
+eq
+  register[2]
+  register[0]
+  1
+jf
+  register[2]
+  1158
+gt
+  register[2]
+  register[1]
+  register[0]
+jf
+  register[2]
+  1139
+gt
+  register[2]
+  register[0]
+  register[1]
+jt
+  register[2]
+  1139
+gt
+  register[2]
+  42
+  42
+jt
+  register[2]
+  1139
+and
+  register[0]
+  28912
+  19626
+eq
+  register[1]
+  register[0]
+  16544
+jf
+  register[1]
+  1177
+or
+  register[1]
+  28912
+  19626
+eq
+  register[0]
+  register[1]
+  31994
+jt
+  register[0]
+  684
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "b"
+out
+  "i"
+out
+  "t"
+out
+  "w"
+out
+  "i"
+out
+  "s"
+out
+  "e"
+out
+  " "
+out
+  "o"
+out
+  "r"
+out
+  "\n"
+halt
+not
+  register[0]
+  0
+eq
+  register[1]
+  register[0]
+  32767
+jf
+  register[1]
+  1208
+not
+  register[0]
+  21845
+eq
+  register[1]
+  register[0]
+  10922
+jf
+  register[1]
+  1208
+call
+  1285
+jmp
+  1289
+pop
+  register[0]
+eq
+  register[1]
+  register[0]
+  708
+jt
+  register[1]
+  1289
+eq
+  register[1]
+  register[0]
+  706
+jf
+  register[1]
+  1289
+set
+  register[0]
+  1287
+call
+  register[0]
+jmp
+  1289
+pop
+  register[0]
+eq
+  register[1]
+  register[0]
+  731
+jt
+  register[1]
+  1289
+eq
+  register[1]
+  register[0]
+  729
+jf
+  register[1]
+  1289
+add
+  register[0]
+  32767
+  32767
+eq
+  register[1]
+  register[0]
+  32766
+jf
+  register[1]
+  1312
+eq
+  register[1]
+  32766
+  register[0]
+jf
+  register[1]
+  1312
+add
+  register[0]
+  16384
+  16384
+jt
+  register[0]
+  1312
+add
+  register[0]
+  16384
+  16384
+jt
+  register[0]
+  1312
+mult
+  register[0]
+  6
+  9
+eq
+  register[1]
+  register[0]
+  42
+jt
+  register[1]
+  1381
+eq
+  register[1]
+  register[0]
+  54
+jf
+  register[1]
+  1414
+mult
+  register[0]
+  12345
+  32123
+eq
+  register[1]
+  register[0]
+  99
+jf
+  register[1]
+  1312
+mod
+  register[0]
+  6
+  3
+eq
+  register[1]
+  register[0]
+  0
+jf
+  register[1]
+  1437
+mod
+  register[0]
+  70
+  6
+eq
+  register[1]
+  register[0]
+  4
+jf
+  register[1]
+  1437
+mult
+  register[0]
+  32766
+  15
+eq
+  register[1]
+  register[0]
+  32738
+jf
+  register[1]
+  1312
+jmp
+  845
 20000
 10000
-RMEM
-REG[0]
-843
-EQ
-REG[1]
-REG[0]
-20000
-JF
-REG[1]
-1239
-ADD
-REG[2]
-843
-1
-RMEM
-REG[0]
-REG[2]
-EQ
-REG[1]
-REG[0]
-10000
-JF
-REG[1]
-1239
-SET
-REG[0]
-843
-WMEM
-REG[0]
-30000
-RMEM
-REG[2]
-REG[0]
-EQ
-REG[1]
-REG[2]
-30000
-JF
-REG[1]
-1262
-CALL
-1723
-RMEM
-REG[0]
-6068
-EQ
-REG[1]
-REG[0]
-11
-JF
-REG[1]
-1239
-ADD
-REG[2]
-6068
-1
-RMEM
-REG[0]
-REG[2]
-EQ
-REG[1]
-REG[0]
-116
-JF
-REG[1]
-1239
-WMEM
-REG[2]
-84
-RMEM
-REG[0]
-REG[2]
-EQ
-REG[1]
-REG[0]
-116
-JT
-REG[1]
-1262
-EQ
-REG[1]
-REG[0]
-84
-JF
-REG[1]
-1262
-WMEM
-937
-21
-WMEM
-938
-7
-JMP
-941
-OUT
-"ϒ"
-OUT
-"w"
-OUT
-"m"
-OUT
-"e"
-OUT
-"m"
-OUT
-" "
-OUT
-"o"
-OUT
-"p"
-OUT
-"w"
-OUT
-"r"
-OUT
-"i"
-OUT
-"t"
-OUT
-"e"
-OUT
-" "
-OUT
-"f"
-OUT
-"a"
-OUT
-"i"
-OUT
-"l"
-OUT
-"\n"
-HALT
-ADD
-REG[1]
-10
-6080
-ADD
-REG[1]
-REG[1]
-1
-RMEM
-REG[2]
-6116
-ADD
-REG[2]
-REG[2]
-6116
-SET
-REG[0]
-6116
-ADD
-REG[0]
-REG[0]
-1
-GT
-REG[3]
-REG[0]
-REG[2]
-JT
-REG[3]
-1023
-RMEM
-REG[4]
-REG[0]
-WMEM
-REG[1]
-REG[4]
-ADD
-REG[0]
-REG[0]
-1
-ADD
-REG[1]
-REG[1]
-1
-JMP
-1000
-RMEM
-REG[0]
-6080
-RMEM
-REG[1]
-6099
-ADD
-REG[0]
-REG[0]
-REG[1]
-ADD
-REG[0]
-REG[0]
-1
-WMEM
-6080
-REG[0]
-WMEM
-6099
-44
-SET
-REG[0]
-6080
-CALL
-1518
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-26851
-SET
-REG[1]
-1531
-ADD
-REG[2]
-971
-27058
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-JMP
-2734
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"j"
-OUT
-"t"
-OUT
-"/"
-OUT
-"j"
-OUT
-"f"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-"n"
-OUT
-"z"
-OUT
-"e"
-OUT
-"r"
-OUT
-"o"
-OUT
-" "
-OUT
-"r"
-OUT
-"e"
-OUT
-"g"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"s"
-OUT
-"e"
-OUT
-"t"
-OUT
-" "
-OUT
-"o"
-OUT
-"p"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"g"
-OUT
-"t"
-OUT
-" "
-OUT
-"o"
-OUT
-"p"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"s"
-OUT
-"t"
-OUT
-"a"
-OUT
-"c"
-OUT
-"k"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"b"
-OUT
-"i"
-OUT
-"t"
-OUT
-"w"
-OUT
-"i"
-OUT
-"s"
-OUT
-"e"
-OUT
-" "
-OUT
-"a"
-OUT
-"n"
-OUT
-"d"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"b"
-OUT
-"i"
-OUT
-"t"
-OUT
-"w"
-OUT
-"i"
-OUT
-"s"
-OUT
-"e"
-OUT
-" "
-OUT
-"n"
-OUT
-"o"
-OUT
-"t"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"r"
-OUT
-"m"
-OUT
-"e"
-OUT
-"m"
-OUT
-" "
-OUT
-"o"
-OUT
-"p"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"w"
-OUT
-"m"
-OUT
-"e"
-OUT
-"m"
-OUT
-" "
-OUT
-"o"
-OUT
-"p"
-OUT
-"\n"
-HALT
-JMP
-708
-JMP
-731
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"c"
-OUT
-"a"
-OUT
-"l"
-OUT
-"l"
-OUT
-" "
-OUT
-"o"
-OUT
-"p"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"m"
-OUT
-"o"
-OUT
-"d"
-OUT
-"u"
-OUT
-"l"
-OUT
-"o"
-OUT
-" "
-OUT
-"m"
-OUT
-"a"
-OUT
-"t"
-OUT
-"h"
-OUT
-" "
-OUT
-"d"
-OUT
-"u"
-OUT
-"r"
-OUT
-"i"
-OUT
-"n"
-OUT
-"g"
-OUT
-" "
-OUT
-"a"
-OUT
-"d"
-OUT
-"d"
-OUT
-" "
-OUT
-"o"
-OUT
-"r"
-OUT
-" "
-OUT
-"m"
-OUT
-"u"
-OUT
-"l"
-OUT
-"t"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-"t"
-OUT
-" "
-OUT
-"h"
-OUT
-"i"
-OUT
-"t"
-OUT
-"c"
-OUT
-"h"
-OUT
-"h"
-OUT
-"i"
-OUT
-"k"
-OUT
-"i"
-OUT
-"n"
-OUT
-"g"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"m"
-OUT
-"u"
-OUT
-"l"
-OUT
-"t"
-OUT
-" "
-OUT
-"o"
-OUT
-"p"
-OUT
-"\n"
-HALT
-OUT
-"n"
-OUT
-"o"
-OUT
-" "
-OUT
-"m"
-OUT
-"o"
-OUT
-"d"
-OUT
-" "
-OUT
-"o"
-OUT
-"p"
-OUT
-"\n"
-HALT
-PUSH
-REG[0]
-PUSH
-REG[3]
-PUSH
-REG[4]
-PUSH
-REG[5]
-PUSH
-REG[6]
-SET
-REG[6]
-REG[0]
-SET
-REG[5]
-REG[1]
-RMEM
-REG[4]
-REG[0]
-SET
-REG[1]
-0
-ADD
-REG[3]
-1
-REG[1]
-GT
-REG[0]
-REG[3]
-REG[4]
-JT
-REG[0]
-1507
-ADD
-REG[3]
-REG[3]
-REG[6]
-RMEM
-REG[0]
-REG[3]
-CALL
-REG[5]
-ADD
-REG[1]
-REG[1]
-1
-JT
-REG[1]
-1480
-POP
-REG[6]
-POP
-REG[5]
-POP
-REG[4]
-POP
-REG[3]
-POP
-REG[0]
-RET
-PUSH
-REG[1]
-SET
-REG[1]
-1528
-CALL
-1458
-POP
-REG[1]
-RET
-OUT
-REG[0]
-RET
-PUSH
-REG[1]
-SET
-REG[1]
-REG[2]
-CALL
-2125
-OUT
-REG[0]
-POP
-REG[1]
-RET
-PUSH
-REG[1]
-PUSH
-REG[3]
-RMEM
-REG[3]
-REG[0]
-JF
-REG[3]
-1563
-CALL
-1458
-JT
-REG[1]
-1563
-SET
-REG[0]
-REG[2]
-JMP
-1566
-SET
-REG[0]
-32767
-POP
-REG[3]
-POP
-REG[1]
-RET
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[2]
-REG[1]
-SET
-REG[1]
-1605
-CALL
-1543
-POP
-REG[2]
-POP
-REG[1]
-RET
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[2]
-REG[1]
-SET
-REG[1]
-1648
-CALL
-1543
-POP
-REG[2]
-POP
-REG[1]
-RET
-EQ
-REG[0]
-REG[0]
-REG[2]
-JF
-REG[0]
-1618
-SET
-REG[2]
-REG[1]
-SET
-REG[1]
-32767
-RET
-PUSH
-REG[3]
-ADD
-REG[3]
-REG[2]
-1
-ADD
-REG[3]
-REG[3]
-REG[1]
-RMEM
-REG[3]
-REG[3]
-EQ
-REG[3]
-REG[0]
-REG[3]
-JT
-REG[3]
-1645
-SET
-REG[2]
-REG[1]
-SET
-REG[1]
-32767
-POP
-REG[3]
-RET
-PUSH
-REG[1]
-SET
-REG[1]
-REG[2]
-CALL
-1667
-POP
-REG[1]
-JF
-REG[0]
-1666
-SET
-REG[2]
-REG[1]
-SET
-REG[1]
-32767
-RET
-PUSH
-REG[1]
-PUSH
-REG[2]
-PUSH
-REG[3]
-PUSH
-REG[4]
-RMEM
-REG[3]
-REG[0]
-RMEM
-REG[4]
-REG[1]
-EQ
-REG[2]
-REG[3]
-REG[4]
-JF
-REG[2]
-1711
-OR
-REG[2]
-REG[3]
-REG[4]
-JF
-REG[2]
-1706
-SET
-REG[2]
-REG[1]
-SET
-REG[1]
-1619
-CALL
-1458
-JF
-REG[1]
-1711
-SET
-REG[0]
-1
-JMP
-1714
-SET
-REG[0]
-0
-POP
-REG[4]
-POP
-REG[3]
-POP
-REG[2]
-POP
-REG[1]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[1]
-6068
-RMEM
-REG[0]
-REG[1]
-PUSH
-REG[1]
-MULT
-REG[1]
-REG[1]
-REG[1]
-CALL
-2125
-SET
-REG[1]
-16724
-CALL
-2125
-POP
-REG[1]
-WMEM
-REG[1]
-REG[0]
-ADD
-REG[1]
-REG[1]
-1
-EQ
-REG[0]
-30050
-REG[1]
-JF
-REG[0]
-1730
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[2]
-PUSH
-REG[3]
-PUSH
-REG[4]
-PUSH
-REG[5]
-ADD
-REG[2]
-REG[1]
-REG[0]
-SET
-REG[0]
-REG[1]
-SET
-REG[5]
-0
-ADD
-REG[0]
-REG[0]
-1
-GT
-REG[3]
-REG[0]
-REG[2]
-JT
-REG[3]
-1816
-IN
-REG[4]
-EQ
-REG[3]
-REG[4]
-10
-JT
-REG[3]
-1816
-WMEM
-REG[0]
-REG[4]
-ADD
-REG[5]
-REG[5]
-1
-JMP
-1787
-WMEM
-REG[1]
-REG[5]
-EQ
-REG[3]
-REG[4]
-10
-JT
-REG[3]
-1830
-IN
-REG[4]
-JMP
-1819
-POP
-REG[5]
-POP
-REG[4]
-POP
-REG[3]
-POP
-REG[2]
-POP
-REG[0]
-RET
-PUSH
-REG[3]
-PUSH
-REG[4]
-PUSH
-REG[5]
-PUSH
-REG[6]
-SET
-REG[6]
-1
-ADD
-REG[4]
-REG[3]
-REG[6]
-RMEM
-REG[4]
-REG[4]
-ADD
-REG[5]
-6125
-REG[6]
-WMEM
-REG[5]
-REG[4]
-ADD
-REG[6]
-REG[6]
-1
-RMEM
-REG[5]
-6125
-GT
-REG[4]
-REG[6]
-REG[5]
-JF
-REG[4]
-1852
-SET
-REG[3]
-0
-SET
-REG[4]
-0
-RMEM
-REG[5]
-6125
-MOD
-REG[5]
-REG[4]
-REG[5]
-ADD
-REG[5]
-REG[5]
-6125
-ADD
-REG[5]
-REG[5]
-1
-RMEM
-REG[6]
-REG[5]
-MULT
-REG[6]
-REG[6]
-5249
-ADD
-REG[6]
-REG[6]
-12345
-WMEM
-REG[5]
-REG[6]
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[1]
-REG[6]
-CALL
-2125
-SET
-REG[6]
-REG[0]
-POP
-REG[1]
-POP
-REG[0]
-RMEM
-REG[5]
-REG[1]
-MOD
-REG[6]
-REG[6]
-REG[5]
-ADD
-REG[6]
-REG[6]
-1
-GT
-REG[5]
-REG[6]
-REG[2]
-JT
-REG[5]
-1952
-SET
-REG[3]
-1
-ADD
-REG[6]
-REG[6]
-REG[1]
-RMEM
-REG[6]
-REG[6]
-ADD
-REG[4]
-REG[4]
-1
-ADD
-REG[5]
-REG[4]
-6129
-WMEM
-REG[5]
-REG[6]
-RMEM
-REG[5]
-6129
-EQ
-REG[5]
-REG[4]
-REG[5]
-JF
-REG[5]
-1886
-JF
-REG[3]
-1880
-PUSH
-REG[0]
-SET
-REG[0]
-6129
-CALL
-1518
-POP
-REG[0]
-POP
-REG[6]
-POP
-REG[5]
-POP
-REG[4]
-POP
-REG[3]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-PUSH
-REG[3]
-PUSH
-REG[4]
-PUSH
-REG[5]
-SET
-REG[2]
-1
-SET
-REG[5]
-0
-JF
-REG[0]
-2092
-EQ
-REG[4]
-REG[2]
-10000
-SET
-REG[3]
-REG[0]
-JT
-REG[4]
-2040
-MULT
-REG[1]
-REG[2]
-10
-MOD
-REG[3]
-REG[0]
-REG[1]
-SET
-REG[4]
-0
-MULT
-REG[2]
-REG[2]
-32767
-JF
-REG[3]
-2060
-ADD
-REG[4]
-REG[4]
-1
-ADD
-REG[3]
-REG[3]
-REG[2]
-JMP
-2047
-MULT
-REG[2]
-REG[2]
-32767
-MULT
-REG[3]
-REG[4]
-REG[2]
-MULT
-REG[3]
-REG[3]
-32767
-ADD
-REG[0]
-REG[0]
-REG[3]
-ADD
-REG[4]
-REG[4]
-48
-MULT
-REG[2]
-REG[2]
-10
-ADD
-REG[5]
-REG[5]
-1
-PUSH
-REG[4]
-JMP
-2019
-JT
-REG[5]
-2099
-OUT
-"0"
-JMP
-2112
-JF
-REG[5]
-2112
-POP
-REG[0]
-OUT
-REG[0]
-ADD
-REG[5]
-REG[5]
-32767
-JMP
-2099
-POP
-REG[5]
-POP
-REG[4]
-POP
-REG[3]
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[1]
-PUSH
-REG[2]
-AND
-REG[2]
-REG[0]
-REG[1]
-NOT
-REG[2]
-REG[2]
-OR
-REG[0]
-REG[0]
-REG[1]
-AND
-REG[0]
-REG[0]
-REG[2]
-POP
-REG[2]
-POP
-REG[1]
-RET
-ADD
-REG[0]
-REG[0]
-REG[1]
-GT
-REG[1]
-REG[1]
-REG[0]
-RET
-PUSH
-REG[2]
-GT
-REG[2]
-REG[1]
-REG[0]
-MULT
-REG[1]
-REG[1]
-32767
-ADD
-REG[0]
-REG[0]
-REG[1]
-SET
-REG[1]
-REG[2]
-POP
-REG[2]
-RET
-JF
-REG[0]
-2241
-JF
-REG[1]
-2241
-PUSH
-REG[2]
-PUSH
-REG[3]
-GT
-REG[2]
-REG[1]
-REG[0]
-JT
-REG[2]
-2204
-SET
-REG[2]
-REG[0]
-SET
-REG[0]
-REG[1]
-SET
-REG[1]
-REG[2]
-SET
-REG[2]
-REG[0]
-SET
-REG[0]
-0
-ADD
-REG[0]
-REG[0]
-REG[1]
-GT
-REG[3]
-REG[1]
-REG[0]
-JT
-REG[3]
-2233
-ADD
-REG[2]
-REG[2]
-32767
-JT
-REG[2]
-2210
-SET
-REG[1]
-0
-JMP
-2236
-SET
-REG[1]
-1
-POP
-REG[3]
-POP
-REG[2]
-RET
-SET
-REG[0]
-0
-SET
-REG[1]
-0
-RET
-PUSH
-REG[1]
-PUSH
-REG[2]
-JF
-REG[1]
-2276
-ADD
-REG[1]
-REG[1]
-32767
-AND
-REG[2]
-REG[0]
-16384
-MULT
-REG[0]
-REG[0]
-2
-JF
-REG[2]
-2252
-OR
-REG[0]
-REG[0]
-1
-JMP
-2252
-POP
-REG[2]
-POP
-REG[1]
-RET
-PUSH
-REG[1]
-GT
-REG[1]
-REG[0]
-14
-JT
-REG[1]
-2309
-SET
-REG[1]
-REG[0]
-SET
-REG[0]
-1
-JF
-REG[1]
-2312
-ADD
-REG[1]
-REG[1]
-32767
-MULT
-REG[0]
-REG[0]
-2
-JMP
-2296
-SET
-REG[0]
-32767
-POP
-REG[1]
-RET
-JMP
-2734
+rmem
+  register[0]
+  843
+eq
+  register[1]
+  register[0]
+  20000
+jf
+  register[1]
+  1239
+add
+  register[2]
+  843
+  1
+rmem
+  register[0]
+  register[2]
+eq
+  register[1]
+  register[0]
+  10000
+jf
+  register[1]
+  1239
+set
+  register[0]
+  843
+wmem
+  register[0]
+  30000
+rmem
+  register[2]
+  register[0]
+eq
+  register[1]
+  register[2]
+  30000
+jf
+  register[1]
+  1262
+call
+  1723
+rmem
+  register[0]
+  6068
+eq
+  register[1]
+  register[0]
+  11
+jf
+  register[1]
+  1239
+add
+  register[2]
+  6068
+  1
+rmem
+  register[0]
+  register[2]
+eq
+  register[1]
+  register[0]
+  116
+jf
+  register[1]
+  1239
+wmem
+  register[2]
+  84
+rmem
+  register[0]
+  register[2]
+eq
+  register[1]
+  register[0]
+  116
+jt
+  register[1]
+  1262
+eq
+  register[1]
+  register[0]
+  84
+jf
+  register[1]
+  1262
+wmem
+  937
+  21
+wmem
+  938
+  7
+jmp
+  941
+out
+  "ϒ"
+out
+  "w"
+out
+  "m"
+out
+  "e"
+out
+  "m"
+out
+  " "
+out
+  "o"
+out
+  "p"
+out
+  "w"
+out
+  "r"
+out
+  "i"
+out
+  "t"
+out
+  "e"
+out
+  " "
+out
+  "f"
+out
+  "a"
+out
+  "i"
+out
+  "l"
+out
+  "\n"
+halt
+add
+  register[1]
+  10
+  6080
+add
+  register[1]
+  register[1]
+  1
+rmem
+  register[2]
+  6116
+add
+  register[2]
+  register[2]
+  6116
+set
+  register[0]
+  6116
+add
+  register[0]
+  register[0]
+  1
+gt
+  register[3]
+  register[0]
+  register[2]
+jt
+  register[3]
+  1023
+rmem
+  register[4]
+  register[0]
+wmem
+  register[1]
+  register[4]
+add
+  register[0]
+  register[0]
+  1
+add
+  register[1]
+  register[1]
+  1
+jmp
+  1000
+rmem
+  register[0]
+  6080
+rmem
+  register[1]
+  6099
+add
+  register[0]
+  register[0]
+  register[1]
+add
+  register[0]
+  register[0]
+  1
+wmem
+  6080
+  register[0]
+wmem
+  6099
+  44
+set
+  register[0]
+  6080
+call
+  1518
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  26851
+set
+  register[1]
+  1531
+add
+  register[2]
+  971
+  27058
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+jmp
+  2734
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "j"
+out
+  "t"
+out
+  "/"
+out
+  "j"
+out
+  "f"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  "n"
+out
+  "z"
+out
+  "e"
+out
+  "r"
+out
+  "o"
+out
+  " "
+out
+  "r"
+out
+  "e"
+out
+  "g"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "s"
+out
+  "e"
+out
+  "t"
+out
+  " "
+out
+  "o"
+out
+  "p"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "g"
+out
+  "t"
+out
+  " "
+out
+  "o"
+out
+  "p"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "s"
+out
+  "t"
+out
+  "a"
+out
+  "c"
+out
+  "k"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "b"
+out
+  "i"
+out
+  "t"
+out
+  "w"
+out
+  "i"
+out
+  "s"
+out
+  "e"
+out
+  " "
+out
+  "a"
+out
+  "n"
+out
+  "d"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "b"
+out
+  "i"
+out
+  "t"
+out
+  "w"
+out
+  "i"
+out
+  "s"
+out
+  "e"
+out
+  " "
+out
+  "n"
+out
+  "o"
+out
+  "t"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "r"
+out
+  "m"
+out
+  "e"
+out
+  "m"
+out
+  " "
+out
+  "o"
+out
+  "p"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "w"
+out
+  "m"
+out
+  "e"
+out
+  "m"
+out
+  " "
+out
+  "o"
+out
+  "p"
+out
+  "\n"
+halt
+jmp
+  708
+jmp
+  731
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "c"
+out
+  "a"
+out
+  "l"
+out
+  "l"
+out
+  " "
+out
+  "o"
+out
+  "p"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "m"
+out
+  "o"
+out
+  "d"
+out
+  "u"
+out
+  "l"
+out
+  "o"
+out
+  " "
+out
+  "m"
+out
+  "a"
+out
+  "t"
+out
+  "h"
+out
+  " "
+out
+  "d"
+out
+  "u"
+out
+  "r"
+out
+  "i"
+out
+  "n"
+out
+  "g"
+out
+  " "
+out
+  "a"
+out
+  "d"
+out
+  "d"
+out
+  " "
+out
+  "o"
+out
+  "r"
+out
+  " "
+out
+  "m"
+out
+  "u"
+out
+  "l"
+out
+  "t"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  "t"
+out
+  " "
+out
+  "h"
+out
+  "i"
+out
+  "t"
+out
+  "c"
+out
+  "h"
+out
+  "h"
+out
+  "i"
+out
+  "k"
+out
+  "i"
+out
+  "n"
+out
+  "g"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "m"
+out
+  "u"
+out
+  "l"
+out
+  "t"
+out
+  " "
+out
+  "o"
+out
+  "p"
+out
+  "\n"
+halt
+out
+  "n"
+out
+  "o"
+out
+  " "
+out
+  "m"
+out
+  "o"
+out
+  "d"
+out
+  " "
+out
+  "o"
+out
+  "p"
+out
+  "\n"
+halt
+push
+  register[0]
+push
+  register[3]
+push
+  register[4]
+push
+  register[5]
+push
+  register[6]
+set
+  register[6]
+  register[0]
+set
+  register[5]
+  register[1]
+rmem
+  register[4]
+  register[0]
+set
+  register[1]
+  0
+add
+  register[3]
+  1
+  register[1]
+gt
+  register[0]
+  register[3]
+  register[4]
+jt
+  register[0]
+  1507
+add
+  register[3]
+  register[3]
+  register[6]
+rmem
+  register[0]
+  register[3]
+call
+  register[5]
+add
+  register[1]
+  register[1]
+  1
+jt
+  register[1]
+  1480
+pop
+  register[6]
+pop
+  register[5]
+pop
+  register[4]
+pop
+  register[3]
+pop
+  register[0]
+ret
+push
+  register[1]
+set
+  register[1]
+  1528
+call
+  1458
+pop
+  register[1]
+ret
+out
+  register[0]
+ret
+push
+  register[1]
+set
+  register[1]
+  register[2]
+call
+  2125
+out
+  register[0]
+pop
+  register[1]
+ret
+push
+  register[1]
+push
+  register[3]
+rmem
+  register[3]
+  register[0]
+jf
+  register[3]
+  1563
+call
+  1458
+jt
+  register[1]
+  1563
+set
+  register[0]
+  register[2]
+jmp
+  1566
+set
+  register[0]
+  32767
+pop
+  register[3]
+pop
+  register[1]
+ret
+push
+  register[1]
+push
+  register[2]
+set
+  register[2]
+  register[1]
+set
+  register[1]
+  1605
+call
+  1543
+pop
+  register[2]
+pop
+  register[1]
+ret
+push
+  register[1]
+push
+  register[2]
+set
+  register[2]
+  register[1]
+set
+  register[1]
+  1648
+call
+  1543
+pop
+  register[2]
+pop
+  register[1]
+ret
+eq
+  register[0]
+  register[0]
+  register[2]
+jf
+  register[0]
+  1618
+set
+  register[2]
+  register[1]
+set
+  register[1]
+  32767
+ret
+push
+  register[3]
+add
+  register[3]
+  register[2]
+  1
+add
+  register[3]
+  register[3]
+  register[1]
+rmem
+  register[3]
+  register[3]
+eq
+  register[3]
+  register[0]
+  register[3]
+jt
+  register[3]
+  1645
+set
+  register[2]
+  register[1]
+set
+  register[1]
+  32767
+pop
+  register[3]
+ret
+push
+  register[1]
+set
+  register[1]
+  register[2]
+call
+  1667
+pop
+  register[1]
+jf
+  register[0]
+  1666
+set
+  register[2]
+  register[1]
+set
+  register[1]
+  32767
+ret
+push
+  register[1]
+push
+  register[2]
+push
+  register[3]
+push
+  register[4]
+rmem
+  register[3]
+  register[0]
+rmem
+  register[4]
+  register[1]
+eq
+  register[2]
+  register[3]
+  register[4]
+jf
+  register[2]
+  1711
+or
+  register[2]
+  register[3]
+  register[4]
+jf
+  register[2]
+  1706
+set
+  register[2]
+  register[1]
+set
+  register[1]
+  1619
+call
+  1458
+jf
+  register[1]
+  1711
+set
+  register[0]
+  1
+jmp
+  1714
+set
+  register[0]
+  0
+pop
+  register[4]
+pop
+  register[3]
+pop
+  register[2]
+pop
+  register[1]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[1]
+  6068
+rmem
+  register[0]
+  register[1]
+push
+  register[1]
+mult
+  register[1]
+  register[1]
+  register[1]
+call
+  2125
+set
+  register[1]
+  16724
+call
+  2125
+pop
+  register[1]
+wmem
+  register[1]
+  register[0]
+add
+  register[1]
+  register[1]
+  1
+eq
+  register[0]
+  30050
+  register[1]
+jf
+  register[0]
+  1730
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[2]
+push
+  register[3]
+push
+  register[4]
+push
+  register[5]
+add
+  register[2]
+  register[1]
+  register[0]
+set
+  register[0]
+  register[1]
+set
+  register[5]
+  0
+add
+  register[0]
+  register[0]
+  1
+gt
+  register[3]
+  register[0]
+  register[2]
+jt
+  register[3]
+  1816
+in
+  register[4]
+eq
+  register[3]
+  register[4]
+  10
+jt
+  register[3]
+  1816
+wmem
+  register[0]
+  register[4]
+add
+  register[5]
+  register[5]
+  1
+jmp
+  1787
+wmem
+  register[1]
+  register[5]
+eq
+  register[3]
+  register[4]
+  10
+jt
+  register[3]
+  1830
+in
+  register[4]
+jmp
+  1819
+pop
+  register[5]
+pop
+  register[4]
+pop
+  register[3]
+pop
+  register[2]
+pop
+  register[0]
+ret
+push
+  register[3]
+push
+  register[4]
+push
+  register[5]
+push
+  register[6]
+set
+  register[6]
+  1
+add
+  register[4]
+  register[3]
+  register[6]
+rmem
+  register[4]
+  register[4]
+add
+  register[5]
+  6125
+  register[6]
+wmem
+  register[5]
+  register[4]
+add
+  register[6]
+  register[6]
+  1
+rmem
+  register[5]
+  6125
+gt
+  register[4]
+  register[6]
+  register[5]
+jf
+  register[4]
+  1852
+set
+  register[3]
+  0
+set
+  register[4]
+  0
+rmem
+  register[5]
+  6125
+mod
+  register[5]
+  register[4]
+  register[5]
+add
+  register[5]
+  register[5]
+  6125
+add
+  register[5]
+  register[5]
+  1
+rmem
+  register[6]
+  register[5]
+mult
+  register[6]
+  register[6]
+  5249
+add
+  register[6]
+  register[6]
+  12345
+wmem
+  register[5]
+  register[6]
+push
+  register[0]
+push
+  register[1]
+set
+  register[1]
+  register[6]
+call
+  2125
+set
+  register[6]
+  register[0]
+pop
+  register[1]
+pop
+  register[0]
+rmem
+  register[5]
+  register[1]
+mod
+  register[6]
+  register[6]
+  register[5]
+add
+  register[6]
+  register[6]
+  1
+gt
+  register[5]
+  register[6]
+  register[2]
+jt
+  register[5]
+  1952
+set
+  register[3]
+  1
+add
+  register[6]
+  register[6]
+  register[1]
+rmem
+  register[6]
+  register[6]
+add
+  register[4]
+  register[4]
+  1
+add
+  register[5]
+  register[4]
+  6129
+wmem
+  register[5]
+  register[6]
+rmem
+  register[5]
+  6129
+eq
+  register[5]
+  register[4]
+  register[5]
+jf
+  register[5]
+  1886
+jf
+  register[3]
+  1880
+push
+  register[0]
+set
+  register[0]
+  6129
+call
+  1518
+pop
+  register[0]
+pop
+  register[6]
+pop
+  register[5]
+pop
+  register[4]
+pop
+  register[3]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+push
+  register[3]
+push
+  register[4]
+push
+  register[5]
+set
+  register[2]
+  1
+set
+  register[5]
+  0
+jf
+  register[0]
+  2092
+eq
+  register[4]
+  register[2]
+  10000
+set
+  register[3]
+  register[0]
+jt
+  register[4]
+  2040
+mult
+  register[1]
+  register[2]
+  10
+mod
+  register[3]
+  register[0]
+  register[1]
+set
+  register[4]
+  0
+mult
+  register[2]
+  register[2]
+  32767
+jf
+  register[3]
+  2060
+add
+  register[4]
+  register[4]
+  1
+add
+  register[3]
+  register[3]
+  register[2]
+jmp
+  2047
+mult
+  register[2]
+  register[2]
+  32767
+mult
+  register[3]
+  register[4]
+  register[2]
+mult
+  register[3]
+  register[3]
+  32767
+add
+  register[0]
+  register[0]
+  register[3]
+add
+  register[4]
+  register[4]
+  48
+mult
+  register[2]
+  register[2]
+  10
+add
+  register[5]
+  register[5]
+  1
+push
+  register[4]
+jmp
+  2019
+jt
+  register[5]
+  2099
+out
+  "0"
+jmp
+  2112
+jf
+  register[5]
+  2112
+pop
+  register[0]
+out
+  register[0]
+add
+  register[5]
+  register[5]
+  32767
+jmp
+  2099
+pop
+  register[5]
+pop
+  register[4]
+pop
+  register[3]
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[1]
+push
+  register[2]
+and
+  register[2]
+  register[0]
+  register[1]
+not
+  register[2]
+  register[2]
+or
+  register[0]
+  register[0]
+  register[1]
+and
+  register[0]
+  register[0]
+  register[2]
+pop
+  register[2]
+pop
+  register[1]
+ret
+add
+  register[0]
+  register[0]
+  register[1]
+gt
+  register[1]
+  register[1]
+  register[0]
+ret
+push
+  register[2]
+gt
+  register[2]
+  register[1]
+  register[0]
+mult
+  register[1]
+  register[1]
+  32767
+add
+  register[0]
+  register[0]
+  register[1]
+set
+  register[1]
+  register[2]
+pop
+  register[2]
+ret
+jf
+  register[0]
+  2241
+jf
+  register[1]
+  2241
+push
+  register[2]
+push
+  register[3]
+gt
+  register[2]
+  register[1]
+  register[0]
+jt
+  register[2]
+  2204
+set
+  register[2]
+  register[0]
+set
+  register[0]
+  register[1]
+set
+  register[1]
+  register[2]
+set
+  register[2]
+  register[0]
+set
+  register[0]
+  0
+add
+  register[0]
+  register[0]
+  register[1]
+gt
+  register[3]
+  register[1]
+  register[0]
+jt
+  register[3]
+  2233
+add
+  register[2]
+  register[2]
+  32767
+jt
+  register[2]
+  2210
+set
+  register[1]
+  0
+jmp
+  2236
+set
+  register[1]
+  1
+pop
+  register[3]
+pop
+  register[2]
+ret
+set
+  register[0]
+  0
+set
+  register[1]
+  0
+ret
+push
+  register[1]
+push
+  register[2]
+jf
+  register[1]
+  2276
+add
+  register[1]
+  register[1]
+  32767
+and
+  register[2]
+  register[0]
+  16384
+mult
+  register[0]
+  register[0]
+  2
+jf
+  register[2]
+  2252
+or
+  register[0]
+  register[0]
+  1
+jmp
+  2252
+pop
+  register[2]
+pop
+  register[1]
+ret
+push
+  register[1]
+gt
+  register[1]
+  register[0]
+  14
+jt
+  register[1]
+  2309
+set
+  register[1]
+  register[0]
+set
+  register[0]
+  1
+jf
+  register[1]
+  2312
+add
+  register[1]
+  register[1]
+  32767
+mult
+  register[0]
+  register[0]
+  2
+jmp
+  2296
+set
+  register[0]
+  32767
+pop
+  register[1]
+ret
+jmp
+  2734
 6142
 6152
 26900
 26903
-HALT
+halt
 6350
 6360
 26906
 26908
-HALT
+halt
 6441
 6451
 26910
 26913
-HALT
+halt
 6597
 6607
 26916
 26919
-HALT
+halt
 6711
 6721
 26922
 26925
-HALT
+halt
 6922
 6934
 26928
 26931
-HALT
+halt
 7070
 7095
 26934
 26936
-HALT
+halt
 7270
 7282
 26938
 26941
-HALT
+halt
 7502
 7514
 26944
 26946
-HALT
+halt
 7616
 7628
 26948
 26951
-HALT
+halt
 7799
 7807
 26954
 26958
-HALT
+halt
 8007
 26962
 26965
 26968
-HALT
+halt
 8163
 8179
 26971
@@ -2419,7 +2419,7 @@ HALT
 9114
 27039
 27041
-HALT
+halt
 9175
 9191
 27043
@@ -2449,18 +2449,18 @@ HALT
 9643
 27073
 27076
-HALT
+halt
 9903
 9909
 27079
 27082
-HALT
+halt
 10103
 10109
 27085
 27090
-HALT
-HALT
+halt
+halt
 10425
 10431
 27107
@@ -2470,92 +2470,92 @@ HALT
 10611
 27111
 27114
-HALT
+halt
 10760
 10766
 27117
 27119
-HALT
+halt
 10892
 10898
 27121
 27124
-HALT
+halt
 11086
 11092
 27127
 27129
-HALT
+halt
 11267
 11288
 27131
 27133
-HALT
+halt
 11552
 11573
 27135
 27137
-HALT
+halt
 11726
 11732
 27139
 27143
-HALT
+halt
 11919
 11925
 27147
 27150
-HALT
+halt
 12199
 12205
 27153
 27156
-HALT
+halt
 12459
 12475
 27159
 27163
-HALT
+halt
 12691
 12707
 27167
 27171
-HALT
+halt
 12847
 12863
 27175
 27178
-HALT
+halt
 13106
 13122
 27181
 27184
-HALT
+halt
 13420
 13436
 27187
 27190
-HALT
+halt
 13694
 13708
 27193
 27196
-HALT
+halt
 13941
 13955
 27199
 27202
-HALT
+halt
 14090
 14104
 27205
 27209
-HALT
+halt
 14444
 14465
 27213
 27215
-HALT
+halt
 14634
 14648
 27217
@@ -2650,17 +2650,17 @@ HALT
 17693
 27359
 27362
-HALT
+halt
 17806
 17838
 27365
 27368
-HALT
+halt
 17949
 17967
 27371
 27375
-HALT
+halt
 18055
 18061
 27379
@@ -2673,7 +2673,7 @@ HALT
 18206
 18220
 2357
-HALT
+halt
 18344
 18352
 32767
@@ -2713,11 +2713,11 @@ HALT
 19113
 19127
 2488
-HALT
+halt
 19192
 19196
 2623
-HALT
+halt
 19258
 19265
 2643
@@ -2725,3347 +2725,3347 @@ HALT
 19384
 19397
 2488
-HALT
+halt
 22093
 22101
 2553
-HALT
+halt
 2317
-HALT
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-PUSH
-REG[3]
-RMEM
-REG[1]
-2732
-RMEM
-REG[0]
-2733
-EQ
-REG[0]
-REG[0]
-REG[1]
-JT
-REG[0]
-2770
-RMEM
-REG[0]
-2732
-ADD
-REG[0]
-REG[0]
-4
-RMEM
-REG[0]
-REG[0]
-JF
-REG[0]
-2770
-CALL
-REG[0]
-RMEM
-REG[1]
-2732
-RMEM
-REG[0]
-2733
-EQ
-REG[0]
-REG[0]
-REG[1]
-JT
-REG[0]
-2791
-SET
-REG[0]
-25974
-WMEM
-REG[0]
-0
-CALL
-2964
-WMEM
-2733
-REG[1]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-27414
-SET
-REG[1]
-1531
-ADD
-REG[2]
-2960
-10606
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-SET
-REG[0]
-32
-SET
-REG[1]
-25974
-CALL
-1767
-OUT
-"\n"
-OUT
-"\n"
-SET
-REG[0]
-25974
-SET
-REG[1]
-32
-CALL
-1571
-EQ
-REG[1]
-REG[0]
-32767
-JF
-REG[1]
-2848
-RMEM
-REG[0]
-25974
-SET
-REG[2]
-REG[0]
-RMEM
-REG[1]
-25974
-PUSH
-REG[1]
-WMEM
-25974
-REG[2]
-SET
-REG[0]
-27398
-SET
-REG[1]
-25974
-CALL
-1588
-POP
-REG[1]
-WMEM
-25974
-REG[1]
-EQ
-REG[1]
-REG[0]
-32767
-JF
-REG[1]
-2885
-SET
-REG[0]
-0
-SET
-REG[2]
-0
-ADD
-REG[1]
-27406
-1
-ADD
-REG[1]
-REG[1]
-REG[0]
-RMEM
-REG[1]
-REG[1]
-RMEM
-REG[3]
-25974
-EQ
-REG[3]
-REG[3]
-REG[2]
-JT
-REG[3]
-2944
-MULT
-REG[0]
-REG[2]
-32767
-RMEM
-REG[3]
-25974
-ADD
-REG[3]
-REG[0]
-REG[3]
-JF
-REG[2]
-2924
-ADD
-REG[3]
-REG[3]
-32767
-MOD
-REG[3]
-REG[3]
-32
-ADD
-REG[0]
-25974
-REG[2]
-JF
-REG[2]
-2939
-ADD
-REG[0]
-REG[0]
-1
-WMEM
-REG[0]
-REG[3]
-JMP
-2950
-SET
-REG[0]
-25974
-WMEM
-REG[0]
-0
-CALL
-REG[1]
-JT
-REG[1]
-2742
-POP
-REG[3]
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-RMEM
-REG[1]
-REG[0]
-JF
-REG[1]
-3032
-CALL
-5921
-JF
-REG[0]
-3006
-PUSH
-REG[0]
-CALL
-5990
-SET
-REG[1]
-REG[0]
-POP
-REG[0]
-JF
-REG[1]
-3006
-ADD
-REG[1]
-REG[0]
-1
-RMEM
-REG[0]
-REG[1]
-CALL
-1518
-OUT
-"\n"
-JMP
-3238
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-27432
-SET
-REG[1]
-1531
-ADD
-REG[2]
-9361
-5860
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-JMP
-3238
-RMEM
-REG[0]
-2732
-PUSH
-REG[0]
-OUT
-"="
-OUT
-"="
-OUT
-" "
-ADD
-REG[0]
-REG[0]
-0
-RMEM
-REG[0]
-REG[0]
-CALL
-1518
-OUT
-" "
-OUT
-"="
-OUT
-"="
-OUT
-"\n"
-POP
-REG[0]
-PUSH
-REG[0]
-ADD
-REG[0]
-REG[0]
-1
-RMEM
-REG[0]
-REG[0]
-RMEM
-REG[1]
-REG[0]
-EQ
-REG[1]
-REG[1]
-2
-JF
-REG[1]
-3104
-PUSH
-REG[0]
-SET
-REG[0]
-2680
-CALL
-5990
-SET
-REG[1]
-REG[0]
-POP
-REG[0]
-ADD
-REG[0]
-REG[0]
-1
-ADD
-REG[0]
-REG[0]
-REG[1]
-RMEM
-REG[0]
-REG[0]
-CALL
-1518
-OUT
-"\n"
-POP
-REG[0]
-PUSH
-REG[0]
-CALL
-5823
-JF
-REG[0]
-3146
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-27455
-SET
-REG[1]
-1531
-ADD
-REG[2]
-214
-28829
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RMEM
-REG[2]
-2732
-CALL
-5876
-POP
-REG[0]
-PUSH
-REG[0]
-ADD
-REG[0]
-REG[0]
-2
-RMEM
-REG[0]
-REG[0]
-RMEM
-REG[0]
-REG[0]
-EQ
-REG[2]
-REG[0]
-1
-OUT
-"\n"
-OUT
-"T"
-OUT
-"h"
-OUT
-"e"
-OUT
-"r"
-OUT
-"e"
-OUT
-" "
-JT
-REG[2]
-3189
-OUT
-"a"
-OUT
-"r"
-OUT
-"e"
-JMP
-3193
-OUT
-"i"
-OUT
-"s"
-OUT
-" "
-CALL
-2001
-OUT
-" "
-OUT
-"e"
-OUT
-"x"
-OUT
-"i"
-OUT
-"t"
-EQ
-REG[2]
-REG[0]
-1
-JT
-REG[2]
-3216
-OUT
-"s"
-OUT
-":"
-OUT
-"\n"
-POP
-REG[0]
-PUSH
-REG[0]
-ADD
-REG[0]
-REG[0]
-2
-RMEM
-REG[0]
-REG[0]
-SET
-REG[1]
-5814
-CALL
-1458
-POP
-REG[0]
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[1]
-REG[0]
-RMEM
-REG[0]
-2732
-ADD
-REG[0]
-REG[0]
-2
-RMEM
-REG[0]
-REG[0]
-CALL
-1588
-EQ
-REG[2]
-REG[0]
-32767
-JT
-REG[2]
-3302
-RMEM
-REG[2]
-2732
-ADD
-REG[2]
-REG[2]
-3
-RMEM
-REG[2]
-REG[2]
-ADD
-REG[2]
-REG[2]
-1
-ADD
-REG[2]
-REG[2]
-REG[0]
-RMEM
-REG[2]
-REG[2]
-WMEM
-2732
-REG[2]
-WMEM
-2733
-0
-JMP
-3326
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-27482
-SET
-REG[1]
-1531
-ADD
-REG[2]
-3796
-2073
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-27532
-SET
-REG[1]
-1531
-ADD
-REG[2]
-3205
-8037
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[2]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28037
-SET
-REG[1]
-1531
-ADD
-REG[2]
-26727
-908
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-SET
-REG[2]
-0
-CALL
-5876
-POP
-REG[2]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-CALL
-5921
-JF
-REG[0]
-3457
-ADD
-REG[1]
-REG[0]
-2
-RMEM
-REG[0]
-REG[1]
-RMEM
-REG[2]
-2732
-EQ
-REG[2]
-REG[0]
-REG[2]
-JF
-REG[2]
-3457
-WMEM
-REG[1]
-0
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28054
-SET
-REG[1]
-1531
-ADD
-REG[2]
-5474
-6150
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-JMP
-3481
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28062
-SET
-REG[1]
-1531
-ADD
-REG[2]
-7126
-1438
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-CALL
-5921
-JF
-REG[0]
-3539
-ADD
-REG[1]
-REG[0]
-2
-RMEM
-REG[0]
-REG[1]
-JT
-REG[0]
-3539
-RMEM
-REG[0]
-2732
-WMEM
-REG[1]
-REG[0]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28090
-SET
-REG[1]
-1531
-ADD
-REG[2]
-5934
-2492
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-JMP
-3563
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28100
-SET
-REG[1]
-1531
-ADD
-REG[2]
-18575
-7519
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-CALL
-5921
-JF
-REG[0]
-3601
-ADD
-REG[1]
-REG[0]
-2
-RMEM
-REG[1]
-REG[1]
-JT
-REG[1]
-3601
-ADD
-REG[1]
-REG[0]
-3
-RMEM
-REG[1]
-REG[1]
-JF
-REG[1]
-3627
-CALL
-REG[1]
-JMP
-3651
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28135
-SET
-REG[1]
-1531
-ADD
-REG[2]
-6879
-3222
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-JMP
-3651
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28170
-SET
-REG[1]
-1531
-ADD
-REG[2]
-3041
-145
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-2680
-CALL
-5990
-JT
-REG[0]
-3694
-ADD
-REG[0]
-2676
-2
-WMEM
-REG[0]
-32767
-ADD
-REG[0]
-2680
-2
-WMEM
-REG[0]
-32767
-ADD
-REG[0]
-2672
-2
-WMEM
-REG[0]
-32767
-WMEM
-2732
-2648
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28204
-SET
-REG[1]
-1531
-ADD
-REG[2]
-5223
-22275
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-HALT
-HALT
-PUSH
-REG[1]
-RMEM
-REG[1]
-3726
-OR
-REG[1]
-REG[1]
-REG[0]
-WMEM
-3726
-REG[1]
-POP
-REG[1]
-RET
-WMEM
-3726
-0
-RET
-PUSH
-REG[0]
-SET
-REG[0]
-1
-CALL
-3727
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-SET
-REG[0]
-2
-CALL
-3727
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-SET
-REG[0]
-4
-CALL
-3727
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-SET
-REG[0]
-8
-CALL
-3727
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-SET
-REG[0]
-16
-CALL
-3727
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-SET
-REG[0]
-32
-CALL
-3727
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-PUSH
-REG[3]
-SET
-REG[0]
-64
-CALL
-3727
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28236
-SET
-REG[1]
-1531
-ADD
-REG[2]
-822
-16566
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RMEM
-REG[0]
-3726
-SET
-REG[1]
-25866
-SET
-REG[2]
-32767
-SET
-REG[3]
-28299
-CALL
-1841
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28303
-SET
-REG[1]
-1531
-ADD
-REG[2]
-8874
-3386
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-WMEM
-2732
-2417
-POP
-REG[3]
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-RMEM
-REG[0]
-2462
-RMEM
-REG[1]
-27101
-EQ
-REG[0]
-REG[0]
-REG[1]
-JT
-REG[0]
-3940
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28347
-SET
-REG[1]
-1531
-ADD
-REG[2]
-31437
-30
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-WMEM
-2732
-2457
-WMEM
-2733
-2457
-POP
-REG[1]
-POP
-REG[0]
-RET
+halt
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+push
+  register[3]
+rmem
+  register[1]
+  2732
+rmem
+  register[0]
+  2733
+eq
+  register[0]
+  register[0]
+  register[1]
+jt
+  register[0]
+  2770
+rmem
+  register[0]
+  2732
+add
+  register[0]
+  register[0]
+  4
+rmem
+  register[0]
+  register[0]
+jf
+  register[0]
+  2770
+call
+  register[0]
+rmem
+  register[1]
+  2732
+rmem
+  register[0]
+  2733
+eq
+  register[0]
+  register[0]
+  register[1]
+jt
+  register[0]
+  2791
+set
+  register[0]
+  25974
+wmem
+  register[0]
+  0
+call
+  2964
+wmem
+  2733
+  register[1]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  27414
+set
+  register[1]
+  1531
+add
+  register[2]
+  2960
+  10606
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+set
+  register[0]
+  32
+set
+  register[1]
+  25974
+call
+  1767
+out
+  "\n"
+out
+  "\n"
+set
+  register[0]
+  25974
+set
+  register[1]
+  32
+call
+  1571
+eq
+  register[1]
+  register[0]
+  32767
+jf
+  register[1]
+  2848
+rmem
+  register[0]
+  25974
+set
+  register[2]
+  register[0]
+rmem
+  register[1]
+  25974
+push
+  register[1]
+wmem
+  25974
+  register[2]
+set
+  register[0]
+  27398
+set
+  register[1]
+  25974
+call
+  1588
+pop
+  register[1]
+wmem
+  25974
+  register[1]
+eq
+  register[1]
+  register[0]
+  32767
+jf
+  register[1]
+  2885
+set
+  register[0]
+  0
+set
+  register[2]
+  0
+add
+  register[1]
+  27406
+  1
+add
+  register[1]
+  register[1]
+  register[0]
+rmem
+  register[1]
+  register[1]
+rmem
+  register[3]
+  25974
+eq
+  register[3]
+  register[3]
+  register[2]
+jt
+  register[3]
+  2944
+mult
+  register[0]
+  register[2]
+  32767
+rmem
+  register[3]
+  25974
+add
+  register[3]
+  register[0]
+  register[3]
+jf
+  register[2]
+  2924
+add
+  register[3]
+  register[3]
+  32767
+mod
+  register[3]
+  register[3]
+  32
+add
+  register[0]
+  25974
+  register[2]
+jf
+  register[2]
+  2939
+add
+  register[0]
+  register[0]
+  1
+wmem
+  register[0]
+  register[3]
+jmp
+  2950
+set
+  register[0]
+  25974
+wmem
+  register[0]
+  0
+call
+  register[1]
+jt
+  register[1]
+  2742
+pop
+  register[3]
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+rmem
+  register[1]
+  register[0]
+jf
+  register[1]
+  3032
+call
+  5921
+jf
+  register[0]
+  3006
+push
+  register[0]
+call
+  5990
+set
+  register[1]
+  register[0]
+pop
+  register[0]
+jf
+  register[1]
+  3006
+add
+  register[1]
+  register[0]
+  1
+rmem
+  register[0]
+  register[1]
+call
+  1518
+out
+  "\n"
+jmp
+  3238
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  27432
+set
+  register[1]
+  1531
+add
+  register[2]
+  9361
+  5860
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+jmp
+  3238
+rmem
+  register[0]
+  2732
+push
+  register[0]
+out
+  "="
+out
+  "="
+out
+  " "
+add
+  register[0]
+  register[0]
+  0
+rmem
+  register[0]
+  register[0]
+call
+  1518
+out
+  " "
+out
+  "="
+out
+  "="
+out
+  "\n"
+pop
+  register[0]
+push
+  register[0]
+add
+  register[0]
+  register[0]
+  1
+rmem
+  register[0]
+  register[0]
+rmem
+  register[1]
+  register[0]
+eq
+  register[1]
+  register[1]
+  2
+jf
+  register[1]
+  3104
+push
+  register[0]
+set
+  register[0]
+  2680
+call
+  5990
+set
+  register[1]
+  register[0]
+pop
+  register[0]
+add
+  register[0]
+  register[0]
+  1
+add
+  register[0]
+  register[0]
+  register[1]
+rmem
+  register[0]
+  register[0]
+call
+  1518
+out
+  "\n"
+pop
+  register[0]
+push
+  register[0]
+call
+  5823
+jf
+  register[0]
+  3146
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  27455
+set
+  register[1]
+  1531
+add
+  register[2]
+  214
+  28829
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+rmem
+  register[2]
+  2732
+call
+  5876
+pop
+  register[0]
+push
+  register[0]
+add
+  register[0]
+  register[0]
+  2
+rmem
+  register[0]
+  register[0]
+rmem
+  register[0]
+  register[0]
+eq
+  register[2]
+  register[0]
+  1
+out
+  "\n"
+out
+  "T"
+out
+  "h"
+out
+  "e"
+out
+  "r"
+out
+  "e"
+out
+  " "
+jt
+  register[2]
+  3189
+out
+  "a"
+out
+  "r"
+out
+  "e"
+jmp
+  3193
+out
+  "i"
+out
+  "s"
+out
+  " "
+call
+  2001
+out
+  " "
+out
+  "e"
+out
+  "x"
+out
+  "i"
+out
+  "t"
+eq
+  register[2]
+  register[0]
+  1
+jt
+  register[2]
+  3216
+out
+  "s"
+out
+  ":"
+out
+  "\n"
+pop
+  register[0]
+push
+  register[0]
+add
+  register[0]
+  register[0]
+  2
+rmem
+  register[0]
+  register[0]
+set
+  register[1]
+  5814
+call
+  1458
+pop
+  register[0]
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[1]
+  register[0]
+rmem
+  register[0]
+  2732
+add
+  register[0]
+  register[0]
+  2
+rmem
+  register[0]
+  register[0]
+call
+  1588
+eq
+  register[2]
+  register[0]
+  32767
+jt
+  register[2]
+  3302
+rmem
+  register[2]
+  2732
+add
+  register[2]
+  register[2]
+  3
+rmem
+  register[2]
+  register[2]
+add
+  register[2]
+  register[2]
+  1
+add
+  register[2]
+  register[2]
+  register[0]
+rmem
+  register[2]
+  register[2]
+wmem
+  2732
+  register[2]
+wmem
+  2733
+  0
+jmp
+  3326
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  27482
+set
+  register[1]
+  1531
+add
+  register[2]
+  3796
+  2073
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  27532
+set
+  register[1]
+  1531
+add
+  register[2]
+  3205
+  8037
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[2]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28037
+set
+  register[1]
+  1531
+add
+  register[2]
+  26727
+  908
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+set
+  register[2]
+  0
+call
+  5876
+pop
+  register[2]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+call
+  5921
+jf
+  register[0]
+  3457
+add
+  register[1]
+  register[0]
+  2
+rmem
+  register[0]
+  register[1]
+rmem
+  register[2]
+  2732
+eq
+  register[2]
+  register[0]
+  register[2]
+jf
+  register[2]
+  3457
+wmem
+  register[1]
+  0
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28054
+set
+  register[1]
+  1531
+add
+  register[2]
+  5474
+  6150
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+jmp
+  3481
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28062
+set
+  register[1]
+  1531
+add
+  register[2]
+  7126
+  1438
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+call
+  5921
+jf
+  register[0]
+  3539
+add
+  register[1]
+  register[0]
+  2
+rmem
+  register[0]
+  register[1]
+jt
+  register[0]
+  3539
+rmem
+  register[0]
+  2732
+wmem
+  register[1]
+  register[0]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28090
+set
+  register[1]
+  1531
+add
+  register[2]
+  5934
+  2492
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+jmp
+  3563
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28100
+set
+  register[1]
+  1531
+add
+  register[2]
+  18575
+  7519
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+call
+  5921
+jf
+  register[0]
+  3601
+add
+  register[1]
+  register[0]
+  2
+rmem
+  register[1]
+  register[1]
+jt
+  register[1]
+  3601
+add
+  register[1]
+  register[0]
+  3
+rmem
+  register[1]
+  register[1]
+jf
+  register[1]
+  3627
+call
+  register[1]
+jmp
+  3651
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28135
+set
+  register[1]
+  1531
+add
+  register[2]
+  6879
+  3222
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+jmp
+  3651
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28170
+set
+  register[1]
+  1531
+add
+  register[2]
+  3041
+  145
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  2680
+call
+  5990
+jt
+  register[0]
+  3694
+add
+  register[0]
+  2676
+  2
+wmem
+  register[0]
+  32767
+add
+  register[0]
+  2680
+  2
+wmem
+  register[0]
+  32767
+add
+  register[0]
+  2672
+  2
+wmem
+  register[0]
+  32767
+wmem
+  2732
+  2648
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28204
+set
+  register[1]
+  1531
+add
+  register[2]
+  5223
+  22275
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+halt
+halt
+push
+  register[1]
+rmem
+  register[1]
+  3726
+or
+  register[1]
+  register[1]
+  register[0]
+wmem
+  3726
+  register[1]
+pop
+  register[1]
+ret
+wmem
+  3726
+  0
+ret
+push
+  register[0]
+set
+  register[0]
+  1
+call
+  3727
+pop
+  register[0]
+ret
+push
+  register[0]
+set
+  register[0]
+  2
+call
+  3727
+pop
+  register[0]
+ret
+push
+  register[0]
+set
+  register[0]
+  4
+call
+  3727
+pop
+  register[0]
+ret
+push
+  register[0]
+set
+  register[0]
+  8
+call
+  3727
+pop
+  register[0]
+ret
+push
+  register[0]
+set
+  register[0]
+  16
+call
+  3727
+pop
+  register[0]
+ret
+push
+  register[0]
+set
+  register[0]
+  32
+call
+  3727
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+push
+  register[3]
+set
+  register[0]
+  64
+call
+  3727
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28236
+set
+  register[1]
+  1531
+add
+  register[2]
+  822
+  16566
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+rmem
+  register[0]
+  3726
+set
+  register[1]
+  25866
+set
+  register[2]
+  32767
+set
+  register[3]
+  28299
+call
+  1841
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28303
+set
+  register[1]
+  1531
+add
+  register[2]
+  8874
+  3386
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+wmem
+  2732
+  2417
+pop
+  register[3]
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+rmem
+  register[0]
+  2462
+rmem
+  register[1]
+  27101
+eq
+  register[0]
+  register[0]
+  register[1]
+jt
+  register[0]
+  3940
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28347
+set
+  register[1]
+  1531
+add
+  register[2]
+  31437
+  30
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+wmem
+  2732
+  2457
+wmem
+  2733
+  2457
+pop
+  register[1]
+pop
+  register[0]
+ret
 26007
 26013
 26017
 2149
 2158
 2178
-HALT
+halt
 22
-HALT
-HALT
-HALT
-HALT
-HALT
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-2
-SET
-REG[1]
-0
-CALL
-4218
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-8
-SET
-REG[1]
-1
-CALL
-4279
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-1
-SET
-REG[1]
-2
-CALL
-4218
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-1
-SET
-REG[1]
-3
-CALL
-4279
-CALL
-4533
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-4
-SET
-REG[1]
-4
-CALL
-4279
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-2
-SET
-REG[1]
-5
-CALL
-4218
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-11
-SET
-REG[1]
-6
-CALL
-4279
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-2
-SET
-REG[1]
-7
-CALL
-4218
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-0
-SET
-REG[1]
-8
-CALL
-4218
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-4
-SET
-REG[1]
-9
-CALL
-4279
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-1
-SET
-REG[1]
-10
-CALL
-4218
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-18
-SET
-REG[1]
-11
-CALL
-4279
-POP
-REG[1]
-POP
-REG[0]
-RET
-CALL
-4611
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-1
-SET
-REG[1]
-12
-CALL
-4218
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-9
-SET
-REG[1]
-13
-CALL
-4279
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-2
-SET
-REG[1]
-14
-CALL
-4218
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-ADD
-REG[2]
-2716
-2
-RMEM
-REG[2]
-REG[2]
-JT
-REG[2]
-4272
-CALL
-4405
-WMEM
-3951
-REG[0]
-ADD
-REG[1]
-REG[0]
-3945
-RMEM
-REG[1]
-REG[1]
-SET
-REG[0]
-26024
-CALL
-1518
-SET
-REG[0]
-REG[1]
-CALL
-1518
-SET
-REG[0]
-26088
-CALL
-1518
-SET
-REG[0]
-REG[1]
-CALL
-1518
-OUT
-"."
-OUT
-"\n"
-OUT
-"\n"
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-ADD
-REG[2]
-2716
-2
-RMEM
-REG[2]
-REG[2]
-JT
-REG[2]
-4398
-CALL
-4405
-PUSH
-REG[0]
-RMEM
-REG[0]
-3951
-ADD
-REG[1]
-REG[0]
-3945
-RMEM
-REG[1]
-REG[1]
-SET
-REG[0]
-26122
-CALL
-1518
-SET
-REG[0]
-REG[1]
-CALL
-1518
-SET
-REG[0]
-26170
-CALL
-1518
-POP
-REG[0]
-SET
-REG[1]
-REG[0]
-RMEM
-REG[0]
-3952
-RMEM
-REG[2]
-3951
-ADD
-REG[2]
-REG[2]
-3948
-RMEM
-REG[2]
-REG[2]
-CALL
-REG[2]
-JT
-REG[1]
-4391
-RMEM
-REG[1]
-3952
-WMEM
-3952
-REG[0]
-GT
-REG[2]
-REG[0]
-REG[1]
-JF
-REG[2]
-4369
-PUSH
-REG[0]
-SET
-REG[0]
-26235
-CALL
-1518
-POP
-REG[0]
-GT
-REG[2]
-REG[1]
-REG[0]
-JF
-REG[2]
-4385
-PUSH
-REG[0]
-SET
-REG[0]
-26267
-CALL
-1518
-POP
-REG[0]
-OUT
-"\n"
-OUT
-"\n"
-JMP
-4398
-CALL
-4660
-SET
-REG[0]
-26299
-CALL
-1518
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-PUSH
-REG[3]
-PUSH
-REG[4]
-PUSH
-REG[5]
-RMEM
-REG[5]
-3953
-GT
-REG[3]
-REG[5]
-29999
-JT
-REG[3]
-4434
-ADD
-REG[5]
-REG[5]
-1
-WMEM
-3953
-REG[5]
-SET
-REG[3]
-REG[0]
-SET
-REG[4]
-REG[1]
-ADD
-REG[0]
-REG[5]
-2
-CALL
-2281
-RMEM
-REG[1]
-3954
-OR
-REG[0]
-REG[1]
-REG[0]
-SET
-REG[1]
-REG[4]
-CALL
-2248
-WMEM
-3954
-REG[0]
-SET
-REG[0]
-3955
-ADD
-REG[1]
-REG[5]
-2
-SET
-REG[2]
-REG[4]
-CALL
-4515
-SET
-REG[0]
-3956
-MULT
-REG[1]
-REG[5]
-REG[5]
-MULT
-REG[2]
-REG[4]
-REG[4]
-CALL
-4515
-SET
-REG[0]
-3957
-SET
-REG[1]
-13
-MULT
-REG[2]
-REG[3]
-9
-MULT
-REG[2]
-REG[2]
-REG[2]
-CALL
-4515
-POP
-REG[5]
-POP
-REG[4]
-POP
-REG[3]
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-RMEM
-REG[0]
-REG[0]
-CALL
-2248
-SET
-REG[1]
-REG[2]
-CALL
-2125
-POP
-REG[1]
-WMEM
-REG[1]
-REG[0]
-RET
-PUSH
-REG[0]
-ADD
-REG[0]
-2716
-2
-RMEM
-REG[0]
-REG[0]
-JT
-REG[0]
-4608
-SET
-REG[0]
-26321
-CALL
-1518
-RMEM
-REG[0]
-3952
-EQ
-REG[0]
-REG[0]
-30
-JT
-REG[0]
-4574
-SET
-REG[0]
-26354
-CALL
-1518
-SET
-REG[0]
-26398
-CALL
-1518
-CALL
-4660
-JMP
-4608
-SET
-REG[0]
-26440
-CALL
-1518
-RMEM
-REG[0]
-3954
-ADD
-REG[0]
-REG[0]
-1
-JT
-REG[0]
-4596
-SET
-REG[0]
-26484
-CALL
-1518
-JMP
-4565
-SET
-REG[0]
-26584
-CALL
-1518
-ADD
-REG[0]
-2716
-2
-WMEM
-REG[0]
-32767
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-ADD
-REG[0]
-2716
-2
-RMEM
-REG[0]
-REG[0]
-JT
-REG[0]
-4657
-SET
-REG[0]
-26717
-CALL
-1518
-RMEM
-REG[0]
-2732
-EQ
-REG[0]
-REG[0]
-2623
-JT
-REG[0]
-4645
-SET
-REG[0]
-26725
-CALL
-1518
-JMP
-4650
-SET
-REG[0]
-26731
-CALL
-1518
-SET
-REG[0]
-26737
-CALL
-1518
-CALL
-4660
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-WMEM
-3952
-22
-WMEM
-3953
-0
-WMEM
-3954
-0
-WMEM
-3955
-0
-WMEM
-3956
-0
-WMEM
-3957
-0
-ADD
-REG[0]
-2716
-2
-WMEM
-REG[0]
-2623
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-ADD
-REG[0]
-2716
-2
-RMEM
-REG[0]
-REG[0]
-EQ
-REG[0]
-REG[0]
-32767
-JT
-REG[0]
-4717
-SET
-REG[0]
-26824
-CALL
-1518
-WMEM
-2732
-2578
-WMEM
-2733
-2578
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-PUSH
-REG[3]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28369
-SET
-REG[1]
-1531
-ADD
-REG[2]
-7447
-1638
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-SET
-REG[0]
-4242
-SET
-REG[1]
-25866
-SET
-REG[2]
-32767
-SET
-REG[3]
-28397
-CALL
-1841
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28401
-SET
-REG[1]
-1531
-ADD
-REG[2]
-16140
-8431
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[3]
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-ADD
-REG[0]
-2672
-2
-RMEM
-REG[0]
-REG[0]
-JT
-REG[0]
-4858
-ADD
-REG[0]
-2684
-2
-WMEM
-REG[0]
-32767
-ADD
-REG[0]
-2672
-2
-WMEM
-REG[0]
-32767
-ADD
-REG[0]
-2676
-2
-WMEM
-REG[0]
-0
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28453
-SET
-REG[1]
-1531
-ADD
-REG[2]
-9835
-11130
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-JMP
-4882
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28510
-SET
-REG[1]
-1531
-ADD
-REG[2]
-4442
-23966
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-ADD
-REG[0]
-2676
-2
-WMEM
-REG[0]
-32767
-ADD
-REG[0]
-2680
-2
-WMEM
-REG[0]
-0
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28569
-SET
-REG[1]
-1531
-ADD
-REG[2]
-20775
-2369
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-WMEM
-2733
-0
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-ADD
-REG[0]
-2676
-2
-WMEM
-REG[0]
-0
-ADD
-REG[0]
-2680
-2
-WMEM
-REG[0]
-32767
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28595
-SET
-REG[1]
-1531
-ADD
-REG[2]
-21118
-2553
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-WMEM
-2733
-0
-POP
-REG[0]
-RET
-PUSH
-REG[2]
-PUSH
-REG[3]
-RMEM
-REG[2]
-2732
-EQ
-REG[2]
-REG[2]
-2457
-JT
-REG[2]
-5017
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28621
-SET
-REG[1]
-1531
-ADD
-REG[2]
-20260
-6337
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-JMP
-5336
-ADD
-REG[2]
-REG[0]
-2
-WMEM
-REG[2]
-32767
-RMEM
-REG[2]
-2462
-ADD
-REG[2]
-REG[2]
-27095
-ADD
-REG[2]
-REG[2]
-1
-RMEM
-REG[2]
-REG[2]
-ADD
-REG[3]
-2457
-1
-RMEM
-REG[3]
-REG[3]
-ADD
-REG[3]
-REG[3]
-REG[2]
-ADD
-REG[2]
-REG[1]
-48
-WMEM
-REG[3]
-REG[2]
-RMEM
-REG[2]
-2462
-ADD
-REG[2]
-REG[2]
-27101
-ADD
-REG[2]
-REG[2]
-1
-WMEM
-REG[2]
-REG[1]
-PUSH
-REG[0]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28664
-SET
-REG[1]
-1531
-ADD
-REG[2]
-7720
-21194
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[0]
-PUSH
-REG[0]
-ADD
-REG[2]
-REG[0]
-0
-RMEM
-REG[0]
-REG[2]
-CALL
-1518
-POP
-REG[0]
-PUSH
-REG[0]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28679
-SET
-REG[1]
-1531
-ADD
-REG[2]
-2340
-852
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[0]
-RMEM
-REG[2]
-2462
-ADD
-REG[2]
-REG[2]
-1
-WMEM
-2462
-REG[2]
-RMEM
-REG[3]
-27101
-EQ
-REG[3]
-REG[2]
-REG[3]
-JF
-REG[3]
-5336
-SET
-REG[0]
-0
-ADD
-REG[1]
-27101
-1
-RMEM
-REG[1]
-REG[1]
-ADD
-REG[0]
-REG[0]
-REG[1]
-ADD
-REG[1]
-27101
-2
-RMEM
-REG[1]
-REG[1]
-ADD
-REG[2]
-27101
-3
-RMEM
-REG[2]
-REG[2]
-MULT
-REG[2]
-REG[2]
-REG[2]
-MULT
-REG[1]
-REG[1]
-REG[2]
-ADD
-REG[0]
-REG[0]
-REG[1]
-ADD
-REG[1]
-27101
-4
-RMEM
-REG[1]
-REG[1]
-MULT
-REG[2]
-REG[1]
-REG[1]
-MULT
-REG[2]
-REG[2]
-REG[1]
-ADD
-REG[0]
-REG[0]
-REG[2]
-ADD
-REG[1]
-27101
-5
-RMEM
-REG[1]
-REG[1]
-MULT
-REG[1]
-REG[1]
-32767
-ADD
-REG[0]
-REG[0]
-REG[1]
-EQ
-REG[1]
-REG[0]
-399
-JT
-REG[1]
-5312
-ADD
-REG[2]
-2688
-2
-WMEM
-REG[2]
-2457
-ADD
-REG[2]
-2692
-2
-WMEM
-REG[2]
-2457
-ADD
-REG[2]
-2696
-2
-WMEM
-REG[2]
-2457
-ADD
-REG[2]
-2700
-2
-WMEM
-REG[2]
-2457
-ADD
-REG[2]
-2704
-2
-WMEM
-REG[2]
-2457
-WMEM
-2462
-0
-SET
-REG[0]
-27095
-SET
-REG[1]
-5341
-CALL
-1458
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28710
-SET
-REG[1]
-1531
-ADD
-REG[2]
-3279
-3358
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-JMP
-5336
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28777
-SET
-REG[1]
-1531
-ADD
-REG[2]
-621
-5899
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[3]
-POP
-REG[2]
-RET
-PUSH
-REG[2]
-ADD
-REG[2]
-2457
-1
-RMEM
-REG[2]
-REG[2]
-ADD
-REG[2]
-REG[2]
-REG[0]
-WMEM
-REG[2]
-95
-POP
-REG[2]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-2688
-SET
-REG[1]
-2
-CALL
-4977
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-2692
-SET
-REG[1]
-3
-CALL
-4977
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-2696
-SET
-REG[1]
-5
-CALL
-4977
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-2700
-SET
-REG[1]
-7
-CALL
-4977
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-2704
-SET
-REG[1]
-9
-CALL
-4977
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-JF
-REG[7]
-5605
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-28844
-SET
-REG[1]
-1531
-ADD
-REG[2]
-1065
-11216
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-NOOP
-NOOP
-NOOP
-NOOP
-NOOP
-SET
-REG[0]
-4
-SET
-REG[1]
-1
-CALL
-6027
-EQ
-REG[1]
-REG[0]
-6
-JF
-REG[1]
-5579
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-29014
-SET
-REG[1]
-1531
-ADD
-REG[2]
-3536
-8995
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-SET
-REG[0]
-REG[7]
-SET
-REG[1]
-25866
-SET
-REG[2]
-32767
-PUSH
-REG[3]
-SET
-REG[3]
-29241
-CALL
-1841
-POP
-REG[3]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-29245
-SET
-REG[1]
-1531
-ADD
-REG[2]
-10719
-7446
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-WMEM
-2732
-2498
-WMEM
-2733
-0
-ADD
-REG[1]
-2708
-2
-WMEM
-REG[1]
-32767
-JMP
-5714
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-29400
-SET
-REG[1]
-1531
-ADD
-REG[2]
-2165
-496
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-JMP
-5714
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-29545
-SET
-REG[1]
-1531
-ADD
-REG[2]
-795
-9419
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-SET
-REG[0]
-0
-ADD
-REG[2]
-1
-27101
-RMEM
-REG[1]
-REG[2]
-ADD
-REG[0]
-REG[0]
-REG[1]
-MULT
-REG[0]
-REG[0]
-31660
-CALL
-2125
-RMEM
-REG[1]
-27101
-ADD
-REG[1]
-REG[1]
-27101
-ADD
-REG[2]
-REG[2]
-1
-GT
-REG[1]
-REG[2]
-REG[1]
-JF
-REG[1]
-5636
-SET
-REG[1]
-25866
-SET
-REG[2]
-32767
-PUSH
-REG[3]
-SET
-REG[3]
-29663
-CALL
-1841
-POP
-REG[3]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-29667
-SET
-REG[1]
-1531
-ADD
-REG[2]
-2635
-5937
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-WMEM
-2732
-2488
-WMEM
-2733
-0
-JMP
-5714
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-PUSH
-REG[3]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-29757
-SET
-REG[1]
-1531
-ADD
-REG[2]
-8652
-407
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RMEM
-REG[0]
-3955
-RMEM
-REG[1]
-3956
-CALL
-2125
-RMEM
-REG[1]
-3957
-CALL
-2125
-SET
-REG[1]
-25919
-SET
-REG[2]
-4
-PUSH
-REG[3]
-SET
-REG[3]
-29942
-CALL
-1841
-POP
-REG[3]
-PUSH
-REG[0]
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-29946
-SET
-REG[1]
-1531
-ADD
-REG[2]
-16140
-5603
-CALL
-1458
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-POP
-REG[3]
-POP
-REG[2]
-POP
-REG[1]
-POP
-REG[0]
-RET
-OUT
-"-"
-OUT
-" "
-CALL
-1518
-OUT
-"\n"
-RET
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[0]
-27381
-SET
-REG[1]
-5846
-SET
-REG[2]
-0
-CALL
-1458
-SET
-REG[0]
-REG[2]
-POP
-REG[2]
-POP
-REG[1]
-RET
-PUSH
-REG[3]
-PUSH
-REG[4]
-RMEM
-REG[3]
-2732
-ADD
-REG[4]
-REG[0]
-2
-RMEM
-REG[4]
-REG[4]
-EQ
-REG[3]
-REG[3]
-REG[4]
-JF
-REG[3]
-5871
-ADD
-REG[2]
-REG[2]
-1
-POP
-REG[4]
-POP
-REG[3]
-RET
-PUSH
-REG[0]
-PUSH
-REG[1]
-SET
-REG[0]
-27381
-SET
-REG[1]
-5893
-CALL
-1458
-POP
-REG[1]
-POP
-REG[0]
-RET
-PUSH
-REG[3]
-ADD
-REG[3]
-REG[0]
-2
-RMEM
-REG[3]
-REG[3]
-EQ
-REG[3]
-REG[2]
-REG[3]
-JF
-REG[3]
-5918
-ADD
-REG[0]
-REG[0]
-0
-RMEM
-REG[0]
-REG[0]
-CALL
-5814
-POP
-REG[3]
-RET
-PUSH
-REG[1]
-PUSH
-REG[2]
-SET
-REG[2]
-REG[0]
-SET
-REG[0]
-27381
-SET
-REG[1]
-5964
-CALL
-1543
-EQ
-REG[1]
-REG[0]
-32767
-JT
-REG[1]
-5956
-ADD
-REG[1]
-27381
-REG[0]
-ADD
-REG[1]
-REG[1]
-1
-RMEM
-REG[0]
-REG[1]
-JMP
-5959
-SET
-REG[0]
-0
-POP
-REG[2]
-POP
-REG[1]
-RET
-PUSH
-REG[1]
-SET
-REG[1]
-REG[2]
-ADD
-REG[0]
-REG[0]
-0
-RMEM
-REG[0]
-REG[0]
-CALL
-1667
-POP
-REG[1]
-JF
-REG[0]
-5989
-SET
-REG[2]
-REG[1]
-SET
-REG[1]
-32767
-RET
-PUSH
-REG[1]
-PUSH
-REG[2]
-ADD
-REG[0]
-REG[0]
-2
-RMEM
-REG[0]
-REG[0]
-JF
-REG[0]
-6019
-RMEM
-REG[1]
-2732
-EQ
-REG[1]
-REG[0]
-REG[1]
-JT
-REG[1]
-6019
-SET
-REG[0]
-0
-JMP
-6022
-SET
-REG[0]
-1
-POP
-REG[2]
-POP
-REG[1]
-RET
-JT
-REG[0]
-6035
-ADD
-REG[0]
-REG[1]
-1
-RET
-JT
-REG[1]
-6048
-ADD
-REG[0]
-REG[0]
-32767
-SET
-REG[1]
-REG[7]
-CALL
-6027
-RET
-PUSH
-REG[0]
-ADD
-REG[1]
-REG[1]
-32767
-CALL
-6027
-SET
-REG[1]
-REG[0]
-POP
-REG[0]
-ADD
-REG[0]
-REG[0]
-32767
-CALL
-6027
-RET
+halt
+halt
+halt
+halt
+halt
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  2
+set
+  register[1]
+  0
+call
+  4218
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  8
+set
+  register[1]
+  1
+call
+  4279
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  1
+set
+  register[1]
+  2
+call
+  4218
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  1
+set
+  register[1]
+  3
+call
+  4279
+call
+  4533
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  4
+set
+  register[1]
+  4
+call
+  4279
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  2
+set
+  register[1]
+  5
+call
+  4218
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  11
+set
+  register[1]
+  6
+call
+  4279
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  2
+set
+  register[1]
+  7
+call
+  4218
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  0
+set
+  register[1]
+  8
+call
+  4218
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  4
+set
+  register[1]
+  9
+call
+  4279
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  1
+set
+  register[1]
+  10
+call
+  4218
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  18
+set
+  register[1]
+  11
+call
+  4279
+pop
+  register[1]
+pop
+  register[0]
+ret
+call
+  4611
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  1
+set
+  register[1]
+  12
+call
+  4218
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  9
+set
+  register[1]
+  13
+call
+  4279
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  2
+set
+  register[1]
+  14
+call
+  4218
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+add
+  register[2]
+  2716
+  2
+rmem
+  register[2]
+  register[2]
+jt
+  register[2]
+  4272
+call
+  4405
+wmem
+  3951
+  register[0]
+add
+  register[1]
+  register[0]
+  3945
+rmem
+  register[1]
+  register[1]
+set
+  register[0]
+  26024
+call
+  1518
+set
+  register[0]
+  register[1]
+call
+  1518
+set
+  register[0]
+  26088
+call
+  1518
+set
+  register[0]
+  register[1]
+call
+  1518
+out
+  "."
+out
+  "\n"
+out
+  "\n"
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+add
+  register[2]
+  2716
+  2
+rmem
+  register[2]
+  register[2]
+jt
+  register[2]
+  4398
+call
+  4405
+push
+  register[0]
+rmem
+  register[0]
+  3951
+add
+  register[1]
+  register[0]
+  3945
+rmem
+  register[1]
+  register[1]
+set
+  register[0]
+  26122
+call
+  1518
+set
+  register[0]
+  register[1]
+call
+  1518
+set
+  register[0]
+  26170
+call
+  1518
+pop
+  register[0]
+set
+  register[1]
+  register[0]
+rmem
+  register[0]
+  3952
+rmem
+  register[2]
+  3951
+add
+  register[2]
+  register[2]
+  3948
+rmem
+  register[2]
+  register[2]
+call
+  register[2]
+jt
+  register[1]
+  4391
+rmem
+  register[1]
+  3952
+wmem
+  3952
+  register[0]
+gt
+  register[2]
+  register[0]
+  register[1]
+jf
+  register[2]
+  4369
+push
+  register[0]
+set
+  register[0]
+  26235
+call
+  1518
+pop
+  register[0]
+gt
+  register[2]
+  register[1]
+  register[0]
+jf
+  register[2]
+  4385
+push
+  register[0]
+set
+  register[0]
+  26267
+call
+  1518
+pop
+  register[0]
+out
+  "\n"
+out
+  "\n"
+jmp
+  4398
+call
+  4660
+set
+  register[0]
+  26299
+call
+  1518
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+push
+  register[3]
+push
+  register[4]
+push
+  register[5]
+rmem
+  register[5]
+  3953
+gt
+  register[3]
+  register[5]
+  29999
+jt
+  register[3]
+  4434
+add
+  register[5]
+  register[5]
+  1
+wmem
+  3953
+  register[5]
+set
+  register[3]
+  register[0]
+set
+  register[4]
+  register[1]
+add
+  register[0]
+  register[5]
+  2
+call
+  2281
+rmem
+  register[1]
+  3954
+or
+  register[0]
+  register[1]
+  register[0]
+set
+  register[1]
+  register[4]
+call
+  2248
+wmem
+  3954
+  register[0]
+set
+  register[0]
+  3955
+add
+  register[1]
+  register[5]
+  2
+set
+  register[2]
+  register[4]
+call
+  4515
+set
+  register[0]
+  3956
+mult
+  register[1]
+  register[5]
+  register[5]
+mult
+  register[2]
+  register[4]
+  register[4]
+call
+  4515
+set
+  register[0]
+  3957
+set
+  register[1]
+  13
+mult
+  register[2]
+  register[3]
+  9
+mult
+  register[2]
+  register[2]
+  register[2]
+call
+  4515
+pop
+  register[5]
+pop
+  register[4]
+pop
+  register[3]
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+rmem
+  register[0]
+  register[0]
+call
+  2248
+set
+  register[1]
+  register[2]
+call
+  2125
+pop
+  register[1]
+wmem
+  register[1]
+  register[0]
+ret
+push
+  register[0]
+add
+  register[0]
+  2716
+  2
+rmem
+  register[0]
+  register[0]
+jt
+  register[0]
+  4608
+set
+  register[0]
+  26321
+call
+  1518
+rmem
+  register[0]
+  3952
+eq
+  register[0]
+  register[0]
+  30
+jt
+  register[0]
+  4574
+set
+  register[0]
+  26354
+call
+  1518
+set
+  register[0]
+  26398
+call
+  1518
+call
+  4660
+jmp
+  4608
+set
+  register[0]
+  26440
+call
+  1518
+rmem
+  register[0]
+  3954
+add
+  register[0]
+  register[0]
+  1
+jt
+  register[0]
+  4596
+set
+  register[0]
+  26484
+call
+  1518
+jmp
+  4565
+set
+  register[0]
+  26584
+call
+  1518
+add
+  register[0]
+  2716
+  2
+wmem
+  register[0]
+  32767
+pop
+  register[0]
+ret
+push
+  register[0]
+add
+  register[0]
+  2716
+  2
+rmem
+  register[0]
+  register[0]
+jt
+  register[0]
+  4657
+set
+  register[0]
+  26717
+call
+  1518
+rmem
+  register[0]
+  2732
+eq
+  register[0]
+  register[0]
+  2623
+jt
+  register[0]
+  4645
+set
+  register[0]
+  26725
+call
+  1518
+jmp
+  4650
+set
+  register[0]
+  26731
+call
+  1518
+set
+  register[0]
+  26737
+call
+  1518
+call
+  4660
+pop
+  register[0]
+ret
+push
+  register[0]
+wmem
+  3952
+  22
+wmem
+  3953
+  0
+wmem
+  3954
+  0
+wmem
+  3955
+  0
+wmem
+  3956
+  0
+wmem
+  3957
+  0
+add
+  register[0]
+  2716
+  2
+wmem
+  register[0]
+  2623
+pop
+  register[0]
+ret
+push
+  register[0]
+add
+  register[0]
+  2716
+  2
+rmem
+  register[0]
+  register[0]
+eq
+  register[0]
+  register[0]
+  32767
+jt
+  register[0]
+  4717
+set
+  register[0]
+  26824
+call
+  1518
+wmem
+  2732
+  2578
+wmem
+  2733
+  2578
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+push
+  register[3]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28369
+set
+  register[1]
+  1531
+add
+  register[2]
+  7447
+  1638
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+set
+  register[0]
+  4242
+set
+  register[1]
+  25866
+set
+  register[2]
+  32767
+set
+  register[3]
+  28397
+call
+  1841
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28401
+set
+  register[1]
+  1531
+add
+  register[2]
+  16140
+  8431
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[3]
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+add
+  register[0]
+  2672
+  2
+rmem
+  register[0]
+  register[0]
+jt
+  register[0]
+  4858
+add
+  register[0]
+  2684
+  2
+wmem
+  register[0]
+  32767
+add
+  register[0]
+  2672
+  2
+wmem
+  register[0]
+  32767
+add
+  register[0]
+  2676
+  2
+wmem
+  register[0]
+  0
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28453
+set
+  register[1]
+  1531
+add
+  register[2]
+  9835
+  11130
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+jmp
+  4882
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28510
+set
+  register[1]
+  1531
+add
+  register[2]
+  4442
+  23966
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[0]
+ret
+push
+  register[0]
+add
+  register[0]
+  2676
+  2
+wmem
+  register[0]
+  32767
+add
+  register[0]
+  2680
+  2
+wmem
+  register[0]
+  0
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28569
+set
+  register[1]
+  1531
+add
+  register[2]
+  20775
+  2369
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+wmem
+  2733
+  0
+pop
+  register[0]
+ret
+push
+  register[0]
+add
+  register[0]
+  2676
+  2
+wmem
+  register[0]
+  0
+add
+  register[0]
+  2680
+  2
+wmem
+  register[0]
+  32767
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28595
+set
+  register[1]
+  1531
+add
+  register[2]
+  21118
+  2553
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+wmem
+  2733
+  0
+pop
+  register[0]
+ret
+push
+  register[2]
+push
+  register[3]
+rmem
+  register[2]
+  2732
+eq
+  register[2]
+  register[2]
+  2457
+jt
+  register[2]
+  5017
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28621
+set
+  register[1]
+  1531
+add
+  register[2]
+  20260
+  6337
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+jmp
+  5336
+add
+  register[2]
+  register[0]
+  2
+wmem
+  register[2]
+  32767
+rmem
+  register[2]
+  2462
+add
+  register[2]
+  register[2]
+  27095
+add
+  register[2]
+  register[2]
+  1
+rmem
+  register[2]
+  register[2]
+add
+  register[3]
+  2457
+  1
+rmem
+  register[3]
+  register[3]
+add
+  register[3]
+  register[3]
+  register[2]
+add
+  register[2]
+  register[1]
+  48
+wmem
+  register[3]
+  register[2]
+rmem
+  register[2]
+  2462
+add
+  register[2]
+  register[2]
+  27101
+add
+  register[2]
+  register[2]
+  1
+wmem
+  register[2]
+  register[1]
+push
+  register[0]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28664
+set
+  register[1]
+  1531
+add
+  register[2]
+  7720
+  21194
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[0]
+push
+  register[0]
+add
+  register[2]
+  register[0]
+  0
+rmem
+  register[0]
+  register[2]
+call
+  1518
+pop
+  register[0]
+push
+  register[0]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28679
+set
+  register[1]
+  1531
+add
+  register[2]
+  2340
+  852
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[0]
+rmem
+  register[2]
+  2462
+add
+  register[2]
+  register[2]
+  1
+wmem
+  2462
+  register[2]
+rmem
+  register[3]
+  27101
+eq
+  register[3]
+  register[2]
+  register[3]
+jf
+  register[3]
+  5336
+set
+  register[0]
+  0
+add
+  register[1]
+  27101
+  1
+rmem
+  register[1]
+  register[1]
+add
+  register[0]
+  register[0]
+  register[1]
+add
+  register[1]
+  27101
+  2
+rmem
+  register[1]
+  register[1]
+add
+  register[2]
+  27101
+  3
+rmem
+  register[2]
+  register[2]
+mult
+  register[2]
+  register[2]
+  register[2]
+mult
+  register[1]
+  register[1]
+  register[2]
+add
+  register[0]
+  register[0]
+  register[1]
+add
+  register[1]
+  27101
+  4
+rmem
+  register[1]
+  register[1]
+mult
+  register[2]
+  register[1]
+  register[1]
+mult
+  register[2]
+  register[2]
+  register[1]
+add
+  register[0]
+  register[0]
+  register[2]
+add
+  register[1]
+  27101
+  5
+rmem
+  register[1]
+  register[1]
+mult
+  register[1]
+  register[1]
+  32767
+add
+  register[0]
+  register[0]
+  register[1]
+eq
+  register[1]
+  register[0]
+  399
+jt
+  register[1]
+  5312
+add
+  register[2]
+  2688
+  2
+wmem
+  register[2]
+  2457
+add
+  register[2]
+  2692
+  2
+wmem
+  register[2]
+  2457
+add
+  register[2]
+  2696
+  2
+wmem
+  register[2]
+  2457
+add
+  register[2]
+  2700
+  2
+wmem
+  register[2]
+  2457
+add
+  register[2]
+  2704
+  2
+wmem
+  register[2]
+  2457
+wmem
+  2462
+  0
+set
+  register[0]
+  27095
+set
+  register[1]
+  5341
+call
+  1458
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28710
+set
+  register[1]
+  1531
+add
+  register[2]
+  3279
+  3358
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+jmp
+  5336
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28777
+set
+  register[1]
+  1531
+add
+  register[2]
+  621
+  5899
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[3]
+pop
+  register[2]
+ret
+push
+  register[2]
+add
+  register[2]
+  2457
+  1
+rmem
+  register[2]
+  register[2]
+add
+  register[2]
+  register[2]
+  register[0]
+wmem
+  register[2]
+  95
+pop
+  register[2]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  2688
+set
+  register[1]
+  2
+call
+  4977
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  2692
+set
+  register[1]
+  3
+call
+  4977
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  2696
+set
+  register[1]
+  5
+call
+  4977
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  2700
+set
+  register[1]
+  7
+call
+  4977
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  2704
+set
+  register[1]
+  9
+call
+  4977
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+jf
+  register[7]
+  5605
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  28844
+set
+  register[1]
+  1531
+add
+  register[2]
+  1065
+  11216
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+noop
+noop
+noop
+noop
+noop
+set
+  register[0]
+  4
+set
+  register[1]
+  1
+call
+  6027
+eq
+  register[1]
+  register[0]
+  6
+jf
+  register[1]
+  5579
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  29014
+set
+  register[1]
+  1531
+add
+  register[2]
+  3536
+  8995
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+set
+  register[0]
+  register[7]
+set
+  register[1]
+  25866
+set
+  register[2]
+  32767
+push
+  register[3]
+set
+  register[3]
+  29241
+call
+  1841
+pop
+  register[3]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  29245
+set
+  register[1]
+  1531
+add
+  register[2]
+  10719
+  7446
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+wmem
+  2732
+  2498
+wmem
+  2733
+  0
+add
+  register[1]
+  2708
+  2
+wmem
+  register[1]
+  32767
+jmp
+  5714
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  29400
+set
+  register[1]
+  1531
+add
+  register[2]
+  2165
+  496
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+jmp
+  5714
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  29545
+set
+  register[1]
+  1531
+add
+  register[2]
+  795
+  9419
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+set
+  register[0]
+  0
+add
+  register[2]
+  1
+  27101
+rmem
+  register[1]
+  register[2]
+add
+  register[0]
+  register[0]
+  register[1]
+mult
+  register[0]
+  register[0]
+  31660
+call
+  2125
+rmem
+  register[1]
+  27101
+add
+  register[1]
+  register[1]
+  27101
+add
+  register[2]
+  register[2]
+  1
+gt
+  register[1]
+  register[2]
+  register[1]
+jf
+  register[1]
+  5636
+set
+  register[1]
+  25866
+set
+  register[2]
+  32767
+push
+  register[3]
+set
+  register[3]
+  29663
+call
+  1841
+pop
+  register[3]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  29667
+set
+  register[1]
+  1531
+add
+  register[2]
+  2635
+  5937
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+wmem
+  2732
+  2488
+wmem
+  2733
+  0
+jmp
+  5714
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+push
+  register[3]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  29757
+set
+  register[1]
+  1531
+add
+  register[2]
+  8652
+  407
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+rmem
+  register[0]
+  3955
+rmem
+  register[1]
+  3956
+call
+  2125
+rmem
+  register[1]
+  3957
+call
+  2125
+set
+  register[1]
+  25919
+set
+  register[2]
+  4
+push
+  register[3]
+set
+  register[3]
+  29942
+call
+  1841
+pop
+  register[3]
+push
+  register[0]
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  29946
+set
+  register[1]
+  1531
+add
+  register[2]
+  16140
+  5603
+call
+  1458
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+pop
+  register[3]
+pop
+  register[2]
+pop
+  register[1]
+pop
+  register[0]
+ret
+out
+  "-"
+out
+  " "
+call
+  1518
+out
+  "\n"
+ret
+push
+  register[1]
+push
+  register[2]
+set
+  register[0]
+  27381
+set
+  register[1]
+  5846
+set
+  register[2]
+  0
+call
+  1458
+set
+  register[0]
+  register[2]
+pop
+  register[2]
+pop
+  register[1]
+ret
+push
+  register[3]
+push
+  register[4]
+rmem
+  register[3]
+  2732
+add
+  register[4]
+  register[0]
+  2
+rmem
+  register[4]
+  register[4]
+eq
+  register[3]
+  register[3]
+  register[4]
+jf
+  register[3]
+  5871
+add
+  register[2]
+  register[2]
+  1
+pop
+  register[4]
+pop
+  register[3]
+ret
+push
+  register[0]
+push
+  register[1]
+set
+  register[0]
+  27381
+set
+  register[1]
+  5893
+call
+  1458
+pop
+  register[1]
+pop
+  register[0]
+ret
+push
+  register[3]
+add
+  register[3]
+  register[0]
+  2
+rmem
+  register[3]
+  register[3]
+eq
+  register[3]
+  register[2]
+  register[3]
+jf
+  register[3]
+  5918
+add
+  register[0]
+  register[0]
+  0
+rmem
+  register[0]
+  register[0]
+call
+  5814
+pop
+  register[3]
+ret
+push
+  register[1]
+push
+  register[2]
+set
+  register[2]
+  register[0]
+set
+  register[0]
+  27381
+set
+  register[1]
+  5964
+call
+  1543
+eq
+  register[1]
+  register[0]
+  32767
+jt
+  register[1]
+  5956
+add
+  register[1]
+  27381
+  register[0]
+add
+  register[1]
+  register[1]
+  1
+rmem
+  register[0]
+  register[1]
+jmp
+  5959
+set
+  register[0]
+  0
+pop
+  register[2]
+pop
+  register[1]
+ret
+push
+  register[1]
+set
+  register[1]
+  register[2]
+add
+  register[0]
+  register[0]
+  0
+rmem
+  register[0]
+  register[0]
+call
+  1667
+pop
+  register[1]
+jf
+  register[0]
+  5989
+set
+  register[2]
+  register[1]
+set
+  register[1]
+  32767
+ret
+push
+  register[1]
+push
+  register[2]
+add
+  register[0]
+  register[0]
+  2
+rmem
+  register[0]
+  register[0]
+jf
+  register[0]
+  6019
+rmem
+  register[1]
+  2732
+eq
+  register[1]
+  register[0]
+  register[1]
+jt
+  register[1]
+  6019
+set
+  register[0]
+  0
+jmp
+  6022
+set
+  register[0]
+  1
+pop
+  register[2]
+pop
+  register[1]
+ret
+jt
+  register[0]
+  6035
+add
+  register[0]
+  register[1]
+  1
+ret
+jt
+  register[1]
+  6048
+add
+  register[0]
+  register[0]
+  32767
+set
+  register[1]
+  register[7]
+call
+  6027
+ret
+push
+  register[0]
+add
+  register[1]
+  register[1]
+  32767
+call
+  6027
+set
+  register[1]
+  register[0]
+pop
+  register[0]
+add
+  register[0]
+  register[0]
+  32767
+call
+  6027
+ret
 6095
 17625
 29781
@@ -8173,8 +8173,8 @@ RET
 16549
 78
 16483
-IN
-16435
+in
+  16435
 464
 16867
 390
@@ -10451,8 +10451,8 @@ IN
 3454
 23709
 11959
-PUSH
-21392
+push
+  21392
 9650
 30577
 18121
@@ -10571,9 +10571,9 @@ PUSH
 2136
 23181
 12212
-RMEM
-21237
-10070
+rmem
+  21237
+  10070
 30781
 19098
 8037
@@ -11891,10 +11891,10 @@ RMEM
 27637
 18062
 9648
-OR
-24401
-14955
-6512
+or
+  24401
+  14955
+  6512
 29765
 21269
 11820
@@ -20164,8 +20164,8 @@ OR
 10680
 18276
 25253
-CALL
-8083
+call
+  8083
 15729
 22693
 30293
@@ -20296,9 +20296,9 @@ CALL
 9413
 17782
 25568
-WMEM
-7897
-16300
+wmem
+  7897
+  16300
 23576
 31408
 6993
@@ -20792,8 +20792,8 @@ WMEM
 6377
 15739
 24454
-CALL
-8889
+call
+  8889
 18221
 27058
 2622
@@ -21605,10 +21605,10 @@ CALL
 1636
 12025
 22943
-GT
-11120
-21024
-31428
+gt
+  11120
+  21024
+  31428
 9608
 19638
 30544
@@ -22193,9 +22193,9 @@ GT
 30749
 10049
 21168
-RMEM
-12193
-23244
+rmem
+  12193
+  23244
 2132
 14326
 25902
@@ -26835,8 +26835,8 @@ RMEM
 3376
 23769
 11947
-PUSH
-21442
+push
+  21442
 9701
 30589
 18134
