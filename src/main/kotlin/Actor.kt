@@ -14,7 +14,7 @@ object InteractiveActor : Actor {
 
 object BootstrappedActor : Actor {
 
-    override fun handleOutput(char: Char) = kotlin.io.print(char)
+    override fun handleOutput(char: Char) = print(char)
 
     /**
      *
