@@ -39,10 +39,10 @@ fun printOpCodeAndOperands(
             .map { instruction -> Operand.fromInt(instruction) }
 
     if (opCode == OpCode.OUT) {
-        // Special handling for OUT because operands will often be ASCII characters.
+        // Special handling for OUT because operands will often represent ASCII characters.
         printOutOperand(operands[0], registers, writer)
     } else if (operands.isNotEmpty()) {
-        operands.forEach { operand -> printIndented("$operand", writer) } // fixme: should handle registers properly
+        operands.forEach { operand -> printNonOutOperand(operand, registers, writer) }
     }
 }
 
@@ -63,13 +63,22 @@ private fun printOutOperand(operand: Operand, registers: IntArray?, writer: Prin
             }
         }
 
-        is Operand.Register -> {
-            if (registers != null) {
-                printIndented("$operand = ${registers[operand.index]}", writer)
-            } else {
-                printIndented("$operand", writer)
-            }
-        }
+        is Operand.Register -> printRegisterOperand(operand, registers, writer)
+    }
+}
+
+private fun printNonOutOperand(operand: Operand, registers: IntArray?, writer: PrintWriter) {
+    when (operand) {
+        is Operand.Number   -> printIndented("$operand", writer)
+        is Operand.Register -> printRegisterOperand(operand, registers, writer)
+    }
+}
+
+private fun printRegisterOperand(register: Operand.Register, registers: IntArray?, writer: PrintWriter) {
+    if (registers != null) {
+        printIndented("$register = ${registers[register.index]}", writer)
+    } else {
+        printIndented("$register", writer)
     }
 }
 
