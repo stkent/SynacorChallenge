@@ -30,6 +30,9 @@ class Decompiler {
         }
     }
 
+    /**
+     * NOTE: intInstructions\[index\] MUST represent an OpCode.
+     */
     fun printOpCodeAndOperands(
             index: Int,
             intInstructions: List<Int>,
