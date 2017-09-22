@@ -9,8 +9,10 @@ import java.util.*
 
 const val MAX_INT = 32767
 const val FIRST_REGISTER_INSTRUCTION = MAX_INT + 1
-const val REGISTER_COUNT = 8
+private const val REGISTER_COUNT = 8
 const val LAST_REGISTER_INSTRUCTION = FIRST_REGISTER_INSTRUCTION + REGISTER_COUNT - 1
+
+private val REGISTER_7_INSTRUCTION_NUMBERS = arrayOf(521, 5451, 5522, 6042)
 
 /**
  * todo: fill me in
@@ -50,6 +52,10 @@ class VM(
     // Implementation
 
     private fun processOpCode(opCode: OpCode): Boolean {
+        if (REGISTER_7_INSTRUCTION_NUMBERS.contains(ip)) {
+            println("Hit line $ip")
+        }
+
         when (opCode) {
             HALT -> {
                 ip += 1
@@ -259,7 +265,7 @@ class VM(
                 if (lastInput.isEmpty()) {
                     val input = actor.getInput()
 
-                    val regex = Regex("register\\[7] = (\\d+)")
+                    val regex = Regex("register\\[7]\\s*=\\s*(\\d+)")
                     val matchResult = regex.matchEntire(input.trim())
 
                     if (matchResult != null) {
