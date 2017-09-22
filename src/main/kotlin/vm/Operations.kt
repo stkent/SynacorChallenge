@@ -25,11 +25,16 @@ enum class OpCode(val operandCount: Int) {
     NOOP(0);
 
     companion object {
-        fun fromInt(int: Int): OpCode? {
+        fun representsOpCode(int: Int) = (0 until values().size).contains(int)
+
+        /**
+         * Check the result of representsOpCode before calling this method.
+         */
+        fun fromInt(int: Int): OpCode {
             return try {
                 OpCode.values()[int]
-            } catch (exception: ArrayIndexOutOfBoundsException) {
-                null
+            } catch (cause: ArrayIndexOutOfBoundsException) {
+                throw IllegalArgumentException("Unrecognized operation code")
             }
         }
     }
@@ -49,7 +54,7 @@ sealed class Operand {
     }
 
     companion object {
-        fun fromInt(int: Int): Operand? = when (int) {
+        fun fromInt(int: Int): Operand = when (int) {
             in 0..MAX_INT -> {
                 Number(value = int)
             }
@@ -59,7 +64,7 @@ sealed class Operand {
             }
 
             else -> {
-                null
+                throw IllegalArgumentException("Unrecognized operand type")
             }
         }
     }
