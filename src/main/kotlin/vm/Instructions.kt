@@ -42,7 +42,7 @@ fun printOpCodeAndOperands(
         // Special handling for OUT because operands will often be ASCII characters.
         printOutOperand(operands[0], registers, writer)
     } else if (operands.isNotEmpty()) {
-        operands.forEach { operand -> printOperandValue("$operand", writer) }
+        operands.forEach { operand -> printIndented("$operand", writer) } // fixme: should handle registers properly
     }
 }
 
@@ -57,22 +57,22 @@ private fun printOutOperand(operand: Operand, registers: IntArray?, writer: Prin
                  * that our decompiled file line numbers correspond to instruction indices (offset by 1, since the
                  * instruction indices are 0-indexed but the file line numbers are 1-indexed).
                  */
-                printOperandValue("\"\\n\"", writer)
+                printIndented("\"\\n\"", writer)
             } else {
-                printOperandValue("\"$operandChar\"", writer)
+                printIndented("\"$operandChar\"", writer)
             }
         }
 
         is Operand.Register -> {
             if (registers != null) {
-                printOperandValue("$operand = ${registers[operand.index]}", writer)
+                printIndented("$operand = ${registers[operand.index]}", writer)
             } else {
-                printOperandValue("$operand", writer)
+                printIndented("$operand", writer)
             }
         }
     }
 }
 
-private fun printOperandValue(literal: String, writer: PrintWriter) {
+private fun printIndented(literal: String, writer: PrintWriter) {
     writer.println("  $literal")
 }
