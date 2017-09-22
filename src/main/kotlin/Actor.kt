@@ -76,6 +76,7 @@ object BootstrappedActor : Actor {
     }
 
     override fun getInput(): String {
+        @Suppress("LiftReturnOrAssignment")
         if (initialInstructions.peek() != null) {
             val nextInstruction = initialInstructions.poll()
             println(nextInstruction)
