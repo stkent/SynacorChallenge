@@ -42,8 +42,12 @@ class VM(
         var run = true
 
         while (run && ip in 0 until memory.size) {
-            val opCode = OpCode.fromInt(memory[ip]) ?: break
-            run = processOpCode(opCode)
+            if (OpCode.representsOpCode(memory[ip])) {
+                val opCode = OpCode.fromInt(memory[ip])
+                run = processOpCode(opCode)
+            } else {
+                break
+            }
         }
     }
 
