@@ -1,5 +1,6 @@
 import vm.Decompiler
 import vm.VM
+import java.io.File
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.util.*
@@ -23,9 +24,15 @@ object Main {
 
         val option = Scanner(System.`in`).nextLine()!!
 
-        when (option) {
+        when (option.trim()) {
             "1" -> VM(actor = BootstrappedActor).runProgram(programBytes)
-            "2" -> Decompiler().decompile(programBytes, "${fileName}_decompiled.txt")
+
+            "2" -> {
+                File("${fileName}_decompiled.txt").printWriter().use { writer ->
+                    Decompiler().decompile(programBytes, writer)
+                }
+            }
+
             else -> println("Option not recognized. Exiting.")
         }
     }
