@@ -2,6 +2,8 @@ package vm
 
 import java.io.PrintWriter
 
+private fun Byte.toUnsignedInt() = java.lang.Byte.toUnsignedInt(this)
+
 /**
  * Converts an array of bytes representing a program into a list of 16-bit unsigned integer instructions.
  */

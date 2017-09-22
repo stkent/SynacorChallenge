@@ -13,7 +13,7 @@ class Decompiler {
             val intInstruction = intInstructions[index]
 
             @Suppress("LiftReturnOrAssignment")
-            if (OpCode.representsOpCode(intInstruction)) {
+            if (intInstruction.representsOpCode()) {
                 printOpCodeAndOperands(
                         index = index,
                         intInstructions = intInstructions,

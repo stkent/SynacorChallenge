@@ -1,5 +1,7 @@
 package vm
 
+fun Int.representsOpCode() = (0 until OpCode.values().size).contains(this)
+
 enum class OpCode(val operandCount: Int) {
     HALT(0),
     SET(2),
@@ -25,10 +27,8 @@ enum class OpCode(val operandCount: Int) {
     NOOP(0);
 
     companion object {
-        fun representsOpCode(int: Int) = (0 until values().size).contains(int)
-
         /**
-         * Check the result of representsOpCode before calling this method.
+         * Check the result of Int.representsOpCode before calling this method.
          */
         fun fromInt(int: Int): OpCode {
             return try {
