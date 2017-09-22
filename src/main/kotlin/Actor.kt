@@ -72,12 +72,13 @@ object BootstrappedActor : Actor {
         add("use teleporter")
         add("take business card")
         add("take strange book")
+        add("register[7] = 3")
     }
 
     override fun getInput(): String {
         if (initialInstructions.peek() != null) {
             val nextInstruction = initialInstructions.poll()
-            print(nextInstruction)
+            println(nextInstruction)
             return nextInstruction
         } else {
             return InteractiveActor.getInput()

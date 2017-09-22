@@ -259,8 +259,12 @@ class VM(
                 if (lastInput.isEmpty()) {
                     val input = actor.getInput()
 
-                    if (input == "use teleporter") {
-                        registers[7] = 1
+                    val regex = Regex("register\\[7] = (\\d+)")
+                    val matchResult = regex.matchEntire(input.trim())
+
+                    if (matchResult != null) {
+                        registers[7] = matchResult.groups[1]!!.value.toInt()
+                        return true
                     }
 
                     input.forEach { lastInput.add(it) }
