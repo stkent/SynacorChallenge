@@ -27,6 +27,8 @@ fun printOpCodeAndOperands(
         registers: IntArray? = null,
         writer: PrintWriter) {
 
+    require(opCode.operandCount == operands.size) { "Incorrect number of operands supplied." }
+
     writer.println(opCode)
     operands.forEach { operand -> printOperand(operand, opCode, registers, writer) }
 }
