@@ -21,9 +21,6 @@ fun parseIntInstructions(programBytes: ByteArray): List<Int> {
     return result
 }
 
-/**
- * NOTE: intInstructions\[index\] MUST represent an OpCode.
- */
 fun printOpCodeAndOperands(
         opCode: OpCode,
         operands: List<Operand>,
