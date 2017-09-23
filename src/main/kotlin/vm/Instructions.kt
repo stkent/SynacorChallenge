@@ -31,10 +31,10 @@ fun printOpCodeAndOperands(
         writer: PrintWriter) {
 
     writer.println(opCode)
-    operands.forEach { operand -> printOperand(opCode, operand, registers, writer) }
+    operands.forEach { operand -> printOperand(operand, opCode, registers, writer) }
 }
 
-private fun printOperand(opCode: OpCode, operand: Operand, registers: IntArray?, writer: PrintWriter) {
+private fun printOperand(operand: Operand, opCode: OpCode, registers: IntArray?, writer: PrintWriter) {
     when (operand) {
         is Operand.Register -> {
             printRegisterOperand(operand, registers, writer)
@@ -52,18 +52,18 @@ private fun printOperand(opCode: OpCode, operand: Operand, registers: IntArray?,
 }
 
 private fun printOutNumberOperand(number: Operand.Number, writer: PrintWriter) {
-        val operandChar = number.value.toChar()
+    val operandChar = number.value.toChar()
 
-        if (operandChar == '\n') {
-            /*
-             * Print newline literals (1 line "tall"), rather than inserting actual newlines (2 lines "tall") so
-             * that our decompiled file line numbers correspond to instruction indices (offset by 1, since the
-             * instruction indices are 0-indexed but the file line numbers are 1-indexed).
-             */
-            printIndented("\"\\n\"", writer)
-        } else {
-            printIndented("\"$operandChar\"", writer)
-        }
+    if (operandChar == '\n') {
+        /*
+         * Print newline literals (1 line "tall"), rather than inserting actual newlines (2 lines "tall") so
+         * that our decompiled file line numbers correspond to instruction indices (offset by 1, since the
+         * instruction indices are 0-indexed but the file line numbers are 1-indexed).
+         */
+        printIndented("\"\\n\"", writer)
+    } else {
+        printIndented("\"$operandChar\"", writer)
+    }
 }
 
 private fun printRegisterOperand(register: Operand.Register, registers: IntArray?, writer: PrintWriter) {
