@@ -21,12 +21,7 @@ fun parseIntInstructions(programBytes: ByteArray): List<Int> {
     return result
 }
 
-fun printOpCodeAndOperands(
-        opCode: OpCode,
-        operands: List<Operand>,
-        registers: IntArray? = null,
-        writer: PrintWriter) {
-
+fun printOpCodeAndOperands(opCode: OpCode, operands: List<Operand>, registers: IntArray? = null, writer: PrintWriter) {
     require(opCode.operandCount == operands.size) { "Incorrect number of operands supplied." }
 
     writer.println(opCode)

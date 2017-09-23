@@ -19,10 +19,7 @@ class Decompiler {
                         .subList(index + 1, index + opCode.operandCount + 1)
                         .map { int -> Operand.fromInt(int) }
 
-                printOpCodeAndOperands(
-                        opCode = opCode,
-                        operands = operands,
-                        writer = writer)
+                printOpCodeAndOperands(opCode = opCode, operands = operands, writer = writer)
 
                 index += OpCode.fromInt(intInstruction).operandCount + 1
             } else {
