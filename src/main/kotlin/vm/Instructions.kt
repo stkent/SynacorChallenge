@@ -25,20 +25,13 @@ fun parseIntInstructions(programBytes: ByteArray): List<Int> {
  * NOTE: intInstructions\[index\] MUST represent an OpCode.
  */
 fun printOpCodeAndOperands(
-        index: Int,
-        intInstructions: List<Int>,
+        opCode: OpCode,
+        operands: List<Operand>,
         registers: IntArray? = null,
         writer: PrintWriter) {
 
-    val intInstruction = intInstructions[index]
-    val opCode = OpCode.fromInt(intInstruction)
-
     writer.println(opCode)
-
-    intInstructions
-            .subList(index + 1, index + opCode.operandCount + 1)
-            .map { instruction -> Operand.fromInt(instruction) }
-            .forEach { operand -> printOperand(opCode, operand, registers, writer) }
+    operands.forEach { operand -> printOperand(opCode, operand, registers, writer) }
 }
 
 private fun printOperand(opCode: OpCode, operand: Operand, registers: IntArray?, writer: PrintWriter) {

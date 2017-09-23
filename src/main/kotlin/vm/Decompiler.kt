@@ -14,9 +14,14 @@ class Decompiler {
 
             @Suppress("LiftReturnOrAssignment")
             if (intInstruction.representsOpCode()) {
+                val opCode = OpCode.fromInt(intInstruction)
+                val operands = intInstructions
+                        .subList(index + 1, index + opCode.operandCount + 1)
+                        .map { int -> Operand.fromInt(int) }
+
                 printOpCodeAndOperands(
-                        index = index,
-                        intInstructions = intInstructions,
+                        opCode = opCode,
+                        operands = operands,
                         writer = writer)
 
                 index += OpCode.fromInt(intInstruction).operandCount + 1
