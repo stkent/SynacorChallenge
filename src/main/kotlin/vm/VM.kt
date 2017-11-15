@@ -44,7 +44,12 @@ class VM(
         while (run && ip in 0 until memory.size) {
             if (memory[ip].representsOpCode()) {
                 val opCode = OpCode.fromInt(memory[ip])
-                run = processOpCode(opCode)
+
+                val operands = intInstructions
+                        .subList(ip + 1, ip + opCode.operandCount + 1)
+                        .map { int -> Operand.fromInt(int) }
+
+                run = processOpCode(opCode, operands)
             } else {
                 break
             }
@@ -55,7 +60,9 @@ class VM(
 
     // Implementation
 
-    private fun processOpCode(opCode: OpCode): Boolean {
+    private fun processOpCode(opCode: OpCode, operands: List<Operand>): Boolean {
+        require(opCode.operandCount == operands.size)  { "Incorrect number of operands supplied." }
+
         if (REGISTER_7_INSTRUCTION_NUMBERS.contains(ip)) {
             println("Hit line $ip")
         }
@@ -68,8 +75,8 @@ class VM(
             }
 
             SET -> {
-                val target  = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
-                val operand = Operand.fromInt(memory[ip + 2])
+                val target  = operands[0] as? Register ?: return false
+                val operand = operands[1]
 
                 registers[target.index] = operandToInt(operand)
                 ip += 3
@@ -78,7 +85,7 @@ class VM(
             }
 
             PUSH -> {
-                val operand = Operand.fromInt(memory[ip + 1])
+                val operand = operands[0]
 
                 stack.addFirst(operandToInt(operand))
                 ip += 2
@@ -88,7 +95,7 @@ class VM(
 
             POP -> {
                 val value  = stack.pollFirst() ?: return false
-                val target = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
+                val target = operands[0] as? Register ?: return false
 
                 registers[target.index] = value
                 ip += 2
@@ -97,9 +104,9 @@ class VM(
             }
 
             EQ -> {
-                val target   = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
-                val operand2 = Operand.fromInt(memory[ip + 2])
-                val operand3 = Operand.fromInt(memory[ip + 3])
+                val target   = operands[0] as? Register ?: return false
+                val operand2 = operands[1]
+                val operand3 = operands[2]
 
                 val equal = operandToInt(operand2) == operandToInt(operand3)
 
@@ -110,9 +117,9 @@ class VM(
             }
 
             GT -> {
-                val target   = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
-                val operand2 = Operand.fromInt(memory[ip + 2])
-                val operand3 = Operand.fromInt(memory[ip + 3])
+                val target   = operands[0] as? Register ?: return false
+                val operand2 = operands[1]
+                val operand3 = operands[2]
 
                 val greaterThan = operandToInt(operand2) > operandToInt(operand3)
 
@@ -123,7 +130,7 @@ class VM(
             }
 
             JMP -> {
-                val operand = Operand.fromInt(memory[ip + 1])
+                val operand = operands[0]
 
                 ip = operandToInt(operand)
 
@@ -131,8 +138,8 @@ class VM(
             }
 
             JT -> {
-                val operand1 = Operand.fromInt(memory[ip + 1])
-                val operand2 = Operand.fromInt(memory[ip + 2])
+                val operand1 = operands[0]
+                val operand2 = operands[1]
 
                 val jump = operandToInt(operand1) != 0
 
@@ -142,8 +149,8 @@ class VM(
             }
 
             JF -> {
-                val operand1 = Operand.fromInt(memory[ip + 1])
-                val operand2 = Operand.fromInt(memory[ip + 2])
+                val operand1 = operands[0]
+                val operand2 = operands[1]
 
                 val jump = operandToInt(operand1) == 0
 
@@ -153,9 +160,9 @@ class VM(
             }
 
             ADD -> {
-                val target   = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
-                val operand2 = Operand.fromInt(memory[ip + 2])
-                val operand3 = Operand.fromInt(memory[ip + 3])
+                val target   = operands[0] as? Register ?: return false
+                val operand2 = operands[1]
+                val operand3 = operands[2]
 
                 registers[target.index] = (operandToInt(operand2) + operandToInt(operand3)) % 32768
                 ip += 4
@@ -164,9 +171,9 @@ class VM(
             }
 
             MULT -> {
-                val target   = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
-                val operand2 = Operand.fromInt(memory[ip + 2])
-                val operand3 = Operand.fromInt(memory[ip + 3])
+                val target   = operands[0] as? Register ?: return false
+                val operand2 = operands[1]
+                val operand3 = operands[2]
 
                 registers[target.index] = (operandToInt(operand2) * operandToInt(operand3)) % 32768
                 ip += 4
@@ -175,9 +182,9 @@ class VM(
             }
 
             MOD -> {
-                val target   = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
-                val operand2 = Operand.fromInt(memory[ip + 2])
-                val operand3 = Operand.fromInt(memory[ip + 3])
+                val target   = operands[0] as? Register ?: return false
+                val operand2 = operands[1]
+                val operand3 = operands[2]
 
                 registers[target.index] = operandToInt(operand2).rem(operandToInt(operand3))
                 ip += 4
@@ -186,9 +193,9 @@ class VM(
             }
 
             AND -> {
-                val target   = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
-                val operand2 = Operand.fromInt(memory[ip + 2])
-                val operand3 = Operand.fromInt(memory[ip + 3])
+                val target   = operands[0] as? Register ?: return false
+                val operand2 = operands[1]
+                val operand3 = operands[2]
 
                 registers[target.index] = operandToInt(operand2) and operandToInt(operand3)
                 ip += 4
@@ -197,9 +204,9 @@ class VM(
             }
 
             OR -> {
-                val target   = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
-                val operand2 = Operand.fromInt(memory[ip + 2])
-                val operand3 = Operand.fromInt(memory[ip + 3])
+                val target   = operands[0] as? Register ?: return false
+                val operand2 = operands[1]
+                val operand3 = operands[2]
 
                 registers[target.index] = operandToInt(operand2) or operandToInt(operand3)
                 ip += 4
@@ -208,8 +215,8 @@ class VM(
             }
 
             NOT -> {
-                val target   = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
-                val operand2 = Operand.fromInt(memory[ip + 2])
+                val target   = operands[0] as? Register ?: return false
+                val operand2 = operands[1]
 
                 registers[target.index] = operandToInt(operand2).inv() and ((1 shl 15) - 1)
                 ip += 3
@@ -218,8 +225,8 @@ class VM(
             }
 
             RMEM -> {
-                val target   = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
-                val operand2 = Operand.fromInt(memory[ip + 2])
+                val target   = operands[0] as? Register ?: return false
+                val operand2 = operands[1]
 
                 registers[target.index] = memory[operandToInt(operand2)]
                 ip += 3
@@ -228,8 +235,8 @@ class VM(
             }
 
             WMEM -> {
-                val operand1 = Operand.fromInt(memory[ip + 1])
-                val operand2 = Operand.fromInt(memory[ip + 2])
+                val operand1 = operands[0]
+                val operand2 = operands[1]
 
                 memory[operandToInt(operand1)] = operandToInt(operand2)
                 ip += 3
@@ -238,7 +245,7 @@ class VM(
             }
 
             CALL -> {
-                val operand = Operand.fromInt(memory[ip + 1])
+                val operand = operands[0]
 
                 stack.addFirst(ip + 2)
                 ip = operandToInt(operand)
@@ -255,7 +262,7 @@ class VM(
             }
 
             OUT -> {
-                val operand = Operand.fromInt(memory[ip + 1])
+                val operand = operands[0]
 
                 actor.handleOutput(operandToInt(operand).toChar())
                 ip += 2
@@ -264,7 +271,7 @@ class VM(
             }
 
             IN -> {
-                val target = Operand.fromInt(memory[ip + 1]) as? Register ?: return false
+                val target = operands[0] as? Register ?: return false
 
                 if (lastInput.isEmpty()) {
                     val input = actor.getInput()
