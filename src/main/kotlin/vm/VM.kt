@@ -5,6 +5,7 @@ import InteractiveActor
 import vm.OpCode.*
 import vm.Operand.Number
 import vm.Operand.Register
+import java.io.PrintWriter
 import java.util.*
 
 const val MAX_INT = 32767
@@ -34,7 +35,7 @@ class VM(
         stack.addAll(stackSeed)
     }
 
-    fun runProgram(programBytes: ByteArray) {
+    fun runProgram(programBytes: ByteArray, writer: PrintWriter? = null) {
         val intInstructions = parseIntInstructions(programBytes)
 
         memory.addAll(intInstructions)
@@ -48,6 +49,14 @@ class VM(
                 val operands = intInstructions
                         .subList(ip + 1, ip + opCode.operandCount + 1)
                         .map { int -> Operand.fromInt(int) }
+
+                writer?.let {
+                    printOpCodeAndOperands(
+                            opCode = opCode,
+                            operands = operands,
+                            writer = it,
+                            registers = registers)
+                }
 
                 run = processOpCode(opCode, operands)
             } else {
