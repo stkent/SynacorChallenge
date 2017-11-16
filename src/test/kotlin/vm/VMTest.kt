@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test
 
 class VMTest {
 
+    // todo: fixme
     @Test
     fun test() {
         val vm = VM(
