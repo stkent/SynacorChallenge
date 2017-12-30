@@ -19,301 +19,301 @@ private val REGISTER_7_INSTRUCTION_NUMBERS = arrayOf(521, 5451, 5522, 6042)
  * todo: fill me in
  */
 class VM(
-        private val actor: Actor        = InteractiveActor,
-        registersSeed:     (Int) -> Int = { 0 },
-        stackSeed:         List<Int>    = emptyList(),
-        private var ip:    Int          = 0
+    private val actor: Actor = InteractiveActor,
+    registersSeed: (Int) -> Int = { 0 },
+    stackSeed: List<Int> = emptyList(),
+    private var ip: Int = 0
 ) {
 
-    private val registers: IntArray         = IntArray(REGISTER_COUNT)
-    private val stack:     Deque<Int>       = ArrayDeque<Int>()
-    private val memory:    MutableList<Int> = mutableListOf()
-    private val lastInput: Deque<Char>      = ArrayDeque<Char>()
+  private val registers: IntArray = IntArray(REGISTER_COUNT)
+  private val stack: Deque<Int> = ArrayDeque<Int>()
+  private val memory: MutableList<Int> = mutableListOf()
+  private val lastInput: Deque<Char> = ArrayDeque<Char>()
 
-    init {
-        (0 until registers.size).forEach { registers[it] = registersSeed(it) }
-        stack.addAll(stackSeed)
-    }
+  init {
+    (0 until registers.size).forEach { registers[it] = registersSeed(it) }
+    stack.addAll(stackSeed)
+  }
 
-    fun runProgram(programBytes: ByteArray, writer: PrintWriter? = null) {
-        val intInstructions = parseIntInstructions(programBytes)
+  fun runProgram(programBytes: ByteArray, writer: PrintWriter? = null) {
+    val intInstructions = parseIntInstructions(programBytes)
 
-        memory.addAll(intInstructions)
+    memory.addAll(intInstructions)
 
-        var run = true
+    var run = true
 
-        while (run && ip in 0 until memory.size) {
-            if (memory[ip].representsOpCode()) {
-                val opCode = OpCode.fromInt(memory[ip])
+    while (run && ip in 0 until memory.size) {
+      if (memory[ip].representsOpCode()) {
+        val opCode = OpCode.fromInt(memory[ip])
 
-                val operands = intInstructions
-                        .subList(ip + 1, ip + opCode.operandCount + 1)
-                        .map { int -> Operand.fromInt(int) }
+        val operands = intInstructions
+            .subList(ip + 1, ip + opCode.operandCount + 1)
+            .map { int -> Operand.fromInt(int) }
 
-                writer?.let {
-                    printOpCodeAndOperands(
-                            opCode = opCode,
-                            operands = operands,
-                            writer = it,
-                            registers = registers)
-                }
-
-                run = processOpCode(opCode, operands)
-            } else {
-                break
-            }
-        }
-    }
-
-    fun getRegisterValues() = registers.toList()
-
-    // Implementation
-
-    private fun processOpCode(opCode: OpCode, operands: List<Operand>): Boolean {
-        require(opCode.operandCount == operands.size)  { "Incorrect number of operands supplied." }
-
-        if (REGISTER_7_INSTRUCTION_NUMBERS.contains(ip)) {
-            println("Hit line $ip")
+        writer?.let {
+          printOpCodeAndOperands(
+              opCode = opCode,
+              operands = operands,
+              writer = it,
+              registers = registers)
         }
 
-        when (opCode) {
-            HALT -> {
-                ip += 1
+        run = processOpCode(opCode, operands)
+      } else {
+        break
+      }
+    }
+  }
 
-                return false
-            }
+  fun getRegisterValues() = registers.toList()
 
-            SET -> {
-                val target  = operands[0] as? Register ?: return false
-                val operand = operands[1]
+  // Implementation
 
-                registers[target.index] = operandToInt(operand)
-                ip += 3
+  private fun processOpCode(opCode: OpCode, operands: List<Operand>): Boolean {
+    require(opCode.operandCount == operands.size) { "Incorrect number of operands supplied." }
 
-                return true
-            }
+    if (REGISTER_7_INSTRUCTION_NUMBERS.contains(ip)) {
+      println("Hit line $ip")
+    }
 
-            PUSH -> {
-                val operand = operands[0]
+    when (opCode) {
+      HALT -> {
+        ip += 1
 
-                stack.addFirst(operandToInt(operand))
-                ip += 2
+        return false
+      }
 
-                return true
-            }
+      SET -> {
+        val target = operands[0] as? Register ?: return false
+        val operand = operands[1]
 
-            POP -> {
-                val value  = stack.pollFirst() ?: return false
-                val target = operands[0] as? Register ?: return false
+        registers[target.index] = operandToInt(operand)
+        ip += 3
 
-                registers[target.index] = value
-                ip += 2
+        return true
+      }
 
-                return true
-            }
+      PUSH -> {
+        val operand = operands[0]
 
-            EQ -> {
-                val target   = operands[0] as? Register ?: return false
-                val operand2 = operands[1]
-                val operand3 = operands[2]
+        stack.addFirst(operandToInt(operand))
+        ip += 2
 
-                val equal = operandToInt(operand2) == operandToInt(operand3)
+        return true
+      }
 
-                registers[target.index] = if (equal) 1 else 0
-                ip += 4
+      POP -> {
+        val value = stack.pollFirst() ?: return false
+        val target = operands[0] as? Register ?: return false
 
-                return true
-            }
+        registers[target.index] = value
+        ip += 2
 
-            GT -> {
-                val target   = operands[0] as? Register ?: return false
-                val operand2 = operands[1]
-                val operand3 = operands[2]
+        return true
+      }
 
-                val greaterThan = operandToInt(operand2) > operandToInt(operand3)
+      EQ -> {
+        val target = operands[0] as? Register ?: return false
+        val operand2 = operands[1]
+        val operand3 = operands[2]
 
-                registers[target.index] = if (greaterThan) 1 else 0
-                ip += 4
+        val equal = operandToInt(operand2) == operandToInt(operand3)
 
-                return true
-            }
+        registers[target.index] = if (equal) 1 else 0
+        ip += 4
 
-            JMP -> {
-                val operand = operands[0]
+        return true
+      }
 
-                ip = operandToInt(operand)
+      GT -> {
+        val target = operands[0] as? Register ?: return false
+        val operand2 = operands[1]
+        val operand3 = operands[2]
 
-                return true
-            }
+        val greaterThan = operandToInt(operand2) > operandToInt(operand3)
 
-            JT -> {
-                val operand1 = operands[0]
-                val operand2 = operands[1]
+        registers[target.index] = if (greaterThan) 1 else 0
+        ip += 4
 
-                val jump = operandToInt(operand1) != 0
+        return true
+      }
 
-                ip = if (jump) operandToInt(operand2) else ip + 3
+      JMP -> {
+        val operand = operands[0]
 
-                return true
-            }
+        ip = operandToInt(operand)
 
-            JF -> {
-                val operand1 = operands[0]
-                val operand2 = operands[1]
+        return true
+      }
 
-                val jump = operandToInt(operand1) == 0
+      JT -> {
+        val operand1 = operands[0]
+        val operand2 = operands[1]
 
-                ip = if (jump) operandToInt(operand2) else ip + 3
+        val jump = operandToInt(operand1) != 0
 
-                return true
-            }
+        ip = if (jump) operandToInt(operand2) else ip + 3
 
-            ADD -> {
-                val target   = operands[0] as? Register ?: return false
-                val operand2 = operands[1]
-                val operand3 = operands[2]
+        return true
+      }
 
-                registers[target.index] = (operandToInt(operand2) + operandToInt(operand3)) % 32768
-                ip += 4
+      JF -> {
+        val operand1 = operands[0]
+        val operand2 = operands[1]
 
-                return true
-            }
+        val jump = operandToInt(operand1) == 0
 
-            MULT -> {
-                val target   = operands[0] as? Register ?: return false
-                val operand2 = operands[1]
-                val operand3 = operands[2]
+        ip = if (jump) operandToInt(operand2) else ip + 3
 
-                registers[target.index] = (operandToInt(operand2) * operandToInt(operand3)) % 32768
-                ip += 4
+        return true
+      }
 
-                return true
-            }
+      ADD -> {
+        val target = operands[0] as? Register ?: return false
+        val operand2 = operands[1]
+        val operand3 = operands[2]
 
-            MOD -> {
-                val target   = operands[0] as? Register ?: return false
-                val operand2 = operands[1]
-                val operand3 = operands[2]
+        registers[target.index] = (operandToInt(operand2) + operandToInt(operand3)) % 32768
+        ip += 4
 
-                registers[target.index] = operandToInt(operand2).rem(operandToInt(operand3))
-                ip += 4
+        return true
+      }
 
-                return true
-            }
+      MULT -> {
+        val target = operands[0] as? Register ?: return false
+        val operand2 = operands[1]
+        val operand3 = operands[2]
 
-            AND -> {
-                val target   = operands[0] as? Register ?: return false
-                val operand2 = operands[1]
-                val operand3 = operands[2]
+        registers[target.index] = (operandToInt(operand2) * operandToInt(operand3)) % 32768
+        ip += 4
 
-                registers[target.index] = operandToInt(operand2) and operandToInt(operand3)
-                ip += 4
+        return true
+      }
 
-                return true
-            }
+      MOD -> {
+        val target = operands[0] as? Register ?: return false
+        val operand2 = operands[1]
+        val operand3 = operands[2]
 
-            OR -> {
-                val target   = operands[0] as? Register ?: return false
-                val operand2 = operands[1]
-                val operand3 = operands[2]
+        registers[target.index] = operandToInt(operand2).rem(operandToInt(operand3))
+        ip += 4
 
-                registers[target.index] = operandToInt(operand2) or operandToInt(operand3)
-                ip += 4
+        return true
+      }
 
-                return true
-            }
+      AND -> {
+        val target = operands[0] as? Register ?: return false
+        val operand2 = operands[1]
+        val operand3 = operands[2]
 
-            NOT -> {
-                val target   = operands[0] as? Register ?: return false
-                val operand2 = operands[1]
+        registers[target.index] = operandToInt(operand2) and operandToInt(operand3)
+        ip += 4
 
-                registers[target.index] = operandToInt(operand2).inv() and ((1 shl 15) - 1)
-                ip += 3
+        return true
+      }
 
-                return true
-            }
+      OR -> {
+        val target = operands[0] as? Register ?: return false
+        val operand2 = operands[1]
+        val operand3 = operands[2]
 
-            RMEM -> {
-                val target   = operands[0] as? Register ?: return false
-                val operand2 = operands[1]
+        registers[target.index] = operandToInt(operand2) or operandToInt(operand3)
+        ip += 4
 
-                registers[target.index] = memory[operandToInt(operand2)]
-                ip += 3
+        return true
+      }
 
-                return true
-            }
+      NOT -> {
+        val target = operands[0] as? Register ?: return false
+        val operand2 = operands[1]
 
-            WMEM -> {
-                val operand1 = operands[0]
-                val operand2 = operands[1]
+        registers[target.index] = operandToInt(operand2).inv() and ((1 shl 15) - 1)
+        ip += 3
 
-                memory[operandToInt(operand1)] = operandToInt(operand2)
-                ip += 3
+        return true
+      }
 
-                return true
-            }
+      RMEM -> {
+        val target = operands[0] as? Register ?: return false
+        val operand2 = operands[1]
 
-            CALL -> {
-                val operand = operands[0]
+        registers[target.index] = memory[operandToInt(operand2)]
+        ip += 3
 
-                stack.addFirst(ip + 2)
-                ip = operandToInt(operand)
+        return true
+      }
 
-                return true
-            }
+      WMEM -> {
+        val operand1 = operands[0]
+        val operand2 = operands[1]
 
-            RET -> {
-                val value = stack.pollFirst() ?: return false
+        memory[operandToInt(operand1)] = operandToInt(operand2)
+        ip += 3
 
-                ip = value
+        return true
+      }
 
-                return true
-            }
+      CALL -> {
+        val operand = operands[0]
 
-            OUT -> {
-                val operand = operands[0]
+        stack.addFirst(ip + 2)
+        ip = operandToInt(operand)
 
-                actor.handleOutput(operandToInt(operand).toChar())
-                ip += 2
+        return true
+      }
 
-                return true
-            }
+      RET -> {
+        val value = stack.pollFirst() ?: return false
 
-            IN -> {
-                val target = operands[0] as? Register ?: return false
+        ip = value
 
-                if (lastInput.isEmpty()) {
-                    val input = actor.getInput()
+        return true
+      }
 
-                    val regex = Regex("register\\[7]\\s*=\\s*(\\d+)")
-                    val matchResult = regex.matchEntire(input.trim())
+      OUT -> {
+        val operand = operands[0]
 
-                    if (matchResult != null) {
-                        registers[7] = matchResult.groups[1]!!.value.toInt()
-                        return true
-                    }
+        actor.handleOutput(operandToInt(operand).toChar())
+        ip += 2
 
-                    input.forEach { lastInput.add(it) }
-                    lastInput.add('\n')
-                }
+        return true
+      }
 
-                registers[target.index] = lastInput.poll().toInt()
-                ip += 2
+      IN -> {
+        val target = operands[0] as? Register ?: return false
 
-                return true
-            }
+        if (lastInput.isEmpty()) {
+          val input = actor.getInput()
 
-            NOOP -> {
-                ip += 1
+          val regex = Regex("register\\[7]\\s*=\\s*(\\d+)")
+          val matchResult = regex.matchEntire(input.trim())
 
-                return true
-            }
+          if (matchResult != null) {
+            registers[7] = matchResult.groups[1]!!.value.toInt()
+            return true
+          }
+
+          input.forEach { lastInput.add(it) }
+          lastInput.add('\n')
         }
-    }
 
-    private fun operandToInt(operand: Operand) = when (operand) {
-        is Number   -> operand.value
-        is Register -> registers[operand.index]
+        registers[target.index] = lastInput.poll().toInt()
+        ip += 2
+
+        return true
+      }
+
+      NOOP -> {
+        ip += 1
+
+        return true
+      }
     }
+  }
+
+  private fun operandToInt(operand: Operand) = when (operand) {
+    is Number -> operand.value
+    is Register -> registers[operand.index]
+  }
 
 }

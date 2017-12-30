@@ -7,40 +7,40 @@ import java.util.*
 
 object Main {
 
-    @JvmStatic
-    fun main(args: Array<String>) {
-        // Name of a binary file residing in the resources directory.
-        val fileName = "challenge"
+  @JvmStatic
+  fun main(args: Array<String>) {
+    // Name of a binary file residing in the resources directory.
+    val fileName = "challenge"
 
-        val programBytes = readProgramBytes("$fileName.bin")
+    val programBytes = readProgramBytes("$fileName.bin")
 
-        print("""
-              Choose an option:
+    print("""
+          Choose an option:
 
-              [1] Run program
-              [2] Decompile program
+          [1] Run program
+          [2] Decompile program
 
-              > """.trimIndent())
+          > """.trimIndent())
 
-        val option = Scanner(System.`in`).nextLine()!!
+    val option = Scanner(System.`in`).nextLine()!!
 
-        when (option.trim()) {
-            "1" -> VM(actor = BootstrappedActor).runProgram(programBytes)
+    when (option.trim()) {
+      "1" -> VM(actor = BootstrappedActor).runProgram(programBytes)
 
-            "2" -> {
-                File("${fileName}_decompiled.txt").printWriter().use { writer ->
-                    Decompiler().decompile(programBytes, writer)
-                }
-            }
-
-            else -> println("Option not recognized. Exiting.")
+      "2" -> {
+        File("${fileName}_decompiled.txt").printWriter().use { writer ->
+          Decompiler().decompile(programBytes, writer)
         }
-    }
+      }
 
-    private fun readProgramBytes(programName: String): ByteArray {
-        val fileName = javaClass.classLoader.getResource(programName)!!.file
-        val filePath = Paths.get(fileName)
-        return Files.readAllBytes(filePath)
+      else -> println("Option not recognized. Exiting.")
     }
+  }
+
+  private fun readProgramBytes(programName: String): ByteArray {
+    val fileName = javaClass.classLoader.getResource(programName)!!.file
+    val filePath = Paths.get(fileName)
+    return Files.readAllBytes(filePath)
+  }
 
 }
