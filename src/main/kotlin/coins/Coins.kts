@@ -8,8 +8,8 @@ val coins = mapOf(
 )
 
 /*
- * Function described by the monument. We wish to find the sequence of coins whose values, when passed as inputs to this
- * function, produce the result 399.
+ * Function described by the monument. We wish to find the sequence of coins whose values, when
+ * passed as inputs to this function, produce the result 399.
  */
 fun function(c1: Int, c2: Int, c3: Int, c4: Int, c5: Int): Int =
     c1 + c2 * Math.pow(c3.toDouble(), 2.0).toInt() + Math.pow(c4.toDouble(), 3.0).toInt() - c5
