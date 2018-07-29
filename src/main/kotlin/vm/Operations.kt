@@ -55,7 +55,7 @@ sealed class Operand {
 
   companion object {
     fun fromInt(int: Int): Operand = when (int) {
-      in 0..MAX_INT -> {
+      in 0..MAX_VM_INT -> {
         Number(value = int)
       }
 
