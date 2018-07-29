@@ -12,8 +12,6 @@ const val FIRST_REGISTER_INSTRUCTION = MAX_VM_INT + 1
 const val REGISTER_COUNT = 8
 const val LAST_REGISTER_INSTRUCTION = FIRST_REGISTER_INSTRUCTION + REGISTER_COUNT - 1
 
-private val REGISTER_7_INSTRUCTION_NUMBERS = arrayOf(521, 5451, 5522, 6042)
-
 /**
  * todo: fill me in
  */
@@ -80,8 +78,10 @@ class VM(
 
     require(opCode.operandCount == operands.size) { "Incorrect number of operands supplied." }
 
-    if (REGISTER_7_INSTRUCTION_NUMBERS.contains(ip)) {
-      println("Hit line $ip")
+    operands.forEach { operand ->
+      if (operand is Register && operand.index == 7) {
+//        display.printLine("Hit register 7 during instruction $ip")
+      }
     }
 
     when (opCode) {
