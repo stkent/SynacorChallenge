@@ -51,7 +51,7 @@ private fun operandDisplayString(
     is Operand.Number -> {
       // Special handling because OUT operands are often ASCII characters.
       if (opCode == OpCode.OUT) {
-        numberOperandDisplayString(operand)
+        charOperandDisplayString(operand)
       } else {
         "$operand"
       }
@@ -70,7 +70,7 @@ private fun registerOperandDisplayString(
   }
 }
 
-private fun numberOperandDisplayString(number: Operand.Number): String {
+private fun charOperandDisplayString(number: Operand.Number): String {
   val operandChar = number.value.toChar()
 
   return if (operandChar == '\n') {

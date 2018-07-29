@@ -6,21 +6,15 @@ import java.io.FileOutputStream
 
 interface OutputHandler {
   fun handleOutput(output: String)
-  fun performCleanup()
 }
 
 class StdOutOutputHandler: OutputHandler {
 
   override fun handleOutput(output: String) {
-    print(output)
-  }
-
-  override fun performCleanup() {
-    // No implementation required.
+    println(output)
   }
 
 }
-
 
 class FileOutputHandler(fileLocation: String): OutputHandler {
 
@@ -30,7 +24,7 @@ class FileOutputHandler(fileLocation: String): OutputHandler {
     filePrintWriter.println(output)
   }
 
-  override fun performCleanup() {
+  fun performCleanup() {
     filePrintWriter.close()
   }
 
