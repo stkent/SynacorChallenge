@@ -29,7 +29,7 @@ object Main {
       "1" -> VM(actor = BootstrappedActor()).runProgram(programBytes)
 
       "2" -> {
-        val outputHandler = FileOutputHandler("${fileName}_decompiled.txt")
+        val outputHandler = FileOutputHandler("out/${fileName}_decompiled.txt")
         Decompiler().decompile(programBytes, outputHandler)
         outputHandler.performCleanup()
       }
