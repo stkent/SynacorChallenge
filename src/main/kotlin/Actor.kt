@@ -17,6 +17,8 @@ class BootstrappedActor(
    */
   private val initialInstructions = ArrayDeque<String>().apply {
     add("take tablet")
+    add("look tablet")
+    add("use tablet")
     add("doorway")
     add("north")
     add("north")
@@ -25,6 +27,7 @@ class BootstrappedActor(
     add("down")
     add("east")
     add("take empty lantern")
+    add("look empty lantern")
     add("west")
     add("west")
     add("passage")
@@ -33,6 +36,7 @@ class BootstrappedActor(
     add("south")
     add("north")
     add("take can")
+    add("look can")
     add("use can")
     add("west")
     add("ladder")
@@ -58,6 +62,11 @@ class BootstrappedActor(
     add("take shiny coin")
     add("down")
     add("east")
+    add("look blue coin")
+    add("look red coin")
+    add("look shiny coin")
+    add("look concave coin")
+    add("look corroded coin")
     add("use blue coin")
     add("use red coin")
     add("use shiny coin")
@@ -65,10 +74,13 @@ class BootstrappedActor(
     add("use corroded coin")
     add("north")
     add("take teleporter")
+    add("look teleporter")
     add("use teleporter")
     add("take business card")
+    add("look business card")
     add("take strange book")
-    add("register[7] = 3")
+    add("look strange book")
+//    add("register[7] = 3")
   }
 
   override fun getInput(): String {
