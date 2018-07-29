@@ -1,23 +1,24 @@
 package vm
 
-private fun Byte.toUnsignedInt() = java.lang.Byte.toUnsignedInt(this)
-
 /**
  * Converts an array of bytes representing a program into a list of 16-bit unsigned integer
  * instructions.
  */
 fun parseIntInstructions(programBytes: ByteArray): List<Int> {
-  val bytesAsUnsignedInts = programBytes.map(Byte::toUnsignedInt)
+  return programBytes
+      .map(Byte::toUnsignedInt)
+      .toPairs()
+      .map { (it.second shl 8) + it.first } // Little-endian interpretation of paired bytes.
+}
 
-  val result = mutableListOf<Int>()
+private fun Byte.toUnsignedInt() = java.lang.Byte.toUnsignedInt(this)
 
-  for (i in 0 until bytesAsUnsignedInts.size step 2) {
-    val lowByteInt = bytesAsUnsignedInts[i]
-    val highByteInt = bytesAsUnsignedInts[i + 1]
-    result.add((highByteInt shl 8) + lowByteInt)
-  }
+fun <T> Iterable<T>.toPairs(): List<Pair<T, T>> {
+  require(count() % 2 == 0) { "Iterable can only be converted to pairs when it has even length." }
 
-  return result
+  return this
+      .windowed(size = 2, step = 2, partialWindows = false)
+      .map { Pair(it.first(), it.last()) }
 }
 
 // Display string methods:
