@@ -17,8 +17,8 @@ object Main {
     print("""
           Choose an option:
 
-          [1] Run program
-          [2] Decompile program
+          [1] Run challenge.bin
+          [2] Decompile challenge.bin
 
           > """.trimIndent())
 
