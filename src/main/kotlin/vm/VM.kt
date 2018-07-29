@@ -28,7 +28,7 @@ class VM(
   private val registers: IntArray = IntArray(REGISTER_COUNT)
   private val stack: Deque<Int> = ArrayDeque<Int>()
   private val memory: MutableList<Int> = mutableListOf()
-  private val lastInput: Deque<Char> = ArrayDeque<Char>()
+  private val pendingInputChars: Deque<Char> = ArrayDeque<Char>()
 
   init {
     (0 until registers.size).forEach { registers[it] = registersSeed(it) }
@@ -281,7 +281,7 @@ class VM(
       OUT -> {
         val operand = operands[0]
 
-        display.print(operandToInt(operand).toChar())
+        display.printChar(operandToInt(operand).toChar())
         ip += 2
 
         return true
@@ -290,22 +290,18 @@ class VM(
       IN -> {
         val target = operands[0] as? Register ?: return false
 
-        if (lastInput.isEmpty()) {
-          val input = actor.getInput()
+        if (pendingInputChars.isEmpty()) {
+          val inputLine = actor.getInputLine()
 
-          val regex = Regex("register\\[7]\\s*=\\s*(\\d+)")
-          val matchResult = regex.matchEntire(input.trim())
-
-          if (matchResult != null) {
-            registers[7] = matchResult.groups[1]!!.value.toInt()
+          if (processSpecialInstruction(inputLine)) {
             return true
           }
 
-          input.forEach { lastInput.add(it) }
-          lastInput.add('\n')
+          inputLine.forEach { char -> pendingInputChars.add(char) }
+          pendingInputChars.add('\n')
         }
 
-        registers[target.index] = lastInput.poll().toInt()
+        registers[target.index] = pendingInputChars.poll().toInt()
         ip += 2
 
         return true
@@ -322,6 +318,52 @@ class VM(
   private fun operandToInt(operand: Operand) = when (operand) {
     is Number -> operand.value
     is Register -> registers[operand.index]
+  }
+
+  // Special instruction processing
+
+  private class SpecialInstruction(
+      val regex: Regex,
+      val action: (matchResult: MatchResult, vm: VM) -> Unit)
+
+  private val specialInstructions = arrayOf(
+      // Prints the current instruction pointer value
+      SpecialInstruction(
+          regex = "vm-print-ip".toRegex(),
+          action = { _, vm ->
+            vm.display.printLine("ip = ${vm.ip}")
+          }
+      ),
+      // Prints current register values
+      SpecialInstruction(
+          regex = "vm-print-register-values".toRegex(),
+          action = { _, vm ->
+            vm.display.printLine("register values = ${vm.getRegisterValues()}")
+          }
+      ),
+      // Sets register 7 to the provided value
+      SpecialInstruction(
+          regex = "vm-set-register-7 (\\d+)".toRegex(),
+          action = { matchResult, vm ->
+            vm.registers[7] = matchResult.groups[1]!!.value.toInt()
+          }
+      )
+  )
+
+  /**
+   * Checks the provided [inputLine] against a collection of pre-defined special instructions. If a
+   * special instruction is matched, it is executed and this method returns `true`. If no special
+   * instruction is matched, this method returns `false`.
+   */
+  private fun processSpecialInstruction(inputLine: String): Boolean {
+    specialInstructions.forEach { specialInstruction ->
+      specialInstruction.regex.matchEntire(inputLine)?.let { matchResult ->
+        specialInstruction.action(matchResult, this@VM)
+        return true
+      }
+    }
+
+    return false
   }
 
 }

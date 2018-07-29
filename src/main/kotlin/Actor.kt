@@ -1,11 +1,11 @@
 import java.util.*
 
 interface Actor {
-  fun getInput(): String
+  fun getInputLine(): String
 }
 
 class InteractiveActor : Actor {
-  override fun getInput() = Scanner(System.`in`).nextLine()!!
+  override fun getInputLine() = Scanner(System.`in`).nextLine()!!
 }
 
 class BootstrappedActor(
@@ -83,14 +83,14 @@ class BootstrappedActor(
 //    add("register[7] = 3")
   }
 
-  override fun getInput(): String {
+  override fun getInputLine(): String {
     @Suppress("LiftReturnOrAssignment")
     if (initialInstructions.peek() != null) {
       val nextInstruction = initialInstructions.poll()
       println(nextInstruction)
       return nextInstruction
     } else {
-      return interactiveActor.getInput()
+      return interactiveActor.getInputLine()
     }
   }
 

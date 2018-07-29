@@ -1,13 +1,18 @@
 package vm
 
 interface Display {
-  fun print(char: Char)
+  fun printChar(c: Char)
+  fun printLine(s: String)
 }
 
 class SysOutDisplay: Display {
 
-  override fun print(char: Char) {
-    System.`out`.print(char)
+  override fun printChar(c: Char) {
+    System.`out`.print(c)
+  }
+
+  override fun printLine(s: String) {
+    System.`out`.println(s)
   }
 
 }
