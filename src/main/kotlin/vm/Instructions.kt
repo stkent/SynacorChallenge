@@ -71,7 +71,7 @@ private fun registerOperandDisplayString(
   }
 }
 
-private fun charOperandDisplayString(number: Operand.Number): String {
+fun charOperandDisplayString(number: Operand.Number): String {
   val operandChar = number.value.toChar()
 
   return if (operandChar == '\n') {

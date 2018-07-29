@@ -60,7 +60,7 @@ class VM(
               operands = operands,
               registers = registers)
 
-          outputHandler.handleOutput(instructionDisplayString)
+          outputHandler.println(instructionDisplayString)
         }
 
         run = processOpCode(opCode, operands)
@@ -281,7 +281,8 @@ class VM(
       OUT -> {
         val operand = operands[0]
 
-        outputHandler?.handleOutput(operandToInt(operand).toString())
+
+        outputHandler?.print(operandToInt(operand).toString())
         ip += 2
 
         return true

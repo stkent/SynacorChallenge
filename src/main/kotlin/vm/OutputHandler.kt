@@ -5,13 +5,19 @@ import java.io.PrintWriter
 import java.io.FileOutputStream
 
 interface OutputHandler {
-  fun handleOutput(output: String)
+  fun print(output: String)
+  fun println(output: String)
 }
 
-class StdOutOutputHandler: OutputHandler {
+class SysOutOutputHandler: OutputHandler {
 
-  override fun handleOutput(output: String) {
-    println(output)
+  override fun print(output: String) {
+    System.`out`.println(output)
+  }
+
+  override fun println(output: String) {
+    print(output)
+    System.`out`.println()
   }
 
 }
@@ -20,8 +26,13 @@ class FileOutputHandler(fileLocation: String): OutputHandler {
 
   private val filePrintWriter = PrintWriter(FileOutputStream(File(fileLocation)))
 
-  override fun handleOutput(output: String) {
-    filePrintWriter.println(output)
+  override fun print(output: String) {
+    filePrintWriter.print(output)
+  }
+
+  override fun println(output: String) {
+    print(output)
+    filePrintWriter.println()
   }
 
   fun performCleanup() {

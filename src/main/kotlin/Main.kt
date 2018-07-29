@@ -1,7 +1,7 @@
 import vm.Decompiler
 import vm.FileOutputHandler
+import vm.SysOutOutputHandler
 import vm.VM
-import java.io.File
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.util.*
@@ -26,7 +26,13 @@ object Main {
     val option = Scanner(System.`in`).nextLine()!!
 
     when (option.trim()) {
-      "1" -> VM(actor = BootstrappedActor()).runProgram(programBytes)
+      "1" -> {
+        val vm = VM(
+            actor = BootstrappedActor(),
+            outputHandler = SysOutOutputHandler())
+
+        vm.runProgram(programBytes)
+      }
 
       "2" -> {
         val outputHandler = FileOutputHandler("out/${fileName}_decompiled.txt")
