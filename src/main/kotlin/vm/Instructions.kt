@@ -32,7 +32,7 @@ fun instructionDisplayString(
   var result: String = opCode.toString()
 
   operands.forEach {
-    result += "\n${operandDisplayString(it, opCode, registers)}"
+    result += "\n  ${operandDisplayString(it, opCode, registers)}"
   }
 
   return result
@@ -53,7 +53,7 @@ private fun operandDisplayString(
       if (opCode == OpCode.OUT) {
         numberOperandDisplayString(operand)
       } else {
-        indentedString("$operand")
+        "$operand"
       }
     }
   }
@@ -64,9 +64,9 @@ private fun registerOperandDisplayString(
     registers: IntArray?): String {
 
   return if (registers != null) {
-    indentedString("$register = ${registers[register.index]}")
+    "$register = ${registers[register.index]}"
   } else {
-    indentedString("$register")
+    "$register"
   }
 }
 
@@ -79,12 +79,8 @@ private fun numberOperandDisplayString(number: Operand.Number): String {
      * "tall") so that our decompiled file line numbers correspond to instruction indices (offset
      * by 1, since the instruction indices are 0-indexed but the file line numbers are 1-indexed).
      */
-    indentedString("\"\\n\"")
+    "\"\\n\""
   } else {
-    indentedString("\"$operandChar\"")
+    "\"$operandChar\""
   }
-}
-
-private fun indentedString(literal: String): String {
-  return "  $literal"
 }
