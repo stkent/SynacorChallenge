@@ -4,7 +4,7 @@ class Decompiler {
 
   fun decompile(
       programBytes: ByteArray,
-      outputHandler: OutputHandler) {
+      instructionPrinter: InstructionPrinter) {
 
     val intInstructions = parseIntInstructions(programBytes)
 
@@ -21,12 +21,12 @@ class Decompiler {
             .map { int -> Operand.fromInt(int) }
 
         val instructionString = instructionDisplayString(opCode = opCode, operands = operands)
-        outputHandler.println(instructionString)
+        instructionPrinter.println(instructionString)
 
         index += OpCode.fromInt(intInstruction).operandCount + 1
       } else {
         // Represents initial data (vs an operation) in the binary file we're decompiling.
-        outputHandler.print(intInstruction.toString())
+        instructionPrinter.println(intInstruction.toString())
 
         index += 1
       }

@@ -19,7 +19,7 @@ private val REGISTER_7_INSTRUCTION_NUMBERS = arrayOf(521, 5451, 5522, 6042)
  */
 class VM(
     private val actor: Actor = InteractiveActor(),
-    private val outputHandler: OutputHandler? = null,
+    private val display: Display = SysOutDisplay(),
     registersSeed: (Int) -> Int = { 0 },
     stackSeed: List<Int> = emptyList(),
     private var ip: Int = 0
@@ -37,7 +37,7 @@ class VM(
 
   fun runProgram(
       programBytes: ByteArray,
-      outputHandler: OutputHandler? = null) {
+      instructionPrinter: InstructionPrinter? = null) {
 
     val intInstructions = parseIntInstructions(programBytes)
 
@@ -54,13 +54,13 @@ class VM(
             .subList(ip + 1, ip + opCode.operandCount + 1)
             .map { int -> Operand.fromInt(int) }
 
-        outputHandler?.let {
+        instructionPrinter?.let {
           val instructionDisplayString = instructionDisplayString(
               opCode = opCode,
               operands = operands,
               registers = registers)
 
-          outputHandler.println(instructionDisplayString)
+          it.println(instructionDisplayString)
         }
 
         run = processOpCode(opCode, operands)
@@ -281,8 +281,7 @@ class VM(
       OUT -> {
         val operand = operands[0]
 
-
-        outputHandler?.print(operandToInt(operand).toString())
+        display.print(operandToInt(operand).toChar())
         ip += 2
 
         return true

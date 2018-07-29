@@ -1,7 +1,4 @@
-import vm.Decompiler
-import vm.FileOutputHandler
-import vm.SysOutOutputHandler
-import vm.VM
+import vm.*
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.util.*
@@ -27,15 +24,12 @@ object Main {
 
     when (option.trim()) {
       "1" -> {
-        val vm = VM(
-            actor = BootstrappedActor(),
-            outputHandler = SysOutOutputHandler())
-
+        val vm = VM(actor = BootstrappedActor())
         vm.runProgram(programBytes)
       }
 
       "2" -> {
-        val outputHandler = FileOutputHandler("out/${fileName}_decompiled.txt")
+        val outputHandler = FileInstructionPrinter("out/${fileName}_decompiled.txt")
         Decompiler().decompile(programBytes, outputHandler)
         outputHandler.performCleanup()
       }
