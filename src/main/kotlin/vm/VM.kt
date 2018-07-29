@@ -5,7 +5,6 @@ import InteractiveActor
 import vm.OpCode.*
 import vm.Operand.Number
 import vm.Operand.Register
-import java.io.PrintWriter
 import java.util.*
 
 const val MAX_INT = 32767
@@ -19,7 +18,8 @@ private val REGISTER_7_INSTRUCTION_NUMBERS = arrayOf(521, 5451, 5522, 6042)
  * todo: fill me in
  */
 class VM(
-    private val actor: Actor = InteractiveActor,
+    private val actor: Actor = InteractiveActor(),
+    private val outputHandler: OutputHandler? = null,
     registersSeed: (Int) -> Int = { 0 },
     stackSeed: List<Int> = emptyList(),
     private var ip: Int = 0
@@ -35,7 +35,7 @@ class VM(
     stack.addAll(stackSeed)
   }
 
-  fun runProgram(programBytes: ByteArray, writer: PrintWriter? = null) {
+  fun runProgram(programBytes: ByteArray, outputHandler: OutputHandler? = null) {
     val intInstructions = parseIntInstructions(programBytes)
 
     memory.addAll(intInstructions)
@@ -50,12 +50,13 @@ class VM(
             .subList(ip + 1, ip + opCode.operandCount + 1)
             .map { int -> Operand.fromInt(int) }
 
-        writer?.let {
-          printOpCodeAndOperands(
+        outputHandler?.let {
+          val instructionDisplayString = instructionDisplayString(
               opCode = opCode,
               operands = operands,
-              writer = it,
               registers = registers)
+
+          outputHandler.handleOutput(instructionDisplayString)
         }
 
         run = processOpCode(opCode, operands)
@@ -273,7 +274,7 @@ class VM(
       OUT -> {
         val operand = operands[0]
 
-        actor.handleOutput(operandToInt(operand).toChar())
+        outputHandler?.handleOutput(operandToInt(operand).toString())
         ip += 2
 
         return true

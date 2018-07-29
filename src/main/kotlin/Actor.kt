@@ -1,20 +1,16 @@
 import java.util.*
 
 interface Actor {
-  fun handleOutput(char: Char)
   fun getInput(): String
 }
 
-object InteractiveActor : Actor {
-
-  override fun handleOutput(char: Char) = print(char)
+class InteractiveActor : Actor {
   override fun getInput() = Scanner(System.`in`).nextLine()!!
-
 }
 
-object BootstrappedActor : Actor {
-
-  override fun handleOutput(char: Char) = print(char)
+class BootstrappedActor(
+    private val interactiveActor: InteractiveActor = InteractiveActor()
+) : Actor {
 
   /**
    *
@@ -82,7 +78,7 @@ object BootstrappedActor : Actor {
       println(nextInstruction)
       return nextInstruction
     } else {
-      return InteractiveActor.getInput()
+      return interactiveActor.getInput()
     }
   }
 

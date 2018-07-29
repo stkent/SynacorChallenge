@@ -1,7 +1,5 @@
 package vm
 
-import java.io.PrintWriter
-
 private fun Byte.toUnsignedInt() = java.lang.Byte.toUnsignedInt(this)
 
 /**
@@ -21,53 +19,60 @@ fun parseIntInstructions(programBytes: ByteArray): List<Int> {
   return result
 }
 
-fun printOpCodeAndOperands(opCode: OpCode, operands: List<Operand>, registers: IntArray? = null, writer: PrintWriter) {
+// Display string methods:
+
+fun instructionDisplayString(opCode: OpCode, operands: List<Operand>, registers: IntArray? = null): String {
   require(opCode.operandCount == operands.size) { "Incorrect number of operands supplied." }
 
-  writer.println(opCode)
-  operands.forEach { operand -> printOperand(operand, opCode, registers, writer) }
+  var result: String = opCode.toString()
+
+  operands.forEach {
+    result += "\n${operandDisplayString(it, opCode, registers)}"
+  }
+
+  return result
 }
 
-private fun printOperand(operand: Operand, opCode: OpCode, registers: IntArray?, writer: PrintWriter) {
-  when (operand) {
+private fun operandDisplayString(operand: Operand, opCode: OpCode, registers: IntArray?): String {
+  return when (operand) {
     is Operand.Register -> {
-      printRegisterOperand(operand, registers, writer)
+      registerOperandDisplayString(operand, registers)
     }
 
     is Operand.Number -> {
       // Special handling for OUT because operands will often represent ASCII characters.
       if (opCode == OpCode.OUT) {
-        printOutNumberOperand(operand, writer)
+        numberOperandDisplayString(operand)
       } else {
-        printIndented("$operand", writer)
+        indentedString("$operand")
       }
     }
   }
 }
 
-private fun printOutNumberOperand(number: Operand.Number, writer: PrintWriter) {
+private fun registerOperandDisplayString(register: Operand.Register, registers: IntArray?): String {
+  return if (registers != null) {
+    indentedString("$register = ${registers[register.index]}")
+  } else {
+    indentedString("$register")
+  }
+}
+
+private fun numberOperandDisplayString(number: Operand.Number): String {
   val operandChar = number.value.toChar()
 
-  if (operandChar == '\n') {
+  return if (operandChar == '\n') {
     /*
      * Print newline literals (1 line "tall"), rather than inserting actual newlines (2 lines "tall") so
      * that our decompiled file line numbers correspond to instruction indices (offset by 1, since the
      * instruction indices are 0-indexed but the file line numbers are 1-indexed).
      */
-    printIndented("\"\\n\"", writer)
+    indentedString("\"\\n\"")
   } else {
-    printIndented("\"$operandChar\"", writer)
+    indentedString("\"$operandChar\"")
   }
 }
 
-private fun printRegisterOperand(register: Operand.Register, registers: IntArray?, writer: PrintWriter) {
-  if (registers != null) {
-    printIndented("$register = ${registers[register.index]}", writer)
-  } else {
-    printIndented("$register", writer)
-  }
-}
-
-private fun printIndented(literal: String, writer: PrintWriter) {
-  writer.println("  $literal")
+private fun indentedString(literal: String): String {
+  return "  $literal"
 }

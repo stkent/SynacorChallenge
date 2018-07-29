@@ -1,4 +1,5 @@
 import vm.Decompiler
+import vm.FileOutputHandler
 import vm.VM
 import java.io.File
 import java.nio.file.Files
@@ -25,12 +26,12 @@ object Main {
     val option = Scanner(System.`in`).nextLine()!!
 
     when (option.trim()) {
-      "1" -> VM(actor = BootstrappedActor).runProgram(programBytes)
+      "1" -> VM(actor = BootstrappedActor()).runProgram(programBytes)
 
       "2" -> {
-        File("${fileName}_decompiled.txt").printWriter().use { writer ->
-          Decompiler().decompile(programBytes, writer)
-        }
+        val outputHandler = FileOutputHandler("${fileName}_decompiled.txt")
+        Decompiler().decompile(programBytes, outputHandler)
+        outputHandler.performCleanup()
       }
 
       else -> println("Option not recognized. Exiting.")
