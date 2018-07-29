@@ -294,6 +294,10 @@ class VM(
           val inputLine = actor.getInputLine()
 
           if (processSpecialInstruction(inputLine)) {
+            /*
+             * By returning true without queuing up the input characters for processing or
+             * incrementing the ip, we force another request for input in the very next run loop.
+             */
             return true
           }
 
