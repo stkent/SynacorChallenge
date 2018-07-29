@@ -25,13 +25,16 @@ object Main {
     when (option.trim()) {
       "1" -> {
         val vm = VM(actor = BootstrappedActor())
-        vm.runProgram(programBytes)
+
+        val instructionPrinter = FileInstructionPrinter("out/${fileName}_run.txt")
+        vm.runProgram(programBytes, instructionPrinter = instructionPrinter)
+        instructionPrinter.performCleanup()
       }
 
       "2" -> {
-        val outputHandler = FileInstructionPrinter("out/${fileName}_decompiled.txt")
-        Decompiler().decompile(programBytes, outputHandler)
-        outputHandler.performCleanup()
+        val instructionPrinter = FileInstructionPrinter("out/${fileName}_decompiled.txt")
+        Decompiler().decompile(programBytes, instructionPrinter)
+        instructionPrinter.performCleanup()
       }
 
       else -> println("Option not recognized. Exiting.")
