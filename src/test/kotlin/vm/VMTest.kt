@@ -15,7 +15,7 @@ class VMTest {
         ip = 0,
         actor = DummyActor)
 
-//        vm.runProgram(listOf(14, 32768, 14000))
+//    vm.runProgram(listOf(14, 32768, 14000))
 
     val register1Value = vm.getRegisterValues().first()
     assertEquals(17875, register1Value)
