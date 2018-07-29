@@ -8,3 +8,5 @@ opcodes are defined as part of the "instruction set architecture (ISA)" of a pro
 
 http://www.scadacore.com/field-tools/programming-calculators/online-hex-converter/
 https://plugins.jetbrains.com/plugin/9339-deltahex-editor
+
+IP 5451 is where register 7 value is checked to see whether it is 0 (= teleport to synacor hq) or non-0 (= perform slow algorithm to check value).
