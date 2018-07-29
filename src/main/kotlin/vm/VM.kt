@@ -44,8 +44,9 @@ class VM(
     memory.addAll(intInstructions)
 
     var run = true
+    val memoryRange = 0 until memory.size
 
-    while (run && ip in 0 until memory.size) {
+    while (run && ip in memoryRange) {
       if (memory[ip].representsOpCode()) {
         val opCode = OpCode.fromInt(memory[ip])
 
