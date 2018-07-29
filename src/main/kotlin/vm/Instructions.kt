@@ -3,7 +3,8 @@ package vm
 private fun Byte.toUnsignedInt() = java.lang.Byte.toUnsignedInt(this)
 
 /**
- * Converts an array of bytes representing a program into a list of 16-bit unsigned integer instructions.
+ * Converts an array of bytes representing a program into a list of 16-bit unsigned integer
+ * instructions.
  */
 fun parseIntInstructions(programBytes: ByteArray): List<Int> {
   val bytesAsUnsignedInts = programBytes.map(Byte::toUnsignedInt)
@@ -21,7 +22,11 @@ fun parseIntInstructions(programBytes: ByteArray): List<Int> {
 
 // Display string methods:
 
-fun instructionDisplayString(opCode: OpCode, operands: List<Operand>, registers: IntArray? = null): String {
+fun instructionDisplayString(
+    opCode: OpCode,
+    operands: List<Operand>,
+    registers: IntArray? = null): String {
+
   require(opCode.operandCount == operands.size) { "Incorrect number of operands supplied." }
 
   var result: String = opCode.toString()
@@ -33,14 +38,18 @@ fun instructionDisplayString(opCode: OpCode, operands: List<Operand>, registers:
   return result
 }
 
-private fun operandDisplayString(operand: Operand, opCode: OpCode, registers: IntArray?): String {
+private fun operandDisplayString(
+    operand: Operand,
+    opCode: OpCode,
+    registers: IntArray?): String {
+
   return when (operand) {
     is Operand.Register -> {
       registerOperandDisplayString(operand, registers)
     }
 
     is Operand.Number -> {
-      // Special handling for OUT because operands will often represent ASCII characters.
+      // Special handling because OUT operands are often ASCII characters.
       if (opCode == OpCode.OUT) {
         numberOperandDisplayString(operand)
       } else {
@@ -50,7 +59,10 @@ private fun operandDisplayString(operand: Operand, opCode: OpCode, registers: In
   }
 }
 
-private fun registerOperandDisplayString(register: Operand.Register, registers: IntArray?): String {
+private fun registerOperandDisplayString(
+    register: Operand.Register,
+    registers: IntArray?): String {
+
   return if (registers != null) {
     indentedString("$register = ${registers[register.index]}")
   } else {
@@ -63,9 +75,9 @@ private fun numberOperandDisplayString(number: Operand.Number): String {
 
   return if (operandChar == '\n') {
     /*
-     * Print newline literals (1 line "tall"), rather than inserting actual newlines (2 lines "tall") so
-     * that our decompiled file line numbers correspond to instruction indices (offset by 1, since the
-     * instruction indices are 0-indexed but the file line numbers are 1-indexed).
+     * Print newline literals (1 line "tall"), rather than inserting actual newlines (2 lines
+     * "tall") so that our decompiled file line numbers correspond to instruction indices (offset
+     * by 1, since the instruction indices are 0-indexed but the file line numbers are 1-indexed).
      */
     indentedString("\"\\n\"")
   } else {

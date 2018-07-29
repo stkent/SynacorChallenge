@@ -35,7 +35,10 @@ class VM(
     stack.addAll(stackSeed)
   }
 
-  fun runProgram(programBytes: ByteArray, outputHandler: OutputHandler? = null) {
+  fun runProgram(
+      programBytes: ByteArray,
+      outputHandler: OutputHandler? = null) {
+
     val intInstructions = parseIntInstructions(programBytes)
 
     memory.addAll(intInstructions)
@@ -70,7 +73,10 @@ class VM(
 
   // Implementation
 
-  private fun processOpCode(opCode: OpCode, operands: List<Operand>): Boolean {
+  private fun processOpCode(
+      opCode: OpCode,
+      operands: List<Operand>): Boolean {
+
     require(opCode.operandCount == operands.size) { "Incorrect number of operands supplied." }
 
     if (REGISTER_7_INSTRUCTION_NUMBERS.contains(ip)) {

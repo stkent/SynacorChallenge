@@ -27,8 +27,7 @@ class FileOutputHandler(fileLocation: String): OutputHandler {
   private val filePrintWriter = PrintWriter(FileOutputStream(File(fileLocation)))
 
   override fun handleOutput(output: String) {
-    filePrintWriter.print(output)
-    filePrintWriter.print('\n')
+    filePrintWriter.println(output)
   }
 
   override fun performCleanup() {
