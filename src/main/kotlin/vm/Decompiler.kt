@@ -12,7 +12,6 @@ class Decompiler {
     while (index < intInstructions.size) {
       val intInstruction = intInstructions[index]
 
-      @Suppress("LiftReturnOrAssignment")
       if (intInstruction.representsOpCode()) {
         val opCode = OpCode.fromInt(intInstruction)
 
