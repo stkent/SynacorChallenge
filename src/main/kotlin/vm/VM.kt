@@ -80,7 +80,7 @@ class VM(
 
     operands.forEach { operand ->
       if (operand is Register && operand.index == 7) {
-//        display.printLine("Hit register 7 during instruction $ip")
+        display.printLine("Hit register 7 during instruction $ip")
       }
     }
 
@@ -280,8 +280,9 @@ class VM(
 
       OUT -> {
         val operand = operands[0]
+        val char = operandToInt(operand).toChar()
 
-        display.printChar(operandToInt(operand).toChar())
+        display.printChar(char)
         ip += 2
 
         return true
@@ -343,6 +344,13 @@ class VM(
           regex = "vm-print-register-values".toRegex(),
           action = { _, vm ->
             vm.display.printLine("register values = ${vm.getRegisterValues()}")
+          }
+      ),
+      // Prints current register values
+      SpecialInstruction(
+          regex = "vm-print-stack".toRegex(),
+          action = { _, vm ->
+            vm.display.printLine("stack = ${vm.stack}")
           }
       ),
       // Sets register 7 to the provided value

@@ -2123,59 +2123,59 @@ pop
 pop
   register[0]
 ret
-push
-  register[1]
-push
-  register[2]
-and
-  register[2]
-  register[0]
-  register[1]
-not
-  register[2]
-  register[2]
-or
-  register[0]
-  register[0]
-  register[1]
-and
-  register[0]
-  register[0]
-  register[2]
-pop
-  register[2]
-pop
-  register[1]
-ret
-add
-  register[0]
-  register[0]
-  register[1]
-gt
-  register[1]
-  register[1]
-  register[0]
-ret
-push
-  register[2]
-gt
-  register[2]
-  register[1]
-  register[0]
-mult
-  register[1]
-  register[1]
-  32767
-add
-  register[0]
-  register[0]
-  register[1]
-set
-  register[1]
-  register[2]
-pop
-  register[2]
-ret
+push          } function
+  register[1] }
+push          } changes: r[0] <- r[0] xor r[1]
+  register[2] }
+and           }
+  register[2] }
+  register[0] }
+  register[1] }
+not           }
+  register[2] }
+  register[2] }
+or            }
+  register[0] }
+  register[0] }
+  register[1] }
+and           }
+  register[0] }
+  register[0] }
+  register[2] }
+pop           }
+  register[2] }
+pop           }
+  register[1] }
+ret           }
+add                } function
+  register[0]      }
+  register[0]      } changes: r[0] <- r[0] + r[1]
+  register[1]      }          r[1] <- { 1 if r[0] < 0,
+gt                 }                  { 0 otherwise
+  register[1]      }
+  register[1]      }
+  register[0]      }
+ret                }
+push          } function
+  register[2] }
+gt            } changes: r[0] <- r[0] + 32767 * r[1]
+  register[2] }          r[1] <- { 1 if r[1] > r[0]
+  register[1] }                  { 0 otherwise
+  register[0] }
+mult          }
+  register[1] }
+  register[1] }
+  32767       }
+add           }
+  register[0] }
+  register[0] }
+  register[1] }
+set           }
+  register[1] }
+  register[2] }
+pop           }
+  register[2] }
+ret           }
 jf
   register[0]
   2241
@@ -5468,9 +5468,9 @@ add
   register[2]
   1065
   11216
-call
+call            <--- printed algo start text?
   1458
-pop
+pop             <--- where we end up after printing algo start text
   register[2]
 pop
   register[1]
@@ -6025,47 +6025,47 @@ pop
 pop
   register[1]
 ret
-jt
-  register[0]
-  6035
-add
-  register[0]
-  register[1]
-  1
-ret
-jt
-  register[1]
-  6048
-add
-  register[0]
-  register[0]
-  32767
-set
-  register[1]
-  register[7]
-call
-  6027
-ret
-push
-  register[0]
-add
-  register[1]
-  register[1]
-  32767
-call
-  6027
-set
-  register[1]
-  register[0]
-pop
-  register[0]
-add
-  register[0]
-  register[0]
-  32767
-call
-  6027
-ret
+jt            } fun f(r0, r1) -> (r0, r1) {
+  register[0] }     if (r0 == 0):
+  6035        }
+add           }
+  register[0] }         r0 = r1 + 1
+  register[1] }
+  1           }
+ret           }         return (r0, r1)
+jt            }     else:
+  register[1] }         if (r1 == 0):
+  6048        }
+add           }             r0--
+  register[0] }
+  register[0] }
+  32767       }
+set           }             r1 = r7
+  register[1] }
+  register[7] }
+call          }             return f(r0, r1)
+  6027        }
+ret           }         else:
+push          }             tmp = r0
+  register[0] }
+add           }             r1--
+  register[1] }
+  register[1] }
+  32767       }
+call          }             (r0, r1) = f(r0, r1)
+  6027        }
+set           }             r1 = r0
+  register[1] }
+  register[0] }
+pop           }             r0 = tmp
+  register[0] }
+add           }             r0--
+  register[0] }
+  register[0] }
+  32767       }
+call          }             return f(r0, r1)
+  6027        }
+ret           }
 6095
 17625
 29781
