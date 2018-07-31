@@ -1456,7 +1456,7 @@ out
 out
   "\n"
 halt
-push
+push          } Pretty sure this is a function that prints from a block of memory?
   register[0]
 push
   register[3]
@@ -5468,9 +5468,9 @@ add
   register[2]
   1065
   11216
-call            <--- printed algo start text?
+call
   1458
-pop             <--- where we end up after printing algo start text
+pop
   register[2]
 pop
   register[1]
@@ -5481,21 +5481,21 @@ noop
 noop
 noop
 noop
-set
-  register[0]
-  4
-set
-  register[1]
-  1
-call
-  6027
-eq
-  register[1]
-  register[0]
-  6
-jf
-  register[1]
-  5579
+set             } verification function setup (get here after printing teleporter duration text)
+  register[0]   }
+  4             }
+set             }
+  register[1]   }
+  1             }
+call                } invocation of verification function
+  6027              }
+eq              } if r[0] != 6, jump to instruction 5579. else continue at instruction 5498.
+  register[1]   }
+  register[0]   }
+  6             }
+jf              }
+  register[1]   }
+  5579          }
 push
   register[0]
 push
