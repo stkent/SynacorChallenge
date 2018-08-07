@@ -293,6 +293,7 @@ class VM(
         val target = operands[0] as? Register ?: return false
 
         if (pendingInputChars.isEmpty()) {
+          // Fetch new input.
           val inputLine = actor.getInputLine()
 
           if (processSpecialInstruction(inputLine)) {
@@ -305,10 +306,11 @@ class VM(
 
           inputLine.forEach { char -> pendingInputChars.add(char) }
           pendingInputChars.add('\n')
+        } else {
+          // Process pending input.
+          registers[target.index] = pendingInputChars.poll().toInt()
+          ip += 2
         }
-
-        registers[target.index] = pendingInputChars.poll().toInt()
-        ip += 2
 
         return true
       }
@@ -333,28 +335,28 @@ class VM(
       val action: (matchResult: MatchResult, vm: VM) -> Unit)
 
   private val specialInstructions = arrayOf(
-      // Prints the current instruction pointer value
+      // Prints the current instruction pointer value.
       SpecialInstruction(
           regex = "vm-print-ip".toRegex(),
           action = { _, vm ->
             vm.outputPrinter.printLine("ip = ${vm.ip}")
           }
       ),
-      // Prints current register values
+      // Prints current register values.
       SpecialInstruction(
           regex = "vm-print-register-values".toRegex(),
           action = { _, vm ->
             vm.outputPrinter.printLine("register values = ${vm.getRegisterValues()}")
           }
       ),
-      // Prints current register values
+      // Prints current register values.
       SpecialInstruction(
           regex = "vm-print-stack".toRegex(),
           action = { _, vm ->
             vm.outputPrinter.printLine("stack = ${vm.stack}")
           }
       ),
-      // Sets register 7 to the provided value
+      // Sets register 7 to the provided value.
       SpecialInstruction(
           regex = "vm-set-register-7 (\\d+)".toRegex(),
           action = { matchResult, vm ->

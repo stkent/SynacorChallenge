@@ -1,4 +1,4 @@
-// From https://github.com/MarcinMoskala/KotlinDiscreteMathToolkit
+// From https://github.com/MarcinMoskala/KotlinDiscreteMathToolkit.
 fun <T> List<T>.permutations(): Set<List<T>> = when {
   isEmpty() -> {
     setOf()
@@ -17,7 +17,7 @@ fun <T> List<T>.permutations(): Set<List<T>> = when {
   }
 }
 
-// From https://github.com/MarcinMoskala/KotlinDiscreteMathToolkit
+// From https://github.com/MarcinMoskala/KotlinDiscreteMathToolkit.
 fun <T> List<T>.plusAt(index: Int, element: T): List<T> = when (index) {
   !in 0..size -> throw Error("Cannot put at index $index because size is $size")
   0           -> listOf(element) + this

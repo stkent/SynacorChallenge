@@ -21,7 +21,7 @@ fun <T> Iterable<T>.toPairs(): List<Pair<T, T>> {
       .map { Pair(it.first(), it.last()) }
 }
 
-// Display string methods:
+// Display string methods
 
 fun instructionDisplayString(
     opCode: OpCode,
