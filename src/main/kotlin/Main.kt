@@ -22,9 +22,11 @@ object Main {
         [2] Decompile challenge.bin
         [3] Solve coins puzzle
 
-        > """.trimIndent())
+        """.trimIndent())
 
     val option = Scanner(System.`in`).nextLine()!!
+
+    screenPrinter.printLine("")
 
     when (option.trim()) {
       "1" -> {
