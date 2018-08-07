@@ -15,14 +15,15 @@ object Main {
     val programBytes = readProgramBytes("$fileName.bin")
 
     screenPrinter.printLine(
-        """
-        Choose an option:
+        s = """
+            Choose an option:
 
-        [1] Run challenge.bin
-        [2] Decompile challenge.bin
-        [3] Solve coins puzzle
+            [1] Run challenge.bin
+            [2] Decompile challenge.bin
+            [3] Solve coins puzzle
 
-        """.trimIndent())
+            > """.trimIndent(),
+        trailingNewline = false)
 
     val option = Scanner(System.`in`).nextLine()!!
 
