@@ -31,8 +31,7 @@ object Main {
 
     when (option.trim()) {
       "1" -> {
-        val printer = ScreenPrinter()
-        val vm = VM(actor = BootstrappedActor(), outputPrinter = printer)
+        val vm = VM(actor = BootstrappedActor(), outputPrinter = screenPrinter)
         vm.runProgram(programBytes)
       }
 
