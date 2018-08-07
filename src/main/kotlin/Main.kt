@@ -5,6 +5,8 @@ import java.util.*
 
 object Main {
 
+  private val screenPrinter = ScreenPrinter()
+
   @JvmStatic
   fun main(args: Array<String>) {
     // Name of a binary file residing in the resources directory.
@@ -12,29 +14,40 @@ object Main {
 
     val programBytes = readProgramBytes("$fileName.bin")
 
-    print("""
-          Choose an option:
+    screenPrinter.printLine(
+        """
+        Choose an option:
 
-          [1] Run challenge.bin
-          [2] Decompile challenge.bin
+        [1] Run challenge.bin
+        [2] Decompile challenge.bin
+        [3] Solve coins puzzle
 
-          > """.trimIndent())
+        > """.trimIndent())
 
     val option = Scanner(System.`in`).nextLine()!!
 
     when (option.trim()) {
       "1" -> {
-        val vm = VM(actor = BootstrappedActor())
-
-        val instructionPrinter = FileInstructionPrinter("out/${fileName}_run.txt")
-        vm.runProgram(programBytes, instructionPrinter = instructionPrinter)
-        instructionPrinter.performCleanup()
+        val printer = ScreenPrinter()
+        val vm = VM(actor = BootstrappedActor(), outputPrinter = printer)
+        vm.runProgram(programBytes)
       }
 
       "2" -> {
-        val instructionPrinter = FileInstructionPrinter("out/${fileName}_decompiled.txt")
-        Decompiler().decompile(programBytes, instructionPrinter)
-        instructionPrinter.performCleanup()
+        val printer = FilePrinter(fileLocation = "out/${fileName}_decompiled.txt")
+        Decompiler().decompile(programBytes, instructionPrinter = printer)
+        printer.performCleanup()
+      }
+
+      "3" -> {
+        val coinPuzzleSolver = CoinPuzzleSolver()
+        val coinPuzzleSolutions = coinPuzzleSolver.solve()
+
+        screenPrinter.printLine("Sequences of coins that solve the puzzle:")
+
+        coinPuzzleSolutions.forEach { solution ->
+          screenPrinter.printLine(solution.joinToString(prefix = "(", postfix = ")"))
+        }
       }
 
       else -> println("Option not recognized. Exiting.")

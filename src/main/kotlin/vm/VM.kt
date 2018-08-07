@@ -2,6 +2,7 @@ package vm
 
 import Actor
 import InteractiveActor
+import Printer
 import vm.OpCode.*
 import vm.Operand.Number
 import vm.Operand.Register
@@ -17,7 +18,7 @@ const val LAST_REGISTER_INSTRUCTION = FIRST_REGISTER_INSTRUCTION + REGISTER_COUN
  */
 class VM(
     private val actor: Actor = InteractiveActor(),
-    private val display: Display = SysOutDisplay(),
+    private val outputPrinter: Printer,
     registersSeed: (Int) -> Int = { 0 },
     stackSeed: List<Int> = emptyList(),
     private var ip: Int = 0
@@ -35,7 +36,7 @@ class VM(
 
   fun runProgram(
       programBytes: ByteArray,
-      instructionPrinter: InstructionPrinter? = null) {
+      instructionPrinter: Printer? = null) {
 
     val intInstructions = parseIntInstructions(programBytes)
 
@@ -58,7 +59,7 @@ class VM(
               operands = operands,
               registers = registers)
 
-          it.println(instructionDisplayString)
+          it.printLine(instructionDisplayString)
         }
 
         run = processOpCode(opCode, operands)
@@ -80,7 +81,7 @@ class VM(
 
     operands.forEach { operand ->
       if (operand is Register && operand.index == 7) {
-        display.printLine("Hit register 7 during instruction $ip")
+        outputPrinter.printLine("Hit register 7 during instruction $ip")
       }
     }
 
@@ -282,7 +283,7 @@ class VM(
         val operand = operands[0]
         val char = operandToInt(operand).toChar()
 
-        display.printChar(char)
+        outputPrinter.printChar(char)
         ip += 2
 
         return true
@@ -336,21 +337,21 @@ class VM(
       SpecialInstruction(
           regex = "vm-print-ip".toRegex(),
           action = { _, vm ->
-            vm.display.printLine("ip = ${vm.ip}")
+            vm.outputPrinter.printLine("ip = ${vm.ip}")
           }
       ),
       // Prints current register values
       SpecialInstruction(
           regex = "vm-print-register-values".toRegex(),
           action = { _, vm ->
-            vm.display.printLine("register values = ${vm.getRegisterValues()}")
+            vm.outputPrinter.printLine("register values = ${vm.getRegisterValues()}")
           }
       ),
       // Prints current register values
       SpecialInstruction(
           regex = "vm-print-stack".toRegex(),
           action = { _, vm ->
-            vm.display.printLine("stack = ${vm.stack}")
+            vm.outputPrinter.printLine("stack = ${vm.stack}")
           }
       ),
       // Sets register 7 to the provided value

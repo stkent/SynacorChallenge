@@ -1,10 +1,12 @@
 package vm
 
+import Printer
+
 class Decompiler {
 
   fun decompile(
       programBytes: ByteArray,
-      instructionPrinter: InstructionPrinter) {
+      instructionPrinter: Printer) {
 
     val intInstructions = parseIntInstructions(programBytes)
 
@@ -21,12 +23,12 @@ class Decompiler {
             .map { int -> Operand.fromInt(int) }
 
         val instructionString = instructionDisplayString(opCode = opCode, operands = operands)
-        instructionPrinter.println(instructionString)
+        instructionPrinter.printLine(instructionString)
 
         index += OpCode.fromInt(intInstruction).operandCount + 1
       } else {
         // Represents initial data (vs an operation) in the binary file we're decompiling.
-        instructionPrinter.println(intInstruction.toString())
+        instructionPrinter.printLine(intInstruction.toString())
 
         index += 1
       }
