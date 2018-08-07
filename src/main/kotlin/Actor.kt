@@ -80,7 +80,6 @@ class BootstrappedActor(
     add("look business card")
     add("take strange book")
     add("look strange book")
-//    add("register[7] = 3")
   }
 
   override fun getInputLine(): String {
