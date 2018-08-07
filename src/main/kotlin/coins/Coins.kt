@@ -25,8 +25,7 @@ class CoinPuzzleSolver {
   }
 
   /**
-   * Objective function described by the monument. We wish to find the sequences of coins whose
-   * values, when passed as inputs to this function, produce the result 399.
+   * Objective function described by the monument.
    */
   private fun obj(c1: Int, c2: Int, c3: Int, c4: Int, c5: Int) = c1 + c2*(c3*c3) + (c4*c4*c4) - c5
 
