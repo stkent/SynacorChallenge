@@ -36,9 +36,9 @@ object Main {
       }
 
       "2" -> {
-        val printer = FilePrinter(fileLocation = "out/${fileName}_decompiled.txt")
-        Decompiler().decompile(programBytes, instructionPrinter = printer)
-        printer.performCleanup()
+        val outputFilePrinter = FilePrinter(fileLocation = "out/${fileName}_decompiled.txt")
+        Decompiler().decompile(programBytes, printer = outputFilePrinter)
+        outputFilePrinter.performCleanup()
       }
 
       "3" -> {
