@@ -1,3 +1,5 @@
+import coins.CoinPuzzleSolver
+import teleportation.EnergyLevelCalculator
 import vm.*
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -50,6 +52,10 @@ object Main {
         coinPuzzleSolutions.forEach { solution ->
           screenPrinter.printLine(solution.joinToString(prefix = "(", postfix = ")"))
         }
+      }
+
+      "4" -> {
+        EnergyLevelCalculator().comp()
       }
 
       else -> println("Option not recognized. Exiting.")
