@@ -8,7 +8,8 @@ import Printer
  *   - if an integer _may_ represent an op code, then it _does_ represent an op code (and not data);
  *   - the program being decompiled does not alter itself when executed.
  *
- * These assumptions are not part of the virtual machine architecture specification, but they hold for challenge.bin.
+ * These assumptions are not part of the virtual machine architecture specification, but they hold
+ * for challenge.bin.
  */
 class Decompiler {
 
