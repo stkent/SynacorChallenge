@@ -294,17 +294,7 @@ class VM(
 
         if (pendingInputChars.isEmpty()) {
           // Fetch new input.
-          val inputLine = actor.getInputLine()
-
-          if (processSpecialInstruction(inputLine)) {
-            /*
-             * By returning true without queuing up the input characters for processing or
-             * incrementing the ip, we force another request for input in the very next run loop.
-             */
-            return true
-          }
-
-          inputLine.forEach { char -> pendingInputChars.add(char) }
+          actor.getInputLine().forEach { char -> pendingInputChars.add(char) }
           pendingInputChars.add('\n')
         } else {
           // Process pending input.
@@ -326,59 +316,6 @@ class VM(
   private fun operandToInt(operand: Operand) = when (operand) {
     is Number -> operand.value
     is Register -> registers[operand.index]
-  }
-
-  // Special instruction processing
-
-  private class SpecialInstruction(
-      val regex: Regex,
-      val action: (matchResult: MatchResult, vm: VM) -> Unit)
-
-  private val specialInstructions = arrayOf(
-      // Prints the current instruction pointer value.
-      SpecialInstruction(
-          regex = "vm-print-ip".toRegex(),
-          action = { _, vm ->
-            vm.outputPrinter.printLine("ip = ${vm.ip}")
-          }
-      ),
-      // Prints current register values.
-      SpecialInstruction(
-          regex = "vm-print-register-values".toRegex(),
-          action = { _, vm ->
-            vm.outputPrinter.printLine("register values = ${vm.getRegisterValues()}")
-          }
-      ),
-      // Prints current register values.
-      SpecialInstruction(
-          regex = "vm-print-stack".toRegex(),
-          action = { _, vm ->
-            vm.outputPrinter.printLine("stack = ${vm.stack}")
-          }
-      ),
-      // Sets register 7 to the provided value.
-      SpecialInstruction(
-          regex = "vm-set-register-7 (\\d+)".toRegex(),
-          action = { matchResult, vm ->
-            vm.registers[7] = matchResult.groups[1]!!.value.toInt()
-          }
-      )
-  )
-
-  /**
-   * Checks the provided [inputLine] against a collection of pre-defined special instructions. If a
-   * special instruction is matched, it is executed and this method returns `true`. If no special
-   * instruction is matched, this method returns `false`.
-   */
-  private fun processSpecialInstruction(inputLine: String): Boolean {
-    specialInstructions.forEach { specialInstruction ->
-      specialInstruction.regex.matchEntire(inputLine)?.let { matchResult ->
-        specialInstruction.action(matchResult, this@VM)
-        return true
-      }
-    }
-
-    return false
   }
 
 }
